@@ -3,7 +3,11 @@ import React from 'react'
 function Header()  
 {
     return (
-        <h1 class="text-center">New Trip From Scratch</h1>
+        <div class="flex-row">
+            <div class="flex-small one-third text-left"><h1>Chillato</h1></div>
+            <div class="flex-small one-third text-center"><h1>New Trip From Scratch</h1></div>
+            <div class="flex-small one-third text-right"><h1>Explorato</h1></div>
+        </div>
      );
 }
 
