@@ -4,8 +4,17 @@ function ScratchForm(props)
 {
     return (
       <form>
-          <label for="name">Name</label>
-          <input type="text" id="name" placeholder="First Name"/>
+          <h1 class="text-center">New Trip From Scratch</h1>
+          <label for="name">First Location</label>
+          <input type="text" id="name" placeholder=""/>
+          <label for="name">Second Location</label>
+          <input type="text" id="name" placeholder=""/>
+          <label for="name">First Date</label>
+          <input type="text" id="name" placeholder=""/>
+          <label for="name">Second Date</label>
+          <input type="text" id="name" placeholder=""/>
+          <label for="name"># of Travelers</label>
+          <input type="text" id="name" placeholder=""/>
           <label for="choose">Budget</label>
           <select id="choose">
             <option disabled selected>Please select</option>
@@ -14,7 +23,7 @@ function ScratchForm(props)
             <option value="option-3">$$$</option>
             <option value="option-4">$$$$</option>
           </select>
-          <label for="comments">Additional Comments</label>
+          <label for="comments">Trip Notes</label>
           <textarea id="comments"></textarea>
           <label>
             <input type="checkbox"/>

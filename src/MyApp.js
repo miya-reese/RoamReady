@@ -10,12 +10,14 @@ function MyApp() {
     if (showForm)
     {
         return (
-            <div className="container" onClick={()=>
+            <div className="container">
+               <div className="container"onClick={()=>
                 {
                     console.log("clicked")
                     setShowForm(!showForm)
                 }}>
-              <Header />
+                <Header/>
+              </div>
               <ScratchForm />
               {/*<Table characterData={characters} />*/}
             </div> );
@@ -23,14 +25,17 @@ function MyApp() {
     else
     {
         return (
-            <div className="container" onClick={()=>{
-                console.log("clicked2")
-                setShowForm(!showForm)
-                }}>
-              <Header />
-              {/* <ScratchForm /> */}
-              {/*<Table characterData={characters} />*/}
-            </div> ); 
+            <div className="container">
+            <div className="container"onClick={()=>
+             {
+                 console.log("clicked")
+                 setShowForm(!showForm)
+             }}>
+             <Header/>
+           </div>
+           {/* <ScratchForm /> */}
+           {/*<Table characterData={characters} />*/}
+         </div> );
     }
 
 
