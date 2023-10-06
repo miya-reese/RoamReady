@@ -1,26 +1,8 @@
 import React, { useState } from "react"
-import Table from "./Component/Table"
+// import Table from "./Component/Table"
 import Header from "./Component/Header"
 import ScratchForm from "./Component/ScratchForm";
-
-const characters = [
-    {
-        name: 'Soren',
-        job: 'Janitor',
-    }, 
-    {
-        name: 'Mac',
-        job: 'Bouncer',
-    },
-    {
-        name: 'Dee',
-        job: 'Aspring actress',
-    },
-    {
-        name: 'Dennis',
-        job: 'Bartender',
-    },  
-];
+import Welcome from "./Component/Welcome";
 
 function MyApp() {
 
@@ -29,12 +11,14 @@ function MyApp() {
     if (showForm)
     {
         return (
-            <div className="container"onClick={()=>
+            <div className="container">
+               <div className="container"onClick={()=>
                 {
                     console.log("clicked")
                     setShowForm(!showForm)
                 }}>
-              <Header />
+                <Header/>
+              </div>
               <ScratchForm />
               {/*<Table characterData={characters} />*/}
             </div> );
@@ -42,14 +26,18 @@ function MyApp() {
     else
     {
         return (
-            <div className="container" onClick={()=>{
-                console.log("clicked2")
-                setShowForm(!showForm)
-                }}>
-              <Header />
-              {/* <ScratchForm /> */}
-              {/*<Table characterData={characters} />*/}
-            </div> ); 
+            <div className="container">
+            <div className="container"onClick={()=>
+             {
+                 console.log("clicked")
+                 setShowForm(!showForm)
+             }}>
+             <Header/>
+             <Welcome/>
+           </div>
+           {/* <ScratchForm /> */}
+           {/*<Table characterData={characters} />*/}
+         </div> );
     }
 
 
