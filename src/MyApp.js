@@ -1,7 +1,8 @@
 import React, { useState } from "react"
-import Table from "./Component/Table"
+// import Table from "./Component/Table"
 import Header from "./Component/Header"
 import ScratchForm from "./Component/ScratchForm";
+import Welcome from "./Component/Welcome";
 
 function MyApp() {
 
@@ -32,6 +33,7 @@ function MyApp() {
                  setShowForm(!showForm)
              }}>
              <Header/>
+             <Welcome/>
            </div>
            {/* <ScratchForm /> */}
            {/*<Table characterData={characters} />*/}

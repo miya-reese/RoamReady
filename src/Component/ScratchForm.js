@@ -25,11 +25,11 @@ function ScratchForm(props)
           </select>
           <label for="comments">Trip Notes</label>
           <textarea id="comments"></textarea>
-          <label>
+          {/* <label>
             <input type="checkbox"/>
             Remember me
-          </label>
-          <input type="submit" value="Submit"/>
+          </label> */}
+          <input class="vertical-center" type="submit" value="Submit"/>
       </form>
     );
 }
