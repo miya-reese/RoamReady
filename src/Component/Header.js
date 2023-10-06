@@ -1,14 +1,14 @@
 import React from 'react'
 
-function Header()  
+function NavBar()  
 {
     return (
         <div class="flex-row">
-            <div class="flex-small one-third text-left"><h1>Chillato</h1></div>
-            <div class="flex-small one-third text-center"><h1>New Trip From Scratch</h1></div>
-            <div class="flex-small one-third text-right"><h1>Explorato</h1></div>
+            <div class="flex-small one-third text-left"><button class="muted-button">Home</button></div>
+            <div class="flex-small one-third text-center"><button class="muted-button">+</button></div>
+            <div class="flex-small one-third text-right"><button class="muted-button">Profile</button></div>
         </div>
      );
 }
 
-export default Header;
+export default NavBar;
