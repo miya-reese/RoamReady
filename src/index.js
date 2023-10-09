@@ -3,12 +3,10 @@ import ReactDOM from 'react-dom/client';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import './index.css';
-//import MyApp from './MyApp';
 import ScratchForm from './Component/ScratchForm';
 import Layout from './Component/Layout';
 import NoPage from './Component/NoPage';
 import Welcome from './Component/Welcome';
-//import Header from './Component/Header';
 import Card from './Component/Card';
 import MyTrips from './Component/MyTrips'
 
