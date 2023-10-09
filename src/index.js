@@ -9,6 +9,7 @@ import Layout from './Component/Layout';
 import NoPage from './Component/NoPage';
 import Welcome from './Component/Welcome';
 //import Header from './Component/Header';
+import Card from './Component/Card';
 
 export default function App() {
     return (
@@ -17,6 +18,7 @@ export default function App() {
                 <Route path="/" element={<Layout />}>
                     <Route index element={<Welcome />} />
                     <Route path="ScratchForm" element={<ScratchForm />} />
+                    <Route path="Card" element={<Card />} />
                     <Route path="*" element={<NoPage />}/>
                 </Route>
             </Routes>
