@@ -1,14 +1,12 @@
-import React from 'react'
+import React from 'react';
+import logo from './ROAM.png';
+import './css/Welcome.css'; // Import your CSS file
 
-function Welcome(props) 
-{
+function Welcome(props) {
     return (
-      
-        <blockquote>
-            <p>RoamReady</p>
-            <cite>Chillato Explorato</cite>
-        </blockquote>
-
+        <div className="center">
+            <img src={logo} width={600} height={600} alt="Logo" />
+        </div>
     );
 }
 

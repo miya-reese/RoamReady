@@ -8,10 +8,10 @@ const Layout = () => {
             <nav className={`${styles.navbar}`}>
 
                 {/* logo */}
-                <a href='#home' className={`${styles.logo}`}>RoamReady</a>
+                <Link to="/Welcome">RoamReady</Link>
                 <ul className={`${styles.navMenu}`}>
                     <li>
-                        <Link to="/MyTrips">Home</Link>                    
+                        <Link to="/MyTrips">My Trips</Link>                    
                     </li>
 
                     <li>

@@ -16,7 +16,7 @@ export default function App() {
         <BrowserRouter>
             <Routes>
                 <Route path="/" element={<Layout />}>
-                    <Route index element={<Welcome />} />
+                    <Route path="Welcome" element={<Welcome />} />
                     <Route path="ScratchForm" element={<ScratchForm />} />
                     <Route path="Card" element={<Card />} />
                     <Route path="*" element={<NoPage />}/>
