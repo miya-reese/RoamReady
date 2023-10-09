@@ -10,6 +10,7 @@ import NoPage from './Component/NoPage';
 import Welcome from './Component/Welcome';
 //import Header from './Component/Header';
 import Card from './Component/Card';
+import MyTrips from './Component/MyTrips'
 
 export default function App() {
     return (
@@ -20,6 +21,7 @@ export default function App() {
                     <Route path="ScratchForm" element={<ScratchForm />} />
                     <Route path="Card" element={<Card />} />
                     <Route path="*" element={<NoPage />}/>
+                    <Route path="MyTrips" element={<MyTrips />}/>
                 </Route>
             </Routes>
         </BrowserRouter>

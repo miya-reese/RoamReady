@@ -11,7 +11,7 @@ const Layout = () => {
                 <a href='#home' className={`${styles.logo}`}>RoamReady</a>
                 <ul className={`${styles.navMenu}`}>
                     <li>
-                        <Link to="/">Home</Link>                    
+                        <Link to="/MyTrips">Home</Link>                    
                     </li>
 
                     <li>
