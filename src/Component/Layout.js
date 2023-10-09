@@ -21,6 +21,9 @@ const Layout = () => {
                     <li>
                         <Link to="/Card">Profile</Link>
                     </li>
+                    <li>
+                        <Link to="/SingleTrip">Test</Link>
+                    </li>
                 </ul>
 
                 <div className={`${styles.hamburger}`}>

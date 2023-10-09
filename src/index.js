@@ -8,7 +8,8 @@ import Layout from './Component/Layout';
 import NoPage from './Component/NoPage';
 import Welcome from './Component/Welcome';
 import Card from './Component/Card';
-import MyTrips from './Component/MyTrips'
+import MyTrips from './Component/MyTrips';
+import SingleTrip from './Component/SingleTrip';
 
 export default function App() {
     return (
@@ -20,6 +21,7 @@ export default function App() {
                     <Route path="Card" element={<Card />} />
                     <Route path="*" element={<NoPage />}/>
                     <Route path="MyTrips" element={<MyTrips />}/>
+                    <Route path="SingleTrip" element={<SingleTrip />} />
                 </Route>
             </Routes>
         </BrowserRouter>
