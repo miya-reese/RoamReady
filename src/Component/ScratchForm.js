@@ -26,10 +26,6 @@ function ScratchForm(props)
             </select>
             <label for="comments">Trip Notes</label>
             <textarea id="comments"></textarea>
-            {/* <label>
-              <input type="checkbox"/>
-              Remember me
-            </label> */}
             <input class="vertical-center" type="submit" value="Submit"/>
         </form>
       </div>
