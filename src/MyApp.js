@@ -1,46 +1,29 @@
-import React, { useState } from "react"
-// import Table from "./Component/Table"
-import Header from "./Component/Header"
-import ScratchForm from "./Component/ScratchForm";
-import Welcome from "./Component/Welcome";
+// import React, { useState } from "react"
+// //import ReactDOM from "react-dom/client";
+// import { BrowserRouter, Routes, Route } from "react-router-dom";
+// import Header from "./Component/Header"
+// import ScratchForm from "./Component/ScratchForm";
+// import Welcome from "./Component/Welcome";
+// import NoPage from "./Component/NoPage";
+// import Layout from "./Component/Layout";
 
-function MyApp() {
+// function MyApp() {
 
-    let [showForm, setShowForm] = useState(false);
+//     return (
+//         // <BrowserRouter>
+//         //     <Routes>
+//         //         <Route path="/" element={<Layout />}>
+//         //             <Route index element={<Welcome />} />
+//         //             <Route path="ScratchForm" element={<ScratchForm />} />
+//         //             <Route path="*" element={<NoPage />}/>
+//         //         </Route>
+//         //     </Routes>
+//         // </BrowserRouter>
 
-    if (showForm)
-    {
-        return (
-            <div className="container">
-               <div className="container"onClick={()=>
-                {
-                    console.log("clicked")
-                    setShowForm(!showForm)
-                }}>
-                <Header/>
-              </div>
-              <ScratchForm />
-              {/*<Table characterData={characters} />*/}
-            </div> );
-    }
-    else
-    {
-        return (
-            <div className="container">
-            <div className="container"onClick={()=>
-             {
-                 console.log("clicked")
-                 setShowForm(!showForm)
-             }}>
-             <Header/>
-             <Welcome/>
-           </div>
-           {/* <ScratchForm /> */}
-           {/*<Table characterData={characters} />*/}
-         </div> );
-    }
+//         <div className="container">            
+//             <Header />
+//         </div> );
 
+// }
 
-}
-
-export default MyApp;
+// export default MyApp;
