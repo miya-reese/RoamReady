@@ -3,6 +3,7 @@ import React, { useState } from "react"
 import Header from "./Component/Header"
 import ScratchForm from "./Component/ScratchForm";
 import Welcome from "./Component/Welcome";
+import SingleTrip from "./Component/SingleTrip";
 
 function MyApp() {
 
@@ -19,7 +20,7 @@ function MyApp() {
                 }}>
                 <Header/>
               </div>
-              <ScratchForm />
+              <SingleTrip />
               {/*<Table characterData={characters} />*/}
             </div> );
     }
