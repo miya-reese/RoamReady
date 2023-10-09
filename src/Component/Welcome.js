@@ -8,7 +8,7 @@ function Welcome(props)
             <p>RoamReady</p>
             <cite>Chillato Explorato</cite>
         </blockquote>
-    
+
     );
 }
 
