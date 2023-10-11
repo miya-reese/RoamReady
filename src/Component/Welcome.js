@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from './ROAM.png';
+import logo from './images/ROAM.png';
 import './css/Welcome.css'; // Import your CSS file
 
 function Welcome(props) {
