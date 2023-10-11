@@ -24,6 +24,9 @@ const Layout = () => {
                     <li>
                         <Link to="/SingleTrip">Test</Link>
                     </li>
+                    <li>
+                        <Link to="/MapUI">Map</Link>
+                    </li>
                 </ul>
 
                 <div className={`${styles.hamburger}`}>
@@ -36,8 +39,8 @@ const Layout = () => {
             <Outlet />
         </header>
     </div>
-    )
+    );
 
-};
+}
 
 export default Layout;
