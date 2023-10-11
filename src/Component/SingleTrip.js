@@ -31,21 +31,22 @@ function BasicExample() {
             </Accordion.Body>
           </Accordion.Item>
         </Accordion>
+        </ div>
     );
   }
 
 function SingleTrip() {
-return (
-<>
-<h1>
-Your Trip to Amsterdam
-</h1>
-<div className="imgParent">
-<img className= "imgChild" src={romeToAmsterdam} alt="rToA"/>
-</div>
-<BasicExample />
-</>
-)
+    return (
+    <>
+    <h1>
+    Your Trip to Amsterdam
+    </h1>
+    <div className="imgParent">
+    <img className= "imgChild" src={romeToAmsterdam} alt="rToA"/>
+    </div>
+    <BasicExample />
+    </>
+    );
 }
 
 export default SingleTrip;
