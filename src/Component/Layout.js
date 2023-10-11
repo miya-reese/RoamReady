@@ -1,5 +1,7 @@
 import { Outlet, Link } from "react-router-dom";
 import styles from './css/Navbar.module.css';
+import logo from './images/ROAM.png';
+
 
 const Layout = () => {
   return (
@@ -8,7 +10,9 @@ const Layout = () => {
             <nav className={`${styles.navbar}`}>
 
                 {/* logo */}
-                <Link to="/Welcome">RoamReady</Link>
+                <Link to="/Welcome">
+			<img src={logo} alt="logo" />
+		</Link>
                 <ul className={`${styles.navMenu}`}>
                     <li>
                         <Link to="/MyTrips">My Trips</Link>                    
