@@ -6,7 +6,7 @@ import Card from 'react-bootstrap/Card';
 
 function TripExample() {
   return (
-    <Container style={{ height: '50vh', width: '30vw' }}>
+    <Container style={{ height: '60vh', width: '30vw' }}>
       <Card bg={"ligth"} border="light">
       <Card.Header></Card.Header>
       <Card.Img variant="top" src="https://lp-cms-production.imgix.net/2021-08/GettyRF_595500583.jpg?auto=format&q=75&w=1920"
@@ -26,46 +26,36 @@ function TripExample() {
 function MyTripsPage() {
   return (
     <div>
-      <center>
+      <div>
         <h1 class="text-center">My Trips</h1>
-      </center>
+        <div style={{height: '1vh'}}></div>
+      </div>
       <div class="row no-gutters">
-      <Row>Trips</Row>
+      <Row>
+      <h5 class="text-center">Planned Trips</h5>
+      <div style={{ height: '1vh'}} ></div>
+      </Row>
+      <div className="d-flex justify-content-evenly" >
       <Row>
         <Col><TripExample></TripExample></Col>
         <Col><TripExample></TripExample></Col>
         <Col><TripExample></TripExample></Col>
       </Row>
-      <Row>Past Trips</Row>
+      </div>
+      <Row>
+      <h5 class="text-center">Past Trips</h5>
+      <div style={{ height: '1vh'}} ></div>
+      </Row>
+      <div className="d-flex justify-content-evenly" >
       <Row>
         <Col><TripExample></TripExample></Col>
+        <Col><TripExample></TripExample></Col>
       </Row>
+      </div>
       </div>
     </div>
   );
 }
-
-function test() {
-    return (
-      <Container>
-        <center>
-          <h1 class="text-center">My Trips</h1>
-        </center>
-        <ul>
-          <li>
-            <TripExample></TripExample>
-          </li>
-          <li>
-          <TripExample></TripExample>
-          </li>
-          <li>
-          <TripExample></TripExample>
-          </li>
-        </ul>
-      </Container>
-    );
-  }
-
   
   export default MyTripsPage;
   
