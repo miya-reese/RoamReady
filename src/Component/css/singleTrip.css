@@ -1,7 +1,6 @@
-    img {
-    height: 300px;
+img {
+    height: 400px;
     width: 500px;
-    flex: 1
     }
 
     h1 {
@@ -10,20 +9,24 @@
 
     .imgParent {
         position: relative;
+        flex-grow: 2.5;
     }
 
     .imgChild {
         position: absolute;
-        top: 5%;
-        left: 5%;
-        transform: translate(0%, 25%);
+        transform: translate(15%, 5%);
     }
 
-    p {
-        text-align: right;
+    .accordionParent {
+        flex-grow: 1;
     }
 
-    .singleTripAccordion {
-        width: 500px;
-        align-content: right;
+    .accordionChild {
+        margin-left: 30px;
+    }
+
+    .box {
+        display: flex;
+        flex-direction: row;
+        background-color: beige;
     }
