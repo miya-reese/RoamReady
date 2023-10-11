@@ -11,6 +11,8 @@ import Card from './Component/Card';
 import MyTrips from './Component/MyTrips';
 import SingleTrip from './Component/SingleTrip';
 
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 export default function App() {
     return (
         <BrowserRouter>

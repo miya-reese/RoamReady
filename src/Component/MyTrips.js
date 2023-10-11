@@ -1,40 +1,71 @@
 import React from 'react'
+import { Container } from 'react-bootstrap';
+import Row from 'react-bootstrap/Row'
+import Col from 'react-bootstrap/Col'
+import Card from 'react-bootstrap/Card';
+
+function TripExample() {
+  return (
+    <Container style={{ height: '50vh', width: '30vw' }}>
+      <Card bg={"ligth"} border="light">
+      <Card.Header></Card.Header>
+      <Card.Img variant="top" src="https://lp-cms-production.imgix.net/2021-08/GettyRF_595500583.jpg?auto=format&q=75&w=1920"
+      width={20}
+      height={200}
+      alt="Trip 1" />
+      <Card.Body>
+        <Card.Title>Cinque Terre</Card.Title>
+        <Card.Subtitle className="mb-2 text-muted">09/29/2023 - 10/01/2023</Card.Subtitle>
+        <Card.Link href="#">View Details</Card.Link>
+      </Card.Body>
+    </Card>
+    </Container>
+  );
+}
 
 function MyTripsPage() {
+  return (
+    <div>
+      <center>
+        <h1 class="text-center">My Trips</h1>
+      </center>
+      <div class="row no-gutters">
+      <Row>Trips</Row>
+      <Row>
+        <Col><TripExample></TripExample></Col>
+        <Col><TripExample></TripExample></Col>
+        <Col><TripExample></TripExample></Col>
+      </Row>
+      <Row>Past Trips</Row>
+      <Row>
+        <Col><TripExample></TripExample></Col>
+      </Row>
+      </div>
+    </div>
+  );
+}
+
+function test() {
     return (
-      <triplist>
+      <Container>
         <center>
           <h1 class="text-center">My Trips</h1>
         </center>
         <ul>
           <li>
-            <img
-              src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dHJhdmVsJTIwbGFuZHNjYXBlfGVufDB8fDB8fHww&w=1000&q=80"
-              width={600}
-              height={300}
-              alt="Trip 1"
-            />
+            <TripExample></TripExample>
           </li>
           <li>
-            <img
-              src="https://images.unsplash.com/photo-1433838552652-f9a46b332c40?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8dHJhdmVsJTIwbGFuZHNjYXBlfGVufDB8fDB8fHww&w=1000&q=80"
-              width={600}
-              height={300}
-              alt="Trip 1"
-            />
+          <TripExample></TripExample>
           </li>
           <li>
-            <img
-              src="https://i.natgeofe.com/n/f7facfef-285c-4171-b58a-3c4653d11872/2019-travel-photo-contest-epic-landscapes035.jpg"
-              width={600}
-              height={300}
-              alt="Trip 1"
-            />
+          <TripExample></TripExample>
           </li>
         </ul>
-      </triplist>
+      </Container>
     );
   }
+
   
   export default MyTripsPage;
   
