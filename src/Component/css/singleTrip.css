@@ -4,13 +4,28 @@ h1 {
     
     
     img {
-    height: 250px;
+    height: 300px;
     width: 500px;
-    align-items: left;
+    flex: 1
+    }
+
+    .imgParent {
+        position: relative;
     }
     
+    .imgChild {
+        position: absolute;
+        top: 5%;
+        left: 5%;
+        transform: translate(0%, 25%);
+    }
     
     p {
-    text-align: right;
+        text-align: right;
+    }
+
+    .singleTripAccordion {
+        width: 500px;
+        align-content: right;
     }
     
