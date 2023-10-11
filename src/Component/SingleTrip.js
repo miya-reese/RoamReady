@@ -2,6 +2,9 @@ import "./css/singleTrip.css";
 import romeToAmsterdam from "./images/romeToAmsterdam.png";
 import Accordion from "react-bootstrap/Accordion";
 
+import AccordionHeader from "react-bootstrap/AccordionHeader";
+import AccordionBody from "react-bootstrap/AccordionBody";
+import AccordionButton from "react-bootstrap/AccordionButton";
 
 console.log(romeToAmsterdam);
 
@@ -28,8 +31,7 @@ function BasicExample() {
             </Accordion.Body>
           </Accordion.Item>
         </Accordion>
-        </div>
-      );
+    );
   }
 
 function SingleTrip() {

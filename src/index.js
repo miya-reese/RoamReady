@@ -10,18 +10,23 @@ import Welcome from './Component/Welcome';
 import Card from './Component/Card';
 import MyTrips from './Component/MyTrips';
 import SingleTrip from './Component/SingleTrip';
+import MapUI from './Component/MapUI';
+
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 export default function App() {
     return (
         <BrowserRouter>
             <Routes>
                 <Route path="/" element={<Layout />}>
+                    <Route index element={<Welcome />} />
                     <Route path="Welcome" element={<Welcome />} />
                     <Route path="ScratchForm" element={<ScratchForm />} />
                     <Route path="Card" element={<Card />} />
                     <Route path="*" element={<NoPage />}/>
                     <Route path="MyTrips" element={<MyTrips />}/>
                     <Route path="SingleTrip" element={<SingleTrip />} />
+                    <Route path="MapUI" element={<MapUI />} />
                 </Route>
             </Routes>
         </BrowserRouter>
@@ -30,3 +35,4 @@ export default function App() {
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(<App />);
+//root.render(<MapUI />);
