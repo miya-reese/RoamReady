@@ -1,7 +1,7 @@
-img {
+/* img {
     height: 400px;
     width: 500px;
-    }
+    } */
 
     h1 {
         text-align: center
@@ -9,7 +9,7 @@ img {
 
     .imgParent {
         position: relative;
-        flex-grow: 2.5;
+        flex-grow: 2;
     }
 
     .imgChild {
@@ -19,14 +19,11 @@ img {
 
     .accordionParent {
         flex-grow: 1;
-    }
-
-    .accordionChild {
-        margin-left: 30px;
+        background-color: beige;
+        height: 750px;
     }
 
     .box {
         display: flex;
         flex-direction: row;
-        background-color: beige;
     }
