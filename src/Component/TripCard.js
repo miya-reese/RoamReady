@@ -8,8 +8,9 @@ function TripCard(props) {
         <Card bg={"ligth"} border="light">
         <Card.Header></Card.Header>
         <Card.Img variant="top" src={props.srcImg}
-        width={20}
-        height={11}
+        // width={11}
+        // height={250}
+        style={{objectFit: "contain"}}
         alt={props.name}/>
         <Card.Body>
           <Card.Title>{props.name}</Card.Title>

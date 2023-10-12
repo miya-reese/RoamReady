@@ -11,7 +11,7 @@ const Layout = () => {
 
                 {/* logo */}
                 <Link to="/Welcome">
-			<img src={logo} alt="logo" />
+                        <img src={logo} alt="logo" style={{width: 200, height: 200}}/>
 		</Link>
                 <ul className={`${styles.navMenu}`}>
                     <li>
