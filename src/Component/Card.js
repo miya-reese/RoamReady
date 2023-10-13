@@ -1,17 +1,18 @@
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
+import icon from './images/userprofile.jpeg'
+import './css/card.css'
 
 function BasicExample() {
   return (
     <Card style={{ width: '18rem' }}>
-      <Card.Img variant="top" src="holder.js/100px180"/>
+      <Card.Img variant="top" src={icon} />
       <Card.Body>
-        <Card.Title>Card Title</Card.Title>
+        <Card.Title>Profile</Card.Title>
         <Card.Text>
-          Some quick example text to build on the card title and make up the
-          bulk of the card's content.
+          Name: Anna Makarewicz
         </Card.Text>
-        <Button variant="primary">Go somewhere</Button>
+        <Button variant="primary">Edit</Button>
       </Card.Body>
     </Card>
   );
