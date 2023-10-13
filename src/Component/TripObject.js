@@ -18,8 +18,10 @@ class MapObject {
 }
 
 class Itinerary {
-    constructor()
+    constructor(startDate, endDate)
     {
+        this.startDate = startDate;
+        this.endDate = endDate;
         this.itineraryItemList = []; //made of ItineraryItems
     }
 }
