@@ -4,7 +4,7 @@ import Form from 'react-bootstrap/Form';
 import Container from 'react-bootstrap/Container';
 import { Link } from 'react-router-dom';
 
-import { useState } from 'react';
+// import { useState } from 'react';
 // import Row from 'react-bootstrap/Row';
 // import Col from 'react-bootstrap/Col';
 
@@ -29,7 +29,7 @@ import { useState } from 'react';
 //   }
 // }
 
-const userInput = [];
+//const userInput = [];
 
 function ScratchForm(props) 
 {
@@ -80,8 +80,8 @@ function ScratchForm(props)
             <Form.Label>Number of Travelers</Form.Label>
             <Form.Control type="number" placeholder="Enter Number:" />
           </Form.Group>
-
           <Link to="/SingleTrip"><Button variant="primary" type="submit">Submit</Button></Link>
+          {/* <Button variant="primary" type="submit">Submit</Button> */}
         </Form>
       </Container>
     );
