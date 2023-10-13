@@ -6,9 +6,10 @@ import './css/card.css'
 function BasicExample() {
   return (
     <Card style={{ width: '18rem' }}>
-      <Card.Img variant="top" src={icon} />
+      <Card.Img class="mx-auto d-block" variant="top" src={icon} />
       <Card.Body>
         <Card.Title>Profile</Card.Title>
+	{/*should display user inputted data*/}
         <Card.Text>
           Name: Anna Makarewicz
         </Card.Text>
