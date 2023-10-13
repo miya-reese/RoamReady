@@ -12,7 +12,7 @@ const Layout = () => {
                 {/* logo */}
                 <Link to="/Welcome">
                         <img src={logo} alt="logo" style={{width: 200, height: 200}}/>
-		</Link>
+		        </Link>
                 <ul className={`${styles.navMenu}`}>
                     <li>
                         <Link to="/MyTrips">My Trips</Link>                    
@@ -27,9 +27,6 @@ const Layout = () => {
                     </li>
                     <li>
                         <Link to="/SingleTrip">Test</Link>
-                    </li>
-                    <li>
-                        <Link to="/MapUI">Map</Link>
                     </li>
                 </ul>
 
