@@ -1,7 +1,7 @@
-.routePic {
+
+.routeImg {
     max-height: 300px;
     max-width: 500px;
-    transform: translate(18%, 0%)
     }
 
     h1 {
@@ -16,8 +16,7 @@
     }
 
     .imgChild {
-        position: absolute;
-        transform: translate(15%, 80%);
+        position: relative;
     }
 
     .accordionParent {

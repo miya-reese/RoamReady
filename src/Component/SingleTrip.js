@@ -3,6 +3,7 @@ import romeToAmsterdam from "./images/romeToAmsterdam.png";
 import Accordion from "react-bootstrap/Accordion";
 import Dropdown from 'react-bootstrap/Dropdown';
 import { useState } from "react";
+import Card from "react-bootstrap/Card";
 
 function Map() {
     return (
@@ -108,15 +109,13 @@ function SingleTrip() {
             </h1>
             <div className="box">
                 <div className="imgParent">
-                    <div className="imgChild">
-                        <Map className="map"/>
-                    </div>
-                    <img className="routePic" src={romeToAmsterdam} alt="rToA"/>
+                    <Card>
+                    <img className="routeImg" src={romeToAmsterdam} alt="rToA" style={{objectFit: "cover"}}/>
+                    </Card>
+                    <Card><Map/></Card>
                 </div>
                 <div className="accordionParent">
-                    <div className>
-                        <FilterByDropDown />
-                    </div>
+                    <FilterByDropDown />
                 </div>
             </div>
         </>
