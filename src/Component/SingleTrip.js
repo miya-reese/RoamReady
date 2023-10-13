@@ -10,7 +10,7 @@ function Map() {
         <div class='container'>
           <iframe
             title="mapframe"
-            width="500"
+            width="600"
             height="400"
             style={{border:0}}
             loading="lazy"
@@ -109,10 +109,10 @@ function SingleTrip() {
             </h1>
             <div className="box">
                 <div className="imgParent">
-                    <Card>
+                    <Card style={{width: 500, height: 400}}>
                     <img className="routeImg" src={romeToAmsterdam} alt="rToA" style={{objectFit: "cover"}}/>
                     </Card>
-                    <Card><Map/></Card>
+                    <Card style={{border: 0, width: 600}}><Map/></Card>
                 </div>
                 <div className="accordionParent">
                     <FilterByDropDown />
