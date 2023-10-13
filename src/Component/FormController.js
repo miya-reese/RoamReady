@@ -1,5 +1,3 @@
-//import { useState } from "react";
-//import ScratchForm from "./ScratchForm";
 
 class TripObject {
     constructor(name, MapObject, Itinerary, budget, travelers) 
@@ -47,10 +45,10 @@ function FormController(formData)
     let userTrip = new TripObject(formData.tripName, userMap, userItinerary, formData.budget, formData.numTravelers);
 
     console.log(userTrip.name);
-    console.log(userMap.locationList);
-    console.log(userMap.MapObject.locationList, "go");
-    console.log(userItinerary.startDate);
-    console.log(userItinerary.endDate);
+    console.log(userTrip.MapObject.locationList[0]);
+    console.log(userTrip.MapObject.locationList[1]);
+    console.log(userTrip.Itinerary.startDate);
+    console.log(userTrip.Itinerary.endDate);
     console.log(userTrip.budget);
     console.log(userTrip.travelers);
 }
