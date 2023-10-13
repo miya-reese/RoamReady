@@ -1,9 +1,7 @@
 import "./css/singleTrip.css";
-// import romeToAmsterdam from "./images/romeToAmsterdam.png";
+import romeToAmsterdam from "./images/romeToAmsterdam.png";
 import Accordion from "react-bootstrap/Accordion";
 import Dropdown from 'react-bootstrap/Dropdown';
-import Card from "react-bootstrap/Card";
-import { Link } from "react-router-dom";
 import { useState } from "react";
 
 function Map() {
@@ -49,6 +47,12 @@ function FilterByDropDown() {
         setActColor(onColor);
     }
 
+    function handleNoneClick() {
+        setTransportColor(offColor);
+        setAccoColor(offColor);
+        setActColor(offColor);
+    }
+
     return (
         <>
             <Dropdown>
@@ -60,40 +64,32 @@ function FilterByDropDown() {
                     <Dropdown.Item onClick={handleTransportClick} href="#/action-1">Transportation</Dropdown.Item>
                     <Dropdown.Item onClick={handleAccoClick} href="#/action-2">Accommodations</Dropdown.Item>
                     <Dropdown.Item onClick={handleActClick} href="#/action-3">Activities</Dropdown.Item>
+                    <Dropdown.Item onClick={handleNoneClick} href="#/action-4">None</Dropdown.Item>
                 </Dropdown.Menu>
             </Dropdown>
 
             <Accordion>
-                <Accordion.Item eventKey="0">
+                <Accordion.Item eventKey="0" style={{backgroundColor: transportColor}}>
                     <Accordion.Header>
-                        <Card style={{backgroundColor: transportColor}}>
-                            Fiumincino Airport to Schipol Amsterdam Airport
-                        </Card>
+                        Fiumincino Airport to Schipol Amsterdam Airport
                     </Accordion.Header>
                     <Accordion.Body>
                         <a href="https://www.expedia.com/" target="_blank" rel="noreferrer">
                             7:30, Turkish Airlines
                         </a>{" "}
-                        {/* <Link to="https://www.expedia.com/">
-                            7:30, Turkish Airlines
-                        </Link> */}
                     </Accordion.Body>
                 </Accordion.Item>
-                <Accordion.Item eventKey="1">
+                <Accordion.Item eventKey="1" style={{backgroundColor: transportColor}}>
                     <Accordion.Header>
-                        <Card style={{backgroundColor: transportColor}}>
-                            Metro to Hotel
-                        </Card>
+                        Metro to Hotel
                     </Accordion.Header>
                     <Accordion.Body>
                         Every 15 minutes
                     </Accordion.Body>
                 </Accordion.Item>
-                <Accordion.Item eventKey="2">
+                <Accordion.Item eventKey="2" style={{backgroundColor: accoColor}}>
                     <Accordion.Header>
-                        <Card style={{backgroundColor: accoColor}}>
-                            3 nights at Hilton Amsterdam
-                        </Card>
+                        3 nights at Hilton Amsterdam
                     </Accordion.Header>
                     <Accordion.Body>
                         October 11th to October 14th
@@ -112,10 +108,10 @@ function SingleTrip() {
             </h1>
             <div className="box">
                 <div className="imgParent">
-                    {/* <img className= "imgChild" src={romeToAmsterdam} alt="rToA"/> */}
                     <div className="imgChild">
-                        <Map />
+                        <Map className="map"/>
                     </div>
+                    <img src={romeToAmsterdam} alt="rToA"/>
                 </div>
                 <div className="accordionParent">
                     <div className>
