@@ -111,7 +111,7 @@ function SingleTrip() {
                     <div className="imgChild">
                         <Map className="map"/>
                     </div>
-                    <img src={romeToAmsterdam} alt="rToA"/>
+                    <img className="routePic" src={romeToAmsterdam} alt="rToA"/>
                 </div>
                 <div className="accordionParent">
                     <div className>
