@@ -2,6 +2,7 @@ import React from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import Container from 'react-bootstrap/Container';
+import FormController from './FormController';
 /****************************************/
 
 import { useState } from 'react';
@@ -23,10 +24,6 @@ function ScratchForm() {
       ...formData,
       [name]: value,
     });
-  };
-
-  const FormHandler = () => {
-    console.log('Form Data:', formData);
   };
 
   return (
@@ -114,7 +111,7 @@ function ScratchForm() {
           />
         </Form.Group>
 
-        <Button variant="primary" type="button" onClick={FormHandler}>
+        <Button variant="primary" type="button" onClick={() => FormController(formData)}>
           Submit
         </Button>
       </Form>
