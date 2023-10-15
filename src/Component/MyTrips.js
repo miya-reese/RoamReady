@@ -2,15 +2,7 @@ import React from 'react'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import TripCard from './TripCard.js'
-
-// class to hold the trip card info
-class TripCardInfo {
-  constructor(name, date, srcImg) {
-    this.name = name;
-    this.date = date;
-    this.srcImg = srcImg;
-  }
-}
+import TripCardInfo from './classes/TripCardInfo.js';
 
 // trip arrays
 const upcomingTrips = [];
@@ -76,5 +68,5 @@ function MyTripsPage() {
   );
 }
   
-  export default MyTripsPage;
+export default MyTripsPage;
   

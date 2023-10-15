@@ -14,8 +14,8 @@ function Map() {
             height="400"
             style={{border:0}}
             loading="lazy"
-            allowfullscreen
-            referrerpolicy="no-referrer"
+            allowFullScreen
+            referrerPolicy="no-referrer"
             src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJVXealLU_xkcRja_At0z9AGY&key=
             AIzaSyBe_wtXmNC3d5nEaUZGuORqjFH1oF50eeY">
           </iframe>
