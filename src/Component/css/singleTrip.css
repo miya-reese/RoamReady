@@ -10,22 +10,20 @@
 
     .imgParent {
         position: relative;
-        flex-grow: 1;
+        flex-grow: 0.5;
         display: flex;
         flex-direction: column;
     }
 
-    .imgChild {
-        position: relative;
-    }
-
-    .accordionParent {
-        flex-grow: 1;
-        background-color: beige;
-        height: 750px;
-    }
-
     .box {
+        background-color: beige;
         display: flex;
         flex-direction: row;
+    }
+
+    .accFlexBox {
+        flex-grow: 1;
+        background-color: cadetblue;
+        display: flex;
+        flex-direction: column;
     }
