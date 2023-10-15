@@ -39,8 +39,8 @@ const TripListView = ({accordionData}) => {
                 <TripFilter handleTransportClick={handleTransportClick} handleAccoClick={handleAccoClick} 
                 handleActClick={handleActClick} handleNoneClick={handleNoneClick}/>
             </div>
-            {accordionData.map(({ title, content }) => (
-                <TripAccordion title={title} content={content} transportColor={transportColor} accoColor={accoColor}
+            {accordionData.map(({ title, content, type }) => (
+                <TripAccordion title={title} content={content} type={type} transportColor={transportColor} accoColor={accoColor}
                 actColor={actColor}/>
             ))}
         </div>

@@ -7,15 +7,18 @@ import TripListView from "./TripListView.js";
 const accordionData = [
     {
       title: "Rome Fiumincino Airport to Amsterdam Schipol Airport",
-      content: "7:30, Turkish Airlines"
+      content: "7:30, Turkish Airlines",
+      type: 0
     },
     {
-      title: "Metrot to Hotel",
-      content: "Every 15 minutes"
+      title: "Metro to Hotel",
+      content: "Every 15 minutes",
+      type: 0
     },
     {
       title: "3 Night at Hilton Amsterdam",
-      content: "October 14th to October 17th"
+      content: "October 14th to October 17th",
+      type: 1
     }
   ];
 
