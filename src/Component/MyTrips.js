@@ -76,5 +76,5 @@ function MyTripsPage() {
   );
 }
   
-  export default MyTripsPage;
+export default MyTripsPage;
   
