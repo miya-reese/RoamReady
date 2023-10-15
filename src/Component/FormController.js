@@ -1,9 +1,8 @@
-//import TripCardInfo from "./MyTrips";
 import MapObject from "./classes/MapObject";
 import ItineraryObject from "./classes/ItineraryObject";
 import TripObject from "./classes/TripObject";
-
-const TripsList = [];
+import TripArray from "../TripArray";
+import TripCardInfo from "./MyTrips";
 
 function FormController(formData)
 {
@@ -19,11 +18,14 @@ function FormController(formData)
     console.log(userTrip.budget);
     console.log(userTrip.travelers);
 
-    TripsList.push(userTrip);
-    // let cardInfo = new TripCardInfo(userTrip.name, userTrip.Itinerary.startDate+" - "+userTrip.Itinerary.endDate, '');
-    // //upcomingTrips.push(cardInfo);
-    // console.log(userTrip.name);
-    // console.log(cardInfo.date);
+    TripArray.push(userTrip);
+
+    let cardInfo = new TripCardInfo(userTrip.name, userTrip.ItineraryObject.startDate+" - "+userTrip.ItineraryObject.endDate, '');
+    console.log("HERE: ");
+    console.log(userTrip.ItineraryObject.startDate+"-"+userTrip.ItineraryObject.endDate);
+    //TripArray.push(cardInfo);
+    console.log(cardInfo.name);
+    console.log(cardInfo.name);
 }
 
 export default FormController;

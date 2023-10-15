@@ -9,6 +9,7 @@ export default class TripObject {
         this.ItineraryObject = ItineraryObject;
         this.budget = budget;
         this.travelers = travelers;
+        this.srcImg = '';
     };
 }
 
