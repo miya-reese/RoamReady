@@ -1,5 +1,4 @@
-import TripCardInfo from "./MyTrips";
-//import MyTripsPage from "./MyTrips";
+//import TripCardInfo from "./MyTrips";
 import MapObject from "./classes/MapObject";
 import ItineraryObject from "./classes/ItineraryObject";
 import TripObject from "./classes/TripObject";
@@ -20,7 +19,7 @@ function FormController(formData)
     console.log(userTrip.budget);
     console.log(userTrip.travelers);
 
-    // TripsList.push(userTrip);
+    TripsList.push(userTrip);
     // let cardInfo = new TripCardInfo(userTrip.name, userTrip.Itinerary.startDate+" - "+userTrip.Itinerary.endDate, '');
     // //upcomingTrips.push(cardInfo);
     // console.log(userTrip.name);
