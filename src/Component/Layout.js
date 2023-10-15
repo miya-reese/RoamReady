@@ -28,6 +28,9 @@ const Layout = () => {
                     <li>
                         <Link to="/SingleTrip">Test</Link>
                     </li>
+                    <li>
+                        <Link to="/AccordionTest">AccordionTest</Link>
+                    </li>
                 </ul>
 
                 <div className={`${styles.hamburger}`}>
