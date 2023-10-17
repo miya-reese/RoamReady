@@ -19,6 +19,11 @@ const accordionData = [
       title: "3 Night at Hilton Amsterdam",
       content: "October 14th to October 17th",
       type: 1
+    },
+    {
+      title: "This is an activity",
+      content: "Wake up at 4am",
+      type: 2
     }
   ];
 
