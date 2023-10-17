@@ -15,7 +15,7 @@ function MyTripsPage() {
   if (TripArray.length > 0)
   {
     displayUpcomingTrips = TripArray.map(trip => 
-      <Col><TripCard name={trip.name} date={trip.ItineraryObject.startDate+' - '+trip.ItineraryObject.endDate} srcImg={trip.srcImg}></TripCard></Col>
+      <Col><TripCard name={trip.name} date={(trip.ItineraryObject.startDate.toDateString()).slice(4)+' - '+(trip.ItineraryObject.endDate.toDateString()).slice(4)} srcImg={trip.srcImg}></TripCard></Col>
       );
   }
   

@@ -17,7 +17,7 @@ function FormController(formData)
     console.log(userTrip.budget);
     console.log(userTrip.travelers);
 
-    TripArray.push(userTrip);
+    TripArray.TimePush(userTrip);
 }
 
 export default FormController;
