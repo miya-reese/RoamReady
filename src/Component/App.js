@@ -8,7 +8,6 @@ import Welcome from './Welcome';
 import Card from './Card';
 import MyTrips from './MyTrips';
 import SingleTrip from './SingleTrip';
-import AccordionTest from './AccordionTest';
 
 export default function App() {
     return (
@@ -22,7 +21,6 @@ export default function App() {
                     <Route path="*" element={<NoPage />}/>
                     <Route path="MyTrips" element={<MyTrips />}/>
                     <Route path="SingleTrip" element={<SingleTrip />} />
-                    <Route path="AccordionTest" element={<AccordionTest />} />
                 </Route>
             </Routes>
         </BrowserRouter>
