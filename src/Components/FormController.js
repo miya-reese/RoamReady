@@ -1,6 +1,6 @@
-import MapObject from "./classes/MapObject";
-import ItineraryObject from "./classes/ItineraryObject";
-import TripObject from "./classes/TripObject";
+import MapObject from "../Classes/MapObject";
+import ItineraryObject from "../Classes/ItineraryObject";
+import TripObject from "../Classes/TripObject";
 import TripArray from "../TripArray";
 
 function FormController(formData)

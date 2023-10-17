@@ -1,6 +1,6 @@
-import ItineraryObject from "./Component/classes/ItineraryObject";
-import MapObject from "./Component/classes/MapObject";
-import TripObject from "./Component/classes/TripObject";
+import ItineraryObject from "./Classes/ItineraryObject";
+import MapObject from "./Classes/MapObject";
+import TripObject from "./Classes/TripObject";
 
 const TripArray = [];
 
