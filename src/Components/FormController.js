@@ -36,15 +36,14 @@ function FormController(formData)
     let userItinerary = new ItineraryObject(parseDate(formData.startDate), parseDate(formData.endDate));
     let userTrip = new TripObject(formData.tripName, userMap, userItinerary, formData.budget, formData.numTravelers, '');
 
-    console.log(userTrip.name);
-    console.log(userTrip.MapObject.locationList[0]);
-    console.log(userTrip.MapObject.locationList[1]);
-    console.log(userTrip.ItineraryObject.startDate);
-    console.log(userTrip.ItineraryObject.endDate);
-    console.log(userTrip.budget);
-    console.log(userTrip.travelers);
+    // console.log(userTrip.name);
+    // console.log(userTrip.MapObject.locationList[0]);
+    // console.log(userTrip.MapObject.locationList[1]);
+    // console.log(userTrip.ItineraryObject.startDate);
+    // console.log(userTrip.ItineraryObject.endDate);
+    // console.log(userTrip.budget);
+    // console.log(userTrip.travelers);
 
-    //TripArray.push(userTrip);
     TimePush(userTrip);
 }
 

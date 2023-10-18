@@ -1,16 +1,32 @@
 import TripArray from "../TripArray";
+import PastTripArray from "../PastTripArray";
 
 export default function TimePush(newTrip)
-{/*pushes to past or present based on entered date or 0/1 for time arg*/
-    let i = 0;
-    while (i < TripArray.length)
+{
+    const today = new Date();
+    let x = TripArray;
+    if((today - newTrip.ItineraryObject.startDate) > 0)  //if trip is in past
     {
-        if((newTrip.ItineraryObject.startDate - TripArray[i].ItineraryObject.startDate) > 0)
+        x = PastTripArray;
+    }
+
+    console.log(x);
+
+    if (x.length===0)
+    {
+        x.push(newTrip);
+        return;
+    }
+
+    let i = 0;
+    while (i < x.length)
+    {
+        console.log(i);
+        if((newTrip.ItineraryObject.startDate - x[i].ItineraryObject.startDate) <= 0)
         {
-            TripArray.splice(i , 0, newTrip);
+            x.splice(i , 0, newTrip);
             return;
         }
         i++;
-
     }
 }
