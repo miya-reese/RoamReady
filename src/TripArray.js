@@ -27,7 +27,7 @@ TripArray.push(cinqueTrip);
 
 let oktoberfestMap = new MapObject('','');
 let oktoberfestItinerary = new ItineraryObject(new Date('September 22, 2023'), new Date('September 25, 2023'));
-let oktoberfestTrip = new TripObject('Cinque Terre', oktoberfestMap, oktoberfestItinerary, 0, 0, 'https://static2-viaggi.corriereobjects.it/wp-content/uploads/2023/09/schuetzen_festzelt_architektur_sebastian_lehner-9665.jpg?v=1694707947');
+let oktoberfestTrip = new TripObject('Oktoberfest', oktoberfestMap, oktoberfestItinerary, 0, 0, 'https://static2-viaggi.corriereobjects.it/wp-content/uploads/2023/09/schuetzen_festzelt_architektur_sebastian_lehner-9665.jpg?v=1694707947');
 TripArray.push(oktoberfestTrip);
 /**********************************************************/
 // TripArray.pop();

@@ -5,28 +5,36 @@ import TripCard from './TripCard.js'
 import TripArray from '../TripArray.js';
 
 // the page
-function MyTripsPage() {
+function MyTripsPage() 
+{ 
+  const pastTrips = [];
+  const today = new Date();
+  for(let i = 0; i<TripArray.length; i++)
+  {
+    if((today-(TripArray[i].ItineraryObject.startDate))>0)
+    {
+      let temp = TripArray[i];
+      TripArray.splice(i, 1);
+      pastTrips.push(temp);
+      i--;
+    }
+  }
+
+  let displayPastTrips = <h3 class="text-center">You haven't gone on any trips... yet :D </h3>;
+  if (pastTrips.length > 0) {
+    displayPastTrips = pastTrips.map(trip => 
+      <Col><TripCard name={trip.name} date={(trip.ItineraryObject.startDate.toDateString()).slice(4)+' - '+(trip.ItineraryObject.endDate.toDateString()).slice(4)} srcImg={trip.srcImg}></TripCard></Col>
+      );
+  }
 
   // map array into node
   let displayUpcomingTrips = <h3 class="text-center">No trips planned, get on it!!! :P</h3>;
-  // displayUpcomingTrips = TripArray.map(trip => 
-  //   <Col><TripCard name={trip.name} date={trip.startDate+"-"+trip.endDate} srcImg={trip.srcImg}></TripCard></Col>
-  //   );
   if (TripArray.length > 0)
   {
     displayUpcomingTrips = TripArray.map(trip => 
       <Col><TripCard name={trip.name} date={(trip.ItineraryObject.startDate.toDateString()).slice(4)+' - '+(trip.ItineraryObject.endDate.toDateString()).slice(4)} srcImg={trip.srcImg}></TripCard></Col>
       );
   }
-  
-  //const pastTrips = [];
-
-  // let displayPastTrips = <h3 class="text-center">You haven't gone on any trips... yet :D </h3>;
-  // if (pastTrips.length > 0) {
-  //   displayPastTrips = pastTrips.map(trip => 
-  //     <Col><TripCard name={trip.name} date={trip.date} srcImg={trip.srcImg}></TripCard></Col>
-  //     );
-  // }
   
   // display on page
   return (
@@ -50,7 +58,7 @@ function MyTripsPage() {
       <div style={{ height: '1vh'}} ></div>
       </Row>
       <div className="d-flex justify-content-evenly" >
-      {/* <Row>{displayPastTrips}</Row> */}
+      <Row>{displayPastTrips}</Row>
       </div>
       </div>
     </div>
