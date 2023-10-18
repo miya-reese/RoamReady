@@ -4,35 +4,17 @@ import TripObject from "./Classes/TripObject";
 
 const TripArray = [];
 
-/****** 5 Hard Coded Example Trips, 2 future, 3 past ******/
-let florenceMap = new MapObject('','');
-let florenceItinerary = new ItineraryObject(new Date('November 20, 2023'), new Date('November 22, 2023'));
-let florenceTrip = new TripObject('Florence Trip', florenceMap, florenceItinerary, 0, 0, 'https://media.timeout.com/images/105879414/750/422/image.jpg');
-TripArray.push(florenceTrip);
-
+/****** 5 Hard Coded Example Trips, 2 future *************/
 let romeMap = new MapObject('','');
-let romeItinerary = new ItineraryObject(new Date('November 13, 2023'), new Date('November 14, 2023'));
+let romeItinerary = new ItineraryObject(new Date('December 13, 2023'), new Date('December 14, 2023'));
 let romeTrip = new TripObject('Clubbing in Roma', romeMap, romeItinerary, 0, 0, 'https://www.wantedinrome.com/i/preview/storage/uploads/2019/03/Clubs_in_Rome.jpg');
 TripArray.push(romeTrip);
 
-let amalfiMap = new MapObject('','');
-let amalfiItinerary = new ItineraryObject(new Date('October 6, 2023'), new Date('Octobere 8, 2023'));
-let amalfiTrip = new TripObject('Amalfi Coast', amalfiMap, amalfiItinerary, 0, 0, 'https://www.tourissimo.travel/hubfs/Blog_pictures/The%20Path%20of%20Gods/Path%20of%20the%20Gods%20Blog%20Banner.jpg');
-TripArray.push(amalfiTrip);
-
-let cinqueMap = new MapObject('','');
-let cinqueItinerary = new ItineraryObject(new Date('September 29, 2023'), new Date('October 1, 2023'));
-let cinqueTrip = new TripObject('Cinque Terre', cinqueMap, cinqueItinerary, 0, 0, 'https://lp-cms-production.imgix.net/2021-08/GettyRF_595500583.jpg?auto=format&q=75&w=1920');
-TripArray.push(cinqueTrip);
-
-let oktoberfestMap = new MapObject('','');
-let oktoberfestItinerary = new ItineraryObject(new Date('September 22, 2023'), new Date('September 25, 2023'));
-let oktoberfestTrip = new TripObject('Oktoberfest', oktoberfestMap, oktoberfestItinerary, 0, 0, 'https://static2-viaggi.corriereobjects.it/wp-content/uploads/2023/09/schuetzen_festzelt_architektur_sebastian_lehner-9665.jpg?v=1694707947');
-TripArray.push(oktoberfestTrip);
+let florenceMap = new MapObject('','');
+let florenceItinerary = new ItineraryObject(new Date('December 20, 2023'), new Date('December 22, 2023'));
+let florenceTrip = new TripObject('Florence Trip', florenceMap, florenceItinerary, 0, 0, 'https://media.timeout.com/images/105879414/750/422/image.jpg');
+TripArray.push(florenceTrip);
 /**********************************************************/
-// TripArray.pop();
-// TripArray.pop();
-// TripArray.pop();
 // TripArray.pop();
 // TripArray.pop();
 

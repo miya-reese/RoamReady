@@ -1,28 +1,28 @@
-import React from 'react'
-import Row from 'react-bootstrap/Row'
-import Col from 'react-bootstrap/Col'
-import TripCard from './TripCard.js'
+import React from 'react';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import TripCard from './TripCard.js';
 import TripArray from '../TripArray.js';
+import PastTrips from '../PastTripArray.js';
 
 // the page
 function MyTripsPage() 
 { 
-  const pastTrips = [];
   const today = new Date();
   for(let i = 0; i<TripArray.length; i++)
   {
-    if((today-(TripArray[i].ItineraryObject.startDate))>0)
+    if((today-(TripArray[i].ItineraryObject.startDate))>0) //if trip is in the past (according to today's date)
     {
       let temp = TripArray[i];
       TripArray.splice(i, 1);
-      pastTrips.push(temp);
+      PastTrips.push(temp, 1);
       i--;
     }
   }
 
   let displayPastTrips = <h3 class="text-center">You haven't gone on any trips... yet :D </h3>;
-  if (pastTrips.length > 0) {
-    displayPastTrips = pastTrips.map(trip => 
+  if (PastTrips.length > 0) {
+    displayPastTrips = PastTrips.map(trip => 
       <Col><TripCard name={trip.name} date={(trip.ItineraryObject.startDate.toDateString()).slice(4)+' - '+(trip.ItineraryObject.endDate.toDateString()).slice(4)} srcImg={trip.srcImg}></TripCard></Col>
       );
   }
