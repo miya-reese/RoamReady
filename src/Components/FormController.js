@@ -1,15 +1,16 @@
 import MapObject from "../Classes/MapObject";
 import ItineraryObject from "../Classes/ItineraryObject";
 import TripObject from "../Classes/TripObject";
-import TripArray from "../TripArray";
+//import TripArray from "../TripArray";
+import TimePush from "./TimePush";
 
 function parseDate(inputDate) 
 {
     const dateParts = inputDate.split('-'); // Split the input into day, month, and year
     if (dateParts.length === 3) {
-      const day = parseInt(dateParts[0], 10);
+      const year = parseInt(dateParts[0], 10);
       const month = parseInt(dateParts[1], 10) - 1; // Subtract 1 from the month because months in JavaScript are zero-indexed (0-11)
-      const year = parseInt(dateParts[2], 10);
+      const day = parseInt(dateParts[2], 10);
       
       // Create a Date object
       const parsedDate = new Date(year, month, day);
@@ -43,8 +44,8 @@ function FormController(formData)
     console.log(userTrip.budget);
     console.log(userTrip.travelers);
 
-    TripArray.push(userTrip);
-    //TripArray.TimePush(userTrip);
+    //TripArray.push(userTrip);
+    TimePush(userTrip);
 }
 
 export default FormController;
