@@ -1,8 +1,12 @@
 import "./css/singleTrip.css";
-import romeToAmsterdam from "./images/romeToAmsterdam.png";
 
-import Card from "react-bootstrap/Card";
 import TripListView from "./TripListView.js";
+import MapUI from "./MapUI.js";
+import TripArray from "../TripArray.js"
+
+import {useLocation} from "react-router-dom";
+
+// const tripName = TripArray[2].name;
 
 const accordionData = [
     {
@@ -27,36 +31,18 @@ const accordionData = [
     }
   ];
 
-function Map() {
-    return (
-        <div class='container'>
-          <iframe
-            title="mapframe"
-            width="600"
-            height="400"
-            style={{border:0}}
-            loading="lazy"
-            allowFullScreen
-            referrerPolicy="no-referrer"
-            src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJVXealLU_xkcRja_At0z9AGY&key=
-            AIzaSyBe_wtXmNC3d5nEaUZGuORqjFH1oF50eeY">
-          </iframe>
-        </div>
-    );
-  }
-
-function SingleTrip() {
+const SingleTrip = () => {
+    const location = useLocation();
+    const {from} = location.state;
+    const tripName = TripArray[from].name;
     return (
         <>
             <h1>
-                Your Trip to Amsterdam
+                Your Trip to {tripName}
             </h1>
             <div className="box">
                 <div className="imgParent">
-                    <Card style={{width: 500, height: 400}}>
-                    <img className="routeImg" src={romeToAmsterdam} alt="rToA" style={{objectFit: "cover"}}/>
-                    </Card>
-                    <Card style={{width: 500}}><Map /></Card>
+                    <MapUI />
                 </div>
                 <div className="accFlexBox">
                     <TripListView className="accordionParent" accordionData={accordionData} />

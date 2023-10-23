@@ -20,7 +20,7 @@ export default function App() {
                     <Route path="Card" element={<Card />} />
                     <Route path="*" element={<NoPage />}/>
                     <Route path="MyTrips" element={<MyTrips />}/>
-                    <Route path="SingleTrip" element={<SingleTrip />} />
+                    <Route path="MyTrips/SingleTrip" element={<SingleTrip />}/>
                 </Route>
             </Routes>
         </BrowserRouter>

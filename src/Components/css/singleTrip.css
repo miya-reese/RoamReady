@@ -10,7 +10,6 @@
 
     .imgParent {
         position: relative;
-        flex-grow: 0.5;
         display: flex;
         flex-direction: column;
     }
