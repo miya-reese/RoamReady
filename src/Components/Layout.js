@@ -26,7 +26,7 @@ const Layout = () => {
                         <Link to="/Card">Profile</Link>
                     </li>
                     <li>
-                        <Link to="/SingleTrip">Test</Link>
+                        <Link to="/MyTrips/SingleTrip" state={{from: 2}}>Single Trip</Link>
                     </li>
                 </ul>
 

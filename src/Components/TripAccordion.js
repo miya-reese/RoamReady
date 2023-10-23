@@ -2,9 +2,9 @@ import Accordion from "react-bootstrap/Accordion";
 
 const TripAccordion = ({title, content, type, transportColor, accoColor, actColor}) => {
     let color;
-    if(type == 0)
+    if(type === 0)
         color = transportColor;
-    else if(type == 1)
+    else if(type === 1)
         color = accoColor;
     else
         color = actColor;
