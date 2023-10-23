@@ -2,7 +2,7 @@ import {useState} from "react";
 import TripFilter from "./TripFilter.js";
 import TripAccordion from "./TripAccordion.js";
 
-const TripListView = ({accordionData}) => {
+const TripListView = ({itemList}) => {
     const offColor = "black";
     const onColor = "green";
     const [transportColor, setTransportColor] = useState(offColor);
@@ -39,8 +39,8 @@ const TripListView = ({accordionData}) => {
                 <TripFilter handleTransportClick={handleTransportClick} handleAccoClick={handleAccoClick} 
                 handleActClick={handleActClick} handleNoneClick={handleNoneClick}/>
             </div>
-            {accordionData.map(({ title, content, type }) => (
-                <TripAccordion title={title} content={content} type={type} transportColor={transportColor} accoColor={accoColor}
+            {itemList.map((item) => (
+                <TripAccordion title={item.description} content={item.startTime} type={item.type} transportColor={transportColor} accoColor={accoColor}
                 actColor={actColor}/>
             ))}
         </div>

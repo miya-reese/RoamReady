@@ -17,7 +17,7 @@ function TripCard(props) {
           <Card.Title>{props.name}</Card.Title>
           <Card.Subtitle className="mb-2 text-muted">{props.date}</Card.Subtitle>
           {/* <Card.Link href={"/MyTrips/SingleTrip"} state={{tripID: 0}}>Viewy Details</Card.Link> */}
-          <Link to="/MyTrips/SingleTrip" state={{trip: props}}>View dets</Link>
+          <Link to="/MyTrips/SingleTrip" state={{trip: props}}>View details</Link>
         </Card.Body>
       </Card>
       </Container>
