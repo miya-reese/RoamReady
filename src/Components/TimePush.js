@@ -22,11 +22,14 @@ export default function TimePush(newTrip)
     while (i < x.length)
     {
         console.log(i);
-        if((newTrip.ItineraryObject.startDate - x[i].ItineraryObject.startDate) <= 0)
+        if((x===TripArray && ((newTrip.ItineraryObject.startDate - x[i].ItineraryObject.startDate) <= 0)) || (x===PastTripArray && ((newTrip.ItineraryObject.startDate - x[i].ItineraryObject.startDate) > 0)))
         {
+
             x.splice(i , 0, newTrip);
             return;
         }
         i++;
     }
+
+    console.log(x);
 }
