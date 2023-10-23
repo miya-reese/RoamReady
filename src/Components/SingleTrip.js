@@ -33,12 +33,11 @@ const accordionData = [
 
 const SingleTrip = () => {
     const location = useLocation();
-    const {from} = location.state;
-    const tripName = TripArray[from].name;
+    const {trip} = location.state;
     return (
         <>
             <h1>
-                Your Trip to {tripName}
+                Your Trip to {trip.name}
             </h1>
             <div className="box">
                 <div className="imgParent">

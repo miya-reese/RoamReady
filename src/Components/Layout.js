@@ -25,9 +25,6 @@ const Layout = () => {
                     <li>
                         <Link to="/Card">Profile</Link>
                     </li>
-                    <li>
-                        <Link to="/MyTrips/SingleTrip" state={{from: 2}}>Single Trip</Link>
-                    </li>
                 </ul>
 
                 <div className={`${styles.hamburger}`}>
