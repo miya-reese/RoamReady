@@ -2,6 +2,7 @@ import React from 'react'
 import { Container } from 'react-bootstrap';
 import Card from 'react-bootstrap/Card';
 import {Link} from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 function TripCard(props) {
     return (
@@ -23,5 +24,11 @@ function TripCard(props) {
       </Container>
     );
   }
+
+  TripCard.propTypes = {
+    name: PropTypes.string,
+    date: PropTypes.string,
+    srcImg: PropTypes.string
+  };
 
 export default TripCard;
