@@ -2,35 +2,19 @@ import {useState} from "react";
 import TripFilter from "./TripFilter.js";
 import TripAccordion from "./TripAccordion.js";
 
-const TripListView = ({itemList}) => {
-    const offColor = "black";
-    const onColor = "green";
-    const [transportColor, setTransportColor] = useState(offColor);
-    const [accoColor, setAccoColor] = useState(offColor);
-    const [actColor, setActColor] = useState(offColor);
-
+const TripListView = ({itemList, handleAccBodyClick}) => {
+    const [highlightType, setHighlightType] = useState(-1);
     function handleTransportClick() {
-        setTransportColor(onColor);
-        setAccoColor(offColor);
-        setActColor(offColor);
+        setHighlightType(0);
     }
-
     function handleAccoClick() {
-        setTransportColor(offColor);
-        setAccoColor(onColor);
-        setActColor(offColor);
+        setHighlightType(1);
     }
-
     function handleActClick() {
-        setTransportColor(offColor);
-        setAccoColor(offColor);
-        setActColor(onColor);
+        setHighlightType(2);
     }
-
     function handleNoneClick() {
-        setTransportColor(offColor);
-        setAccoColor(offColor);
-        setActColor(offColor);
+        setHighlightType(-1);
     }
 
     return(
@@ -40,8 +24,8 @@ const TripListView = ({itemList}) => {
                 handleActClick={handleActClick} handleNoneClick={handleNoneClick}/>
             </div>
             {itemList.map((item) => (
-                <TripAccordion title={item.description} content={item.startTime} type={item.type} transportColor={transportColor} accoColor={accoColor}
-                actColor={actColor}/>
+                <TripAccordion title={item.description} content={item.startTime} type={item.type} handleAccBodyClick={handleAccBodyClick}
+                highlightType={highlightType}/>
             ))}
         </div>
     )
