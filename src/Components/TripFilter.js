@@ -9,10 +9,10 @@ const TripFilter = ({handleTransportClick, handleAccoClick, handleActClick, hand
                 </Dropdown.Toggle>
 
                 <Dropdown.Menu>
-                    <Dropdown.Item onClick={handleTransportClick} href="#/action-1">Transportation</Dropdown.Item>
-                    <Dropdown.Item onClick={handleAccoClick} href="#/action-2">Accommodations</Dropdown.Item>
-                    <Dropdown.Item onClick={handleActClick} href="#/action-3">Activities</Dropdown.Item>
-                    <Dropdown.Item onClick={handleNoneClick} href="#/action-4">None</Dropdown.Item>
+                    <Dropdown.Item onClick={handleTransportClick}>Transportation</Dropdown.Item>
+                    <Dropdown.Item onClick={handleAccoClick}>Accommodations</Dropdown.Item>
+                    <Dropdown.Item onClick={handleActClick}>Activities</Dropdown.Item>
+                    <Dropdown.Item onClick={handleNoneClick}>None</Dropdown.Item>
                 </Dropdown.Menu>
             </Dropdown>
             </>
