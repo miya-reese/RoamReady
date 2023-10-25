@@ -27,7 +27,7 @@
     /* 2 */
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    font: normal normal normal 1rem/1.6 -apple-system, BlinkMacSystemFont, Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, Helvetica Neue, Helvetica, Arial, sans-serif;
     font-size: 1rem;
     box-sizing: border-box;
   }
@@ -52,7 +52,6 @@
   h1 {
     font-size: 2em;
     margin: 0.67em 0;
-    font-size: 1.75rem;
   }
   
   /* Grouping content
@@ -68,7 +67,6 @@
     /* 1 */
     overflow: visible;
     /* 2 */
-    height: 0;
     border: 0;
     border-top: 1px solid #dedede;
   }
@@ -88,8 +86,6 @@
     padding: 1rem;
     tab-size: 2;
     color: #404040;
-    font-family: Menlo, monospace;
-    font-size: 14px;
     margin: 0 0 1.5rem 0;
   }
   
