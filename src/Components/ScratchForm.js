@@ -4,6 +4,7 @@ import Form from 'react-bootstrap/Form';
 import Container from 'react-bootstrap/Container';
 import FormController from './FormController';
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 function ScratchForm() {
   const [formData, setFormData] = useState({
@@ -26,8 +27,10 @@ function ScratchForm() {
   };
 
   return (
-    <Container fluid className="mt-4 mr-12" style={{fontFamily: 'Fira Sans'}}>
+    // <Col xs={12} sm={6} className="p-3" style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0 }}>
+    <Container fluid className="p-0" style={{fontFamily: 'Fira Sans', background: 'white', width:'100%', height:'100vh'}}>
       <Form>
+        <br></br>
         <Form.Group className="mb-3" controlId="formName">
           <Form.Label style={{fontSize: '20px'}}>Trip Name</Form.Label>
           <Form.Control
@@ -39,6 +42,9 @@ function ScratchForm() {
             style={{fontFamily: 'Montserrat', color: '#737373'}}
           />
         </Form.Group>
+
+        <br></br>
+        <br></br>
 
         <Form.Group className="mb-3" controlId="formBasicLocation1">
           <Form.Label style={{fontSize: '20px'}}>First Location</Form.Label>
@@ -64,6 +70,9 @@ function ScratchForm() {
           />
         </Form.Group>
 
+        <br></br>
+        <br></br>
+
         <Form.Group className="mb-3" controlId="formDate">
           <Form.Label style={{fontSize: '20px'}}>Start Date</Form.Label>
           <Form.Control
@@ -88,6 +97,9 @@ function ScratchForm() {
           />
         </Form.Group>
 
+        <br></br>
+        <br></br>
+
         <Form.Group className="mb-3" controlId="formBudget">
           <Form.Label style={{fontSize: '20px'}}>Budget</Form.Label>
           <Form.Select
@@ -104,6 +116,8 @@ function ScratchForm() {
           </Form.Select>
         </Form.Group>
 
+        <br></br>
+
         <Form.Group className="mb-3" controlId="formTravelers">
           <Form.Label style={{fontSize: '20px'}}>Number of Travelers</Form.Label>
           <Form.Control
@@ -116,11 +130,10 @@ function ScratchForm() {
           />
         </Form.Group>
 
-        <Button style={{background: '#a4e0e1'}} variant="primary" type="button" onClick={() => FormController(formData)}>
-          Submit
-        </Button>
+        <Link to="/MyTrips"><Button style={{background: '#a4e0e1'}} variant="primary" type="button" onClick={() => FormController(formData)}>Submit</Button></Link>
       </Form>
-    </Container>
+      </Container>
+    // </Col>
   );
 }
 

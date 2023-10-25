@@ -4,7 +4,9 @@ import { Image } from "react-bootstrap";
 export default function FormImage()
 {
     return(
-        <div style={{ position: 'relative' }}>
+        <div style={{ position: 'relative',
+        width: '100%',
+        height: '100vh' }}>
             <Image
                 src="https://www.greeka.com/photos/greece/hero/athens-greece-1920.jpg"
                 alt="Greece at night"
