@@ -26,69 +26,75 @@ function ScratchForm() {
   };
 
   return (
-    <Container fluid>
+    <Container fluid className="mt-4 mr-12" style={{fontFamily: 'Fira Sans'}}>
       <Form>
         <Form.Group className="mb-3" controlId="formName">
-          <Form.Label>New Trip Name</Form.Label>
+          <Form.Label style={{fontSize: '20px'}}>Trip Name</Form.Label>
           <Form.Control
             type="text"
             name="tripName"
-            placeholder="Enter trip name:"
+            placeholder="Name"
             value={formData.tripName}
             onChange={handleInputChange}
+            style={{fontFamily: 'Montserrat'}}
           />
         </Form.Group>
 
         <Form.Group className="mb-3" controlId="formBasicLocation1">
-          <Form.Label>First Location</Form.Label>
+          <Form.Label style={{fontSize: '20px'}}>First Location</Form.Label>
           <Form.Control
             type="text"
             name="location1"
-            placeholder="Enter location:"
+            placeholder="Location"
             value={formData.location1}
             onChange={handleInputChange}
+            style={{fontFamily: 'Montserrat'}}
           />
         </Form.Group>
 
         <Form.Group className="mb-3" controlId="formBasicLocation2">
-          <Form.Label>Second Location</Form.Label>
+          <Form.Label style={{fontSize: '20px'}}>Second Location</Form.Label>
           <Form.Control
             type="text"
             name="location2"
-            placeholder="Enter location:"
+            placeholder="Location"
             value={formData.location2}
             onChange={handleInputChange}
+            style={{fontFamily: 'Montserrat'}}
           />
         </Form.Group>
 
         <Form.Group className="mb-3" controlId="formDate">
-          <Form.Label>Start Date</Form.Label>
+          <Form.Label style={{fontSize: '20px'}}>Start Date</Form.Label>
           <Form.Control
             type="date"
             name="startDate"
             placeholder="dd/mm/yyyy"
             value={formData.startDate}
             onChange={handleInputChange}
+            style={{fontFamily: 'Montserrat'}}
           />
         </Form.Group>
 
         <Form.Group className="mb-3" controlId="formEndDate">
-          <Form.Label>End Date</Form.Label>
+          <Form.Label style={{fontSize: '20px'}}>End Date</Form.Label>
           <Form.Control
             type="date"
             name="endDate"
             placeholder="dd/mm/yyyy"
             value={formData.endDate}
             onChange={handleInputChange}
+            style={{fontFamily: 'Montserrat'}}
           />
         </Form.Group>
 
         <Form.Group className="mb-3" controlId="formBudget">
-          <Form.Label>Trip Budget</Form.Label>
+          <Form.Label style={{fontSize: '20px'}}>Budget</Form.Label>
           <Form.Select
             name="budget"
             value={formData.budget}
             onChange={handleInputChange}
+            style={{fontFamily: 'Montserrat'}}
           >
             <option>Please Select</option>
             <option>$</option>
@@ -99,26 +105,16 @@ function ScratchForm() {
         </Form.Group>
 
         <Form.Group className="mb-3" controlId="formTravelers">
-          <Form.Label>Number of Travelers</Form.Label>
+          <Form.Label style={{fontSize: '20px'}}>Number of Travelers</Form.Label>
           <Form.Control
             type="number"
             name="numTravelers"
-            placeholder="Enter Number:"
+            placeholder="Enter Number"
+            style={{fontFamily: 'Montserrat'}}
             value={formData.numTravelers}
             onChange={handleInputChange}
           />
         </Form.Group>
-
-        {/* <Form.Group className="mb-3" controlId="formFile">
-          <Form.Label>Trip Image Selector (Optional)</Form.Label>
-          <Form.Control
-            type="file"
-            name="imgSrc"
-            placeholder="Click Here"
-            value={formData.imgSrc}
-            onChange={handleInputChange}
-          />
-        </Form.Group> */}
 
         <Button variant="primary" type="button" onClick={() => FormController(formData)}>
           Submit
