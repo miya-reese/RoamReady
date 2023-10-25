@@ -4,6 +4,7 @@ import Col from 'react-bootstrap/Col';
 import TripCard from './TripCard.js';
 import TripArray from '../TripArray.js';
 import PastTrips from '../PastTripArray.js';
+import './css/UI.css'
 
 // the page
 function MyTripsPage() 
@@ -30,12 +31,12 @@ function MyTripsPage()
     <div>
       <Row>
         <div style={{ height: '1vh'}} ></div>
-        <h1 className="text-center"> My Trips </h1>
+        <h1 className="title"> My Trips </h1>
         <div style={{height: '1vh'}}></div>
       </Row>
       <div className="row no-gutters">
         <Row>
-          <h5 className="text-center">Planned Trips</h5>
+          <h5 className="subtitle">Upcoming Trips</h5>
           <div style={{ height: '2vh'}} ></div>
         </Row>
         <div className="d-flex justify-content-evenly">
@@ -43,7 +44,7 @@ function MyTripsPage()
         </div>
         <Row>
           <div style={{ height: '2vh'}} ></div>
-          <h5 className="text-center">Past Trips</h5>
+          <h5 className="subtitle">Past Trips</h5>
           <div style={{ height: '1vh'}} ></div>
         </Row>
         <div className="d-flex justify-content-evenly" >
