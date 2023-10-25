@@ -25,6 +25,11 @@
     /* 1 */
     -webkit-text-size-adjust: 100%;
     /* 2 */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font: normal normal normal 1rem/1.6 -apple-system, BlinkMacSystemFont, Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 1rem;
+    box-sizing: border-box;
   }
   
   /* Sections
@@ -32,9 +37,6 @@
   /**
    * Remove the margin in all browsers.
    */
-  body {
-    margin: 0;
-  }
   
   /**
    * Render the `main` element consistently in IE.
@@ -50,6 +52,7 @@
   h1 {
     font-size: 2em;
     margin: 0.67em 0;
+    font-size: 1.75rem;
   }
   
   /* Grouping content
@@ -65,6 +68,9 @@
     /* 1 */
     overflow: visible;
     /* 2 */
+    height: 0;
+    border: 0;
+    border-top: 1px solid #dedede;
   }
   
   /**
@@ -72,10 +78,19 @@
    * 2. Correct the odd `em` font sizing in all browsers.
    */
   pre {
-    font-family: monospace, monospace;
+    font-family: monospace;
     /* 1 */
     font-size: 1em;
     /* 2 */
+    border: 0;
+    border-radius: 4px;
+    background: transparent;
+    padding: 1rem;
+    tab-size: 2;
+    color: #404040;
+    font-family: Menlo, monospace;
+    font-size: 14px;
+    margin: 0 0 1.5rem 0;
   }
   
   /* Text-level semantics
@@ -85,6 +100,8 @@
    */
   a {
     background-color: transparent;
+    color: #0366ee;
+    text-decoration: none;
   }
   
   /**
@@ -115,7 +132,7 @@
   code,
   kbd,
   samp {
-    font-family: monospace, monospace;
+    font-family: monospace;
     /* 1 */
     font-size: 1em;
     /* 2 */
@@ -352,10 +369,6 @@
     display: none;
   }
   
-  html {
-    box-sizing: border-box;
-  }
-  
   *,
   *::before,
   *::after {
@@ -369,17 +382,12 @@
   /**
    * Scaffolding
    */
-  html {
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    font: normal normal normal 1rem/1.6 -apple-system, BlinkMacSystemFont, Helvetica Neue, Helvetica, Arial, sans-serif;
-    font-size: 1rem;
-  }
   
   body {
     color: #404040;
     background: white;
     font-size: 1rem;
+    margin: 0;
   }
   
   p,
@@ -424,10 +432,6 @@
     margin-top: 2rem;
   }
   
-  h1 {
-    font-size: 1.75rem;
-  }
-  
   h2 {
     font-size: 1.5rem;
   }
@@ -467,11 +471,6 @@
     }
   }
   
-  a {
-    color: #0366ee;
-    text-decoration: none;
-  }
-  
   a:hover, a:active, a:focus {
     color: #0246a2;
     text-decoration: underline;
@@ -494,18 +493,6 @@
     margin-top: 1.5rem;
     font-size: 1rem;
     text-align: right;
-  }
-  
-  pre {
-    border: 0;
-    border-radius: 4px;
-    background: transparent;
-    padding: 1rem;
-    tab-size: 2;
-    color: #404040;
-    font-family: Menlo, monospace;
-    font-size: 14px;
-    margin: 0 0 1.5rem 0;
   }
   
   pre code {
@@ -536,12 +523,6 @@
     padding: 0 0.2rem;
     border: 1px solid #dedede;
     border-radius: 4px;
-  }
-  
-  hr {
-    height: 0;
-    border: 0;
-    border-top: 1px solid #dedede;
   }
   
   dt {
@@ -589,23 +570,16 @@
   .flex-large {
     padding-left: 1rem;
     padding-right: 1rem;
+    flex-basis: 100%;
+    margin-bottom: 1rem;
   }
   
   .flex-row {
     margin-left: -1rem;
     margin-right: -1rem;
-  }
-  
-  .flex-row {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-  }
-  
-  .flex-small,
-  .flex-large {
-    flex-basis: 100%;
-    margin-bottom: 1rem;
   }
   
   /* Small screen breakpoint */
@@ -889,23 +863,6 @@
   [type=color]:focus, [type=color]:active, [type=date]:focus, [type=date]:active, [type=datetime]:focus, [type=datetime]:active, [type=datetime-local]:focus, [type=datetime-local]:active, [type=email]:focus, [type=email]:active, [type=month]:focus, [type=month]:active, [type=number]:focus, [type=number]:active, [type=password]:focus, [type=password]:active, [type=search]:focus, [type=search]:active, [type=tel]:focus, [type=tel]:active, [type=text]:focus, [type=text]:active, [type=url]:focus, [type=url]:active, [type=week]:focus, [type=week]:active, [type=time]:focus, [type=time]:active, select:focus, select:active, textarea:focus, textarea:active {
     border: 1px solid #0366ee;
     box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.1), 0 0 6px #8cbcfe;
-  }
-  
-  textarea {
-    overflow: auto;
-    height: auto;
-  }
-  
-  fieldset {
-    border: 1px solid #dedede;
-    border-radius: 4px;
-    padding: 1rem;
-    margin: 1.5rem 0;
-  }
-  
-  legend {
-    padding: 0 0.5rem;
-    font-weight: 600;
   }
   
   select {
