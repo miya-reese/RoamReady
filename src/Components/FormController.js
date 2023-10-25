@@ -36,8 +36,8 @@ function FormController(formData)
     let userTrip = new TripObject(formData.tripName, userMap, userItinerary, formData.budget, formData.numTravelers, ''); //add formdata.imgSrc
 
     console.log(userTrip.name);
-    console.log(userTrip.MapObject.locationList[0]);
-    console.log(userTrip.MapObject.locationList[1]);
+    console.log(userTrip.MapObject.origin);
+    console.log(userTrip.MapObject.destination);
     console.log(userTrip.ItineraryObject.startDate);
     console.log(userTrip.ItineraryObject.endDate);
     console.log(userTrip.budget);
