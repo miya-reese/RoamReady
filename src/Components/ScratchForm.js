@@ -109,17 +109,6 @@ function ScratchForm() {
           />
         </Form.Group>
 
-        {/* <Form.Group className="mb-3" controlId="formFile">
-          <Form.Label>Trip Image Selector (Optional)</Form.Label>
-          <Form.Control
-            type="file"
-            name="imgSrc"
-            placeholder="Click Here"
-            value={formData.imgSrc}
-            onChange={handleInputChange}
-          />
-        </Form.Group> */}
-
         <Button variant="primary" type="button" onClick={() => FormController(formData)}>
           Submit
         </Button>
