@@ -36,7 +36,7 @@ function ScratchForm() {
             placeholder="Name"
             value={formData.tripName}
             onChange={handleInputChange}
-            style={{fontFamily: 'Montserrat'}}
+            style={{fontFamily: 'Montserrat', color: '#737373'}}
           />
         </Form.Group>
 
@@ -48,7 +48,7 @@ function ScratchForm() {
             placeholder="Location"
             value={formData.location1}
             onChange={handleInputChange}
-            style={{fontFamily: 'Montserrat'}}
+            style={{fontFamily: 'Montserrat', color: '#737373'}}
           />
         </Form.Group>
 
@@ -60,7 +60,7 @@ function ScratchForm() {
             placeholder="Location"
             value={formData.location2}
             onChange={handleInputChange}
-            style={{fontFamily: 'Montserrat'}}
+            style={{fontFamily: 'Montserrat', color: '#737373'}}
           />
         </Form.Group>
 
@@ -72,7 +72,7 @@ function ScratchForm() {
             placeholder="dd/mm/yyyy"
             value={formData.startDate}
             onChange={handleInputChange}
-            style={{fontFamily: 'Montserrat'}}
+            style={{fontFamily: 'Montserrat', color: '#737373'}}
           />
         </Form.Group>
 
@@ -84,7 +84,7 @@ function ScratchForm() {
             placeholder="dd/mm/yyyy"
             value={formData.endDate}
             onChange={handleInputChange}
-            style={{fontFamily: 'Montserrat'}}
+            style={{fontFamily: 'Montserrat', color: '#737373'}}
           />
         </Form.Group>
 
@@ -94,7 +94,7 @@ function ScratchForm() {
             name="budget"
             value={formData.budget}
             onChange={handleInputChange}
-            style={{fontFamily: 'Montserrat'}}
+            style={{fontFamily: 'Montserrat', color: '#737373'}}
           >
             <option>Please Select</option>
             <option>$</option>
@@ -110,13 +110,13 @@ function ScratchForm() {
             type="number"
             name="numTravelers"
             placeholder="Enter Number"
-            style={{fontFamily: 'Montserrat'}}
+            style={{fontFamily: 'Montserrat', color: '#737373'}}
             value={formData.numTravelers}
             onChange={handleInputChange}
           />
         </Form.Group>
 
-        <Button variant="primary" type="button" onClick={() => FormController(formData)}>
+        <Button style={{background: '#a4e0e1'}} variant="primary" type="button" onClick={() => FormController(formData)}>
           Submit
         </Button>
       </Form>

@@ -10,7 +10,7 @@ export default function FormScreen()
             <Col xs={12} sm={6} className="p-0">
                 <FormImage />
             </Col>
-            <Col xs={12} sm={6} className="p-0">
+            <Col xs={12} sm={6} className="p-3">
                 <ScratchForm />
             </Col>
         </Row>
