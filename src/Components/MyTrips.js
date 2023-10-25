@@ -13,7 +13,7 @@ function MyTripsPage()
   let displayPastTrips = <h3 className="text-center">You haven't gone on any trips... yet :D </h3>;
   if (PastTrips.length > 0) {
     displayPastTrips = PastTrips.map(trip => 
-      <Col><TripCard name={trip.name} date={(trip.ItineraryObject.startDate.toDateString()).slice(4)+' - '+(trip.ItineraryObject.endDate.toDateString()).slice(4)} srcImg={trip.srcImg}></TripCard></Col>
+      <Col key={trip.name}><TripCard name={trip.name} date={(trip.ItineraryObject.startDate.toDateString()).slice(4)+' - '+(trip.ItineraryObject.endDate.toDateString()).slice(4)} srcImg={trip.srcImg}></TripCard></Col>
       );
   }
 
@@ -21,7 +21,7 @@ function MyTripsPage()
   let displayUpcomingTrips = <h3 className="text-center">No trips planned, get on it!!! :P</h3>;
   if (TripArray.length > 0) {
     displayUpcomingTrips = TripArray.map(trip => 
-      <Col><TripCard {...trip} date={(trip.ItineraryObject.startDate.toDateString()).slice(4)+' - '+(trip.ItineraryObject.endDate.toDateString()).slice(4)} srcImg={trip.srcImg}></TripCard></Col>
+      <Col key={trip.name}><TripCard {...trip} date={(trip.ItineraryObject.startDate.toDateString()).slice(4)+' - '+(trip.ItineraryObject.endDate.toDateString()).slice(4)} srcImg={trip.srcImg}></TripCard></Col>
       // <Col><TripCard {...trip} /></Col>
       );
   }
