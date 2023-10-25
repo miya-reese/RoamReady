@@ -2,38 +2,23 @@ import "./css/singleTrip.css";
 
 import TripListView from "./TripListView.js";
 import MapUI from "./MapUI.js";
-import TripArray from "../TripArray.js"
 
 import {useLocation} from "react-router-dom";
-
-// const tripName = TripArray[2].name;
-
-// const accordionData = [
-//     {
-//       title: "Rome Fiumincino Airport to Amsterdam Schipol Airport",
-//       content: "7:30, Turkish Airlines",
-//       type: 0
-//     },
-//     {
-//       title: "Metro to Hotel",
-//       content: "Every 15 minutes",
-//       type: 0
-//     },
-//     {
-//       title: "3 Night at Hilton Amsterdam",
-//       content: "October 14th to October 17th",
-//       type: 1
-//     },
-//     {
-//       title: "This is an activity",
-//       content: "Wake up at 4am",
-//       type: 2
-//     }
-//   ];
+import {useState} from "react";
 
 const SingleTrip = () => {
     const location = useLocation();
     const {trip} = location.state;
+
+
+    const [placeMode, setPlaceMode] = useState(false);
+    const [place, setPlace] = useState("");
+
+    function handleAccBodyClick(place) {
+        setPlaceMode(true);
+        setPlace(place);
+    }
+
     return (
         <>
             <h1>
@@ -41,10 +26,16 @@ const SingleTrip = () => {
             </h1>
             <div className="box">
                 <div className="imgParent">
-                    <MapUI />
+                    <MapUI startLoc={trip.MapObject.locationList[0]} endLoc={trip.MapObject.locationList[1]} placeMode={placeMode} 
+                    place={place}/>
+                    <div style={{color: "blue", textDecorationLine: "underline", textAlign: "center"}} onClick={() => {
+                      setPlaceMode(false);
+                    }}>
+                      FullTripView
+                    </div>
                 </div>
                 <div className="accFlexBox">
-                    <TripListView itemList={trip.ItineraryObject.itineraryItemList} />
+                    <TripListView itemList={trip.ItineraryObject.itineraryItemList} handleAccBodyClick={handleAccBodyClick} />
                 </div>
             </div>
         </>

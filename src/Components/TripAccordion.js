@@ -1,13 +1,9 @@
 import Accordion from "react-bootstrap/Accordion";
 
-const TripAccordion = ({title, content, type, transportColor, accoColor, actColor}) => {
-    let color;
-    if(type === 0)
-        color = transportColor;
-    else if(type === 1)
-        color = accoColor;
-    else
-        color = actColor;
+const TripAccordion = ({title, content, type, handleAccBodyClick, highlightType}) => {
+    let color = "black";
+    if(type === highlightType)
+        color = "green";
     return (
         <>
             <Accordion>
@@ -21,6 +17,11 @@ const TripAccordion = ({title, content, type, transportColor, accoColor, actColo
                         <a href="https://www.expedia.com/" target="_blank" rel="noreferrer">
                             {content}
                         </a>{" "}
+                        <div style={{color: "blue", textDecorationLine: "underline"}} onClick={() => {
+                            handleAccBodyClick(title)
+                        }}>
+                            MapView
+                        </div>
                     </Accordion.Body>
                 </Accordion.Item>
             </Accordion>
