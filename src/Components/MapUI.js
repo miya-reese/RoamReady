@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 function MapUI({startLoc, endLoc, placeMode, place}) {
   const apiKey = "AIzaSyBe_yqP9GViK5G5veZ-Kr0mTLIl-dSmlQI";
@@ -11,7 +12,7 @@ function MapUI({startLoc, endLoc, placeMode, place}) {
     "&mode=transit";
   }
   return (
-      <div class='container'>
+      <div className='container'>
         <iframe
           title="mapframe"
           width="600"
@@ -19,12 +20,19 @@ function MapUI({startLoc, endLoc, placeMode, place}) {
           style={{border:0}}
           loading="lazy"
           allowfullscreen
-          referrerpolicy="no-referrer-when-downgrade"
+          referrerPolicy="no-referrer-when-downgrade"
           src={url}>
         </iframe>
       </div>
   );
 }
+
+MapUI.propTypes = {
+  startLoc: PropTypes.string,
+  endLoc: PropTypes.string,
+  placeMode: PropTypes.bool,
+  place: PropTypes.string
+};
 
 export default MapUI;
 
