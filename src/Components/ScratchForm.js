@@ -27,7 +27,6 @@ function ScratchForm() {
 
   return (
     <Container fluid>
-      <h1 className="text-center">New Trip From Scratch</h1>
       <Form>
         <Form.Group className="mb-3" controlId="formName">
           <Form.Label>New Trip Name</Form.Label>
