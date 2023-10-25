@@ -1,32 +1,39 @@
 import Accordion from "react-bootstrap/Accordion";
+import PropTypes from "prop-types";
 
-const TripAccordion = ({title, content, type, handleAccBodyClick, highlightType}) => {
+function TripAccordion (props) {
     let color = "black";
-    if(type === highlightType)
+    if(props.type === props.highlightType)
         color = "green";
     return (
-        <>
-            <Accordion>
-                <Accordion.Item eventKey="0" class="testTrip">
-                    <Accordion.Header>
-                        <body style={{color: color}}>
-                        {title}
-                        </body>
-                    </Accordion.Header>
-                    <Accordion.Body>
-                        <a href="https://www.expedia.com/" target="_blank" rel="noreferrer">
-                            {content}
-                        </a>{" "}
-                        <div style={{color: "blue", textDecorationLine: "underline"}} onClick={() => {
-                            handleAccBodyClick(title)
-                        }}>
-                            MapView
-                        </div>
-                    </Accordion.Body>
-                </Accordion.Item>
-            </Accordion>
-        </>
+        <Accordion>
+            <Accordion.Item eventKey="0" class="testTrip">
+                <Accordion.Header>
+                    <body style={{color: color}}>
+                    {props.title}
+                    </body>
+                </Accordion.Header>
+                <Accordion.Body>
+                    <a href="https://www.expedia.com/" target="_blank" rel="noreferrer">
+                        {props.content}
+                    </a>{" "}
+                    <div style={{color: "blue", textDecorationLine: "underline"}} onClick={() => {
+                        props.handleAccBodyClick(props.title)
+                    }}>
+                        MapView
+                    </div>
+                </Accordion.Body>
+            </Accordion.Item>
+        </Accordion>
     );
 }
+
+TripAccordion.propTypes = {
+    title: PropTypes.string,
+    content: PropTypes.string,
+    type: PropTypes.number,
+    highlightType: PropTypes.number,
+    handleAccBodyClick: PropTypes.func
+};
 
 export default TripAccordion;
