@@ -1,32 +1,27 @@
 import React from 'react'
-import { Container } from 'react-bootstrap';
-import Card from 'react-bootstrap/Card';
 import {Link} from 'react-router-dom';
 import PropTypes from 'prop-types';
 import './css/UI.css'
 
-function TripCard(props) {
+  function TripCard(props) {
     return (
-      <Container style={{width: '30vw'}}>
-        <Card className='custom-class'>
-        <Card.Img variant="top" src={props.srcImg}
-        style={{objectFit: "contain"}}
-        alt={props.name}/>
-        <Card.Body>
-          <Card.Title className='card-title'>{props.name}</Card.Title>
-          <Card.Subtitle className="custom-date">{props.date}</Card.Subtitle>
-          {/* <Card.Link href={"/MyTrips/SingleTrip"} state={{tripID: 0}}>Viewy Details</Card.Link> */}
+      <div style={{width: 280, height: 365}}>
+        <img src={props.srcImg} width={280} height={280} alt={props.name}/>
+        <div className='card-div'>
+          <h1 className='card-title'>{props.name}</h1>
+          <h2 className='card-date'>{props.date}</h2>
           <Link to="/MyTrips/SingleTrip" state={{trip: props}} className='card-details'>View details</Link>
-        </Card.Body>
-      </Card>
-      </Container>
+        </div>
+      </div>
+
     );
-  }
+  };
 
   TripCard.propTypes = {
     name: PropTypes.string,
     date: PropTypes.string,
     srcImg: PropTypes.string
   };
+
 
 export default TripCard;
