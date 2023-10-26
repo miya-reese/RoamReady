@@ -131,6 +131,7 @@ function ScratchForm() {
         </Form.Group>
 
         <Link to="/MyTrips"><Button style={{background: '#a4e0e1'}} variant="primary" type="button" onClick={() => FormController(formData)}>Submit</Button></Link>
+
       </Form>
       </Container>
     // </Col>
