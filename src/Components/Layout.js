@@ -19,7 +19,7 @@ const Layout = () => {
                     </li>
 
                     <li>
-                        <Link to="/ScratchForm">Create</Link>
+                        <Link to="/FormScreen">Create</Link>
                     </li>
 
                     <li>
