@@ -249,7 +249,6 @@
     padding: 0.35em 0.75em 0.625em;
     border: 1px solid #dedede;
     border-radius: 4px;
-    padding: 1rem;
     margin: 1.5rem 0;
   }
   
@@ -272,7 +271,6 @@
     /* 3 */
     white-space: normal;
     /* 1 */
-    padding: 0 0.5rem;
     font-weight: 600;
   }
   
