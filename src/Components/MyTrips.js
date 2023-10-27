@@ -14,7 +14,9 @@ function MyTripsPage()
   if (PastTrips.length > 0) {
     displayPastTrips = PastTrips.map(trip => 
       <Col>
-        <div key={trip.name}><TripCard name={trip.name} date={(trip.ItineraryObject.startDate.toDateString()).slice(4)+' - '+(trip.ItineraryObject.endDate.toDateString()).slice(4)} srcImg={trip.srcImg}></TripCard></div>
+        <div key={trip.name}>
+          <TripCard {...trip} date={(trip.ItineraryObject.startDate.toDateString()).slice(4)+' - '+(trip.ItineraryObject.endDate.toDateString()).slice(4)} srcImg={trip.srcImg}></TripCard>
+        </div>
       </Col>
       );
   }
@@ -24,7 +26,9 @@ function MyTripsPage()
   if (TripArray.length > 0) {
     displayUpcomingTrips = TripArray.map(trip => 
       <Col>
-        <div key={trip.name}><TripCard {...trip} name={trip.name} date={(trip.ItineraryObject.startDate.toDateString()).slice(4)+' - '+(trip.ItineraryObject.endDate.toDateString()).slice(4)} srcImg={trip.srcImg}></TripCard></div>
+        <div key={trip.name}>
+          <TripCard {...trip} date={(trip.ItineraryObject.startDate.toDateString()).slice(4)+' - '+(trip.ItineraryObject.endDate.toDateString()).slice(4)} srcImg={trip.srcImg}></TripCard>
+        </div>
       </Col>
       );
   }
