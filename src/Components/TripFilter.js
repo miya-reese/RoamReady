@@ -1,4 +1,5 @@
 import Dropdown from "react-bootstrap/Dropdown";
+import PropTypes from 'prop-types';
 
 const TripFilter = ({handleTransportClick, handleAccoClick, handleActClick, handleNoneClick}) => {
     return (
@@ -17,6 +18,13 @@ const TripFilter = ({handleTransportClick, handleAccoClick, handleActClick, hand
             </Dropdown>
             </>
     )
+}
+
+TripFilter.propTypes = {
+    handleTransportClick: PropTypes.func,
+    handleAccoClick: PropTypes.func,
+    handleActClick: PropTypes.func,
+    handleNoneClick: PropTypes.func,
 }
 
 export default TripFilter;
