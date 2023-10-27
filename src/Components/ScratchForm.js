@@ -28,7 +28,7 @@ function ScratchForm() {
 
   return (
     // <Col xs={12} sm={6} className="p-3" style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0 }}>
-    <Container fluid className="p-0" style={{fontFamily: 'Fira Sans', background: 'white', width:'100%', height:'100vh'}}>
+    <Container flex className="p-0" style={{fontFamily: 'Fira Sans', background: 'white', width:'100%', height:'100vh'}}>
       <Form>
         <br></br>
         <Form.Group className="mb-3" controlId="formName">

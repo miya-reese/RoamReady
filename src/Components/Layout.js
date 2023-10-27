@@ -1,19 +1,26 @@
 import { Outlet, Link } from "react-router-dom";
-import styles from './css/Navbar.module.css';
-import logo from './images/ROAM.png';
+//import styles from './css/Navbar.module.css';
+// import logo from './images/ROAM.png';
 
 
 const Layout = () => {
   return (
     <div className="App">
         <header className="App-header">
-            <nav className={`${styles.navbar}`}>
+            {/*className={`${styles.navbar}`}*/}
+            <nav className='p-1 m-0' style={{background:'#5f9ea0'}}>
 
                 {/* logo */}
                 <Link to="/Welcome">
-                        <img src={logo} alt="logo" style={{width: 200, height: 200}}/>
+                        <h1 style={{fontFamily:'League Spartan', color:'white'}}>RoamReady</h1>
+                        {/* <img src={logo} alt="logo" style={{width: 200, height: 200}}/> */}
 		        </Link>
-                <ul className={`${styles.navMenu}`}>
+                {/* className={`${styles.navMenu}` */}
+                <ul>
+                    <li>
+                        <Link to="/Card">About Us</Link>
+                    </li>
+                        
                     <li>
                         <Link to="/MyTrips">My Trips</Link>                    
                     </li>
@@ -26,19 +33,12 @@ const Layout = () => {
                         <Link to="/Card">Profile</Link>
                     </li>
                 </ul>
-
-                <div className={`${styles.hamburger}`}>
-                    <span className={`${styles.bar}`}></span>
-                    <span className={`${styles.bar}`}></span>
-                    <span className={`${styles.bar}`}></span>
-                </div>
             </nav>
 
             <Outlet />
         </header>
     </div>
     );
-
 }
 
 export default Layout;
