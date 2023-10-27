@@ -1,6 +1,7 @@
 import {useState} from "react";
 import TripFilter from "./TripFilter.js";
 import TripAccordion from "./TripAccordion.js";
+import PropTypes from "prop-types";
 
 const TripListView = ({itemList, handleAccBodyClick}) => {
     const [highlightType, setHighlightType] = useState(-1);
@@ -29,6 +30,11 @@ const TripListView = ({itemList, handleAccBodyClick}) => {
             ))}
         </div>
     )
+}
+
+TripListView.propTypes = {
+    itemList: PropTypes.array,
+    handleAccClick: PropTypes.func,
 }
 
 export default TripListView;
