@@ -34,7 +34,7 @@ const TripListView = ({itemList, handleAccBodyClick}) => {
 
 TripListView.propTypes = {
     itemList: PropTypes.array,
-    handleAccClick: PropTypes.func,
+    handleAccBodyClick: PropTypes.func,
 }
 
 export default TripListView;
