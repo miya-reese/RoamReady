@@ -14,11 +14,9 @@ const SingleTrip = () => {
     const [placeMode, setPlaceMode] = useState(false);
     const [place, setPlace] = useState("");
 
-    function handleAccBodyClick(place, keyPressed) {
-        if(keyPressed == "m"){
+    function handleAccBodyClick(place) {
             setPlaceMode(true);
             setPlace(place);
-        }
     }
 
     return (
@@ -32,6 +30,8 @@ const SingleTrip = () => {
                     place={place}/>
                     <div style={{color: "blue", textDecorationLine: "underline", textAlign: "center"}} onClick={() => {
                       setPlaceMode(false);
+                    }} onKeyDown={() => {
+                        setPlaceMode(false);
                     }}>
                       FullTripView
                     </div>
