@@ -34,7 +34,7 @@ function MyTripsPage()
   }
   
   // display on page
-  return (
+  return (  
     <div>
       <Row>
         <div style={{ height: '1vh'}} ></div>
