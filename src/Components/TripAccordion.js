@@ -18,7 +18,9 @@ function TripAccordion (props) {
                         {props.content}
                     </a>{" "}
                     <div style={{color: "blue", textDecorationLine: "underline"}} onClick={() => {
-                        props.handleAccBodyClick(props.title)
+                        props.handleAccBodyClick(props.title, "m")
+                    }} onKeyDown={(e) => {
+                        props.handleAccBodyClick(props.title, e.key)
                     }}>
                         MapView
                     </div>

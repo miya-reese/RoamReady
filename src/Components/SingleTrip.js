@@ -14,9 +14,11 @@ const SingleTrip = () => {
     const [placeMode, setPlaceMode] = useState(false);
     const [place, setPlace] = useState("");
 
-    function handleAccBodyClick(place) {
-        setPlaceMode(true);
-        setPlace(place);
+    function handleAccBodyClick(place, keyPressed) {
+        if(keyPressed == "m"){
+            setPlaceMode(true);
+            setPlace(place);
+        }
     }
 
     return (
