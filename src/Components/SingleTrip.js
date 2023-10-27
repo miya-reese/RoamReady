@@ -26,7 +26,7 @@ const SingleTrip = () => {
             </h1>
             <div className="box">
                 <div className="imgParent">
-                    <MapUI startLoc={trip.MapObject.locationList[0]} endLoc={trip.MapObject.locationList[1]} placeMode={placeMode} 
+                    <MapUI startLoc={trip.MapObject.origin} endLoc={trip.MapObject.destination} placeMode={placeMode} 
                     place={place}/>
                     <div style={{color: "blue", textDecorationLine: "underline", textAlign: "center"}} onClick={() => {
                       setPlaceMode(false);
