@@ -1,9 +1,8 @@
-import React from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import Container from 'react-bootstrap/Container';
 import FormController from './FormController';
-import { useState } from 'react';
+import { useState, React } from 'react';
 import { Link } from 'react-router-dom';
 
 function ScratchForm() {

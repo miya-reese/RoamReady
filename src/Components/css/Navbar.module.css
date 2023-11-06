@@ -10,10 +10,9 @@ ul {
 }
 
 a {
-  font-family: League Spartan;
+  font-family: League Spartan, sans-serif;
   font-size: .8em;
   color:white;
-  /* text-decoration: underline; */
 }
 
 a:visited {
