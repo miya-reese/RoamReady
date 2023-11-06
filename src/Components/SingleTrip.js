@@ -22,7 +22,7 @@ const SingleTrip = () => {
     return (
         <>
             <h1>
-                Your Trip to {trip.name}
+                {trip.name}
             </h1>
             <div className="box">
                 <div className="imgParent">

@@ -18,7 +18,7 @@ export default function FormImage()
             />
             <h1
                 style={{
-                fontSize: '50px',
+                fontSize: '3em',
                 fontFamily: 'Fira Sans',
                 position: 'absolute',
                 top: '5%',
@@ -33,7 +33,7 @@ export default function FormImage()
                 style={{
                 fontFamily: 'Fira Sans',
                 position: 'absolute',
-                fontSize: '18px',
+                fontSize: '1.1em',
                 top: '15%', // Adjust the top position as needed
                 left: '10%',
                 zIndex: 1,
