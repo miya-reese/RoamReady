@@ -1,0 +1,67 @@
+/*Profile Page*/
+.prof-name {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 1000;
+    font-size: 18px;
+    color: #12263a;
+    text-align: left;
+    top: 16px;
+    position: relative;
+  }
+
+  .prof-subtitle {
+    font-family: 'Fira Sans', sans-serif;
+    font-weight: light;
+    font-size: 18px;
+    color: #5f9ea0;
+    text-align: left;
+    position: relative;
+    top: 20px;
+  }
+
+  .prof-info {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: light;
+    font-size: 16px;
+    color: #000000;
+    text-align: left;
+    position: relative;
+    top: 30px;
+  }
+
+  .prof-details {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: light;
+    font-size: 14px;
+    color: #a4e0e1;
+    text-align: left;
+    position: relative;
+    top: 3px;
+    left: 10px;
+  }
+
+  .prof-col1 {
+    height: 500px;
+    width: 300px;
+    top: 50px;
+    left: 180px;
+    position: relative;
+    background-color: white;
+    white-space:pre;
+  }
+
+  .prof-col2 {
+    height: 500px;
+    width: 300px;
+    top: 40px;
+    left: 20px;
+    position: relative;
+    background-color: #ffffff;
+    white-space:pre;
+  }
+
+  .water-img {
+    height: 580;
+    width: 100%;
+    position: static;
+  }
