@@ -1,65 +1,62 @@
 /* default styling */
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-  }
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
   
-  ul {
-    list-style: none;
-  }
+ul {
+  list-style: none;
+}
 
-  .custom-link {
-    text-decoration: none;
-    color:white;
-  }
+a {
+  font-family: League Spartan;
+  font-size: .8em;
+  color:white;
+  /* text-decoration: underline; */
+}
 
-  a {
-    font-family: League Spartan;
-    text-decoration: none;
-    color: white;
-    font-size: .6em;
-  }
+a:visited {
+  color:white;
+}
 
-  a:visited {
-    color:white;
-  }
+a:hover {
+  font-weight:bold;
+}
 
+/* navbar */
+.navbar {
+  background-color: #5f9ea0;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  min-height: 70px;
+}
   
-  /* navbar */
-  .navbar {
-    background-color: #5f9ea0;
-    padding: 10px 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 40px;
-    min-height: 70px;
-  }
-  
-  
-  /* logo  */
-  .logo {
-    font-size: 30px;
-    font-family: Arial, Helvetica, sans-serif;
-  }
+/* logo  */
+.logo {
+  font-size: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+}
   
   
   /* ul  */
-  .navMenu {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    gap: 60px;
-    font-size: 25px;  
+.navMenu {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 60px;
+  font-size: 25px;  
 }
   
   /* media queries */
   
-  @media screen and (max-width: 780px){
+  /* @media screen and (max-width: 780px){ */
     
     /* hamburger */
-    .hamburger {
+    /* .hamburger {
       display: block;
       cursor: pointer;
     }
@@ -72,10 +69,10 @@
           margin: 5px;
           -webkit-transition: 0.3s ease-in-out;
           transition: 0.3s ease-in-out;
-      }
+      } */
   
     /* adding active class to the bars  */
-    .hamburger.active .bar:nth-child(2){
+    /* .hamburger.active .bar:nth-child(2){
       opacity: 0;
     }
     .hamburger.active .bar:nth-child(1){
@@ -83,12 +80,12 @@
     }
     .hamburger.active .bar:nth-child(3){
       transform: translateY(-8px) rotate(-45deg);
-    }
+    } */
   
   
     /* navMenu */
   
-    .navMenu{
+    /* .navMenu{
       position: absolute;
       flex-direction: column;
       gap: 0;
@@ -108,4 +105,4 @@
     .navMenu li {
       margin: 16px 0;
     }
-  }
+  } */
