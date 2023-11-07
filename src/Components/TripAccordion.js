@@ -1,4 +1,5 @@
 import Accordion from "react-bootstrap/Accordion";
+import TripArray from "../TripArray.js";
 import PropTypes from "prop-types";
 
 function TripAccordion (props) {
@@ -24,6 +25,7 @@ function TripAccordion (props) {
                     }}>
                         MapView
                     </div>
+                    <button onClick={() => {props.handleItemsMod(props.index)}}>delete</button>
                 </Accordion.Body>
             </Accordion.Item>
         </Accordion>
