@@ -9,17 +9,17 @@ import './css/UI.css'
 // the page
 function MyTripsPage() 
 { 
-  let defaultPastTrips = PastTrips.map(trip =>
+  let defaultPastTrips = PastTrips.map((trip, index) =>
     <Col key={trip.name}>
       <div>
-        <TripCard {...trip} handleTripsMod={handlePastTripsMod} date={(trip.ItineraryObject.startDate.toDateString()).slice(4)+' - '+(trip.ItineraryObject.endDate.toDateString()).slice(4)} srcImg={trip.srcImg}/>
+        <TripCard {...trip} index={index} handleTripsMod={handlePastTripsMod} date={(trip.ItineraryObject.startDate.toDateString()).slice(4)+' - '+(trip.ItineraryObject.endDate.toDateString()).slice(4)} srcImg={trip.srcImg}/>
       </div>
     </Col>
   );
-  let defaultUpcomingTrips = TripArray.map(trip => 
+  let defaultUpcomingTrips = TripArray.map((trip, index) => 
     <Col key={trip.name}>
       <div>
-        <TripCard {...trip} handleTripsMod={handleTripsMod} date={(trip.ItineraryObject.startDate.toDateString()).slice(4)+' - '+(trip.ItineraryObject.endDate.toDateString()).slice(4)} srcImg={trip.srcImg}/>
+        <TripCard {...trip} index={index} handleTripsMod={handleTripsMod} date={(trip.ItineraryObject.startDate.toDateString()).slice(4)+' - '+(trip.ItineraryObject.endDate.toDateString()).slice(4)} srcImg={trip.srcImg}/>
       </div>
     </Col>
   );
@@ -27,27 +27,27 @@ function MyTripsPage()
   const [pastTrips, setPastTrips] = useState(defaultPastTrips);
   const [upcomingTrips, setUpcomingTrips] = useState(defaultUpcomingTrips);
 
-  function handlePastTripsMod() {
-    PastTrips.splice(0, 1);
+  function handlePastTripsMod(idx) {
+    PastTrips.splice(idx, 1);
     setPastTrips(
       PastTrips.map(
-        trip =>
+        (trip, index) =>
         <Col key={trip.name}>
           <div>
-            <TripCard {...trip} handleTripsMod={handlePastTripsMod} date={(trip.ItineraryObject.startDate.toDateString()).slice(4)+' - '+(trip.ItineraryObject.endDate.toDateString()).slice(4)} srcImg={trip.srcImg}/>
+            <TripCard {...trip} index={index} handleTripsMod={handlePastTripsMod} date={(trip.ItineraryObject.startDate.toDateString()).slice(4)+' - '+(trip.ItineraryObject.endDate.toDateString()).slice(4)} srcImg={trip.srcImg}/>
           </div>
         </Col>
       )
     );
   }
-  function handleTripsMod() {
-    TripArray.splice(0, 1);
+  function handleTripsMod(idx) {
+    TripArray.splice(idx, 1);
     setUpcomingTrips(
       TripArray.map(
-        trip =>
+        (trip, index) =>
         <Col key={trip.name}>
           <div>
-            <TripCard {...trip} handleTripsMod={handleTripsMod} date={(trip.ItineraryObject.startDate.toDateString()).slice(4)+' - '+(trip.ItineraryObject.endDate.toDateString()).slice(4)} srcImg={trip.srcImg}/>
+            <TripCard {...trip} index={index} handleTripsMod={handleTripsMod} date={(trip.ItineraryObject.startDate.toDateString()).slice(4)+' - '+(trip.ItineraryObject.endDate.toDateString()).slice(4)} srcImg={trip.srcImg}/>
           </div>
         </Col>
       )
