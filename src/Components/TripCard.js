@@ -11,9 +11,9 @@ import './css/UI.css'
           <h1 className='card-title'>{props.name}</h1>
           <h2 className='card-date'>{props.date}</h2>
           <Link to="/MyTrips/SingleTrip" state={{trip: props}} className='card-details'>View details</Link>
+          <button onClick={props.handleTripsMod}>delete</button>
         </div>
       </div>
-
     );
   };
 
