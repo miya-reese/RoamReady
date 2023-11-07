@@ -14,7 +14,7 @@ function TripAccordion (props) {
                     </body>
                 </Accordion.Header>
                 <Accordion.Body>
-                    <a href="https://www.expedia.com/" target="_blank" rel="noreferrer">
+                    <a href="https://www.expedia.com/" target="_blank" rel="noreferrer" style={{color:"blue"}}>
                         {props.content}
                     </a>{" "}
                     <div style={{color: "blue", textDecorationLine: "underline"}} onClick={() => {
