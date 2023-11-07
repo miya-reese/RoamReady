@@ -8,7 +8,7 @@ import {useState} from "react";
 
 const SingleTrip = () => {
     const location = useLocation();
-    const {trip} = location.state;
+    const {trip, index, handleItemDelete} = location.state;
 
 
     const [placeMode, setPlaceMode] = useState(false);
@@ -37,7 +37,7 @@ const SingleTrip = () => {
                     </div>
                 </div>
                 <div className="accFlexBox">
-                    <TripListView itemList={trip.ItineraryObject.itineraryItemList} handleAccBodyClick={handleAccBodyClick} />
+                    <TripListView trip={trip} index={index} handleItemDelete={handleItemDelete} handleAccBodyClick={handleAccBodyClick} />
                 </div>
             </div>
         </>

@@ -12,14 +12,14 @@ function MyTripsPage()
   let defaultPastTrips = PastTrips.map((trip, index) =>
     <Col key={trip.name}>
       <div>
-        <TripCard {...trip} index={index} handleTripsMod={handlePastTripsMod} date={(trip.ItineraryObject.startDate.toDateString()).slice(4)+' - '+(trip.ItineraryObject.endDate.toDateString()).slice(4)} srcImg={trip.srcImg}/>
+        <TripCard trip={trip} index={index} handleTripsMod={handlePastTripsMod} date={(trip.ItineraryObject.startDate.toDateString()).slice(4)+' - '+(trip.ItineraryObject.endDate.toDateString()).slice(4)} srcImg={trip.srcImg}/>
       </div>
     </Col>
   );
   let defaultUpcomingTrips = TripArray.map((trip, index) => 
     <Col key={trip.name}>
       <div>
-        <TripCard {...trip} index={index} handleTripsMod={handleTripsMod} date={(trip.ItineraryObject.startDate.toDateString()).slice(4)+' - '+(trip.ItineraryObject.endDate.toDateString()).slice(4)} srcImg={trip.srcImg}/>
+        <TripCard trip={trip} index={index} handleTripsMod={handleTripsMod} date={(trip.ItineraryObject.startDate.toDateString()).slice(4)+' - '+(trip.ItineraryObject.endDate.toDateString()).slice(4)} srcImg={trip.srcImg}/>
       </div>
     </Col>
   );
@@ -34,7 +34,7 @@ function MyTripsPage()
         (trip, index) =>
         <Col key={trip.name}>
           <div>
-            <TripCard {...trip} index={index} handleTripsMod={handlePastTripsMod} date={(trip.ItineraryObject.startDate.toDateString()).slice(4)+' - '+(trip.ItineraryObject.endDate.toDateString()).slice(4)} srcImg={trip.srcImg}/>
+            <TripCard trip={trip} index={index} handleTripsMod={handlePastTripsMod} date={(trip.ItineraryObject.startDate.toDateString()).slice(4)+' - '+(trip.ItineraryObject.endDate.toDateString()).slice(4)} srcImg={trip.srcImg}/>
           </div>
         </Col>
       )
@@ -47,7 +47,7 @@ function MyTripsPage()
         (trip, index) =>
         <Col key={trip.name}>
           <div>
-            <TripCard {...trip} index={index} handleTripsMod={handleTripsMod} date={(trip.ItineraryObject.startDate.toDateString()).slice(4)+' - '+(trip.ItineraryObject.endDate.toDateString()).slice(4)} srcImg={trip.srcImg}/>
+            <TripCard trip={trip} index={index} handleTripsMod={handleTripsMod} date={(trip.ItineraryObject.startDate.toDateString()).slice(4)+' - '+(trip.ItineraryObject.endDate.toDateString()).slice(4)} srcImg={trip.srcImg}/>
           </div>
         </Col>
       )

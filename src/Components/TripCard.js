@@ -8,9 +8,9 @@ import './css/UI.css'
       <div style={{width: 280, height: 365}}>
         <img src={props.srcImg} width={280} height={280} alt={props.name}/>
         <div className='card-div'>
-          <h1 className='card-title'>{props.name}</h1>
+          <h1 className='card-title'>{props.trip.name}</h1>
           <h2 className='card-date'>{props.date}</h2>
-          <Link to="/MyTrips/SingleTrip" state={{trip: props}} className='card-details'>View details</Link>
+          <Link to="/MyTrips/SingleTrip" state={{trip: props.trip, index: props.index, handleItemDelete: props.handleItemDelete}}>View details</Link>
           <button onClick={() => {props.handleTripsMod(props.index)}}>delete</button>
         </div>
       </div>
