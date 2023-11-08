@@ -20,8 +20,5 @@ let oktoberfestItinerary = new ItineraryObject(new Date('September 22, 2023'), n
 let oktoberfestTrip = new TripObject('Oktoberfest', oktoberfestMap, oktoberfestItinerary, 0, 0, 'https://static2-viaggi.corriereobjects.it/wp-content/uploads/2023/09/schuetzen_festzelt_architektur_sebastian_lehner-9665.jpg?v=1694707947');
 PastTripArray.push(oktoberfestTrip);
 /**************************************************/
-// PastTripArray.pop();
-// PastTripArray.pop();
-// PastTripArray.pop();
 
 export default PastTripArray;
