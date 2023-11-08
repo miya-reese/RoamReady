@@ -1,5 +1,4 @@
 import Accordion from "react-bootstrap/Accordion";
-import TripArray from "../TripArray.js";
 import PropTypes from "prop-types";
 
 function TripAccordion (props) {
@@ -37,7 +36,9 @@ TripAccordion.propTypes = {
     content: PropTypes.string,
     type: PropTypes.number,
     highlightType: PropTypes.number,
-    handleAccBodyClick: PropTypes.func
+    handleAccBodyClick: PropTypes.func,
+    handleItemsMod: PropTypes.func,
+    index: PropTypes.number
 };
 
 export default TripAccordion;
