@@ -1,17 +1,17 @@
 import React from 'react'
 import {Link} from 'react-router-dom';
 import PropTypes from 'prop-types';
-import './css/UI.css'
+import './css/UI.css';
 
   function TripCard(props) {
     return (
-      <div style={{width: 280, height: 365}}>
-        <img src={props.srcImg} width={280} height={280} alt={props.name}/>
+      <div>
+        <img className='card-image' src={props.srcImg} width={280} height={280} alt={props.name}></img>
         <div className='card-div'>
           <h1 className='card-title'>{props.trip.name}</h1>
           <h2 className='card-date'>{props.date}</h2>
-          <Link to="/MyTrips/SingleTrip" state={{trip: props.trip, index: props.index, handleItemDelete: props.handleItemDelete}}>View details</Link>
-          <button onClick={() => {props.handleTripsMod(props.index)}}>delete</button>
+          <Link to="/MyTrips/SingleTrip" className='card-details' state={{trip: props.trip, index: props.index, handleItemDelete: props.handleItemDelete}}>View details</Link>
+          <button className="delete-button" style={{float: "right"}} onClick={() => {props.handleTripsMod(props.index)}}>Delete</button>
         </div>
       </div>
     );
