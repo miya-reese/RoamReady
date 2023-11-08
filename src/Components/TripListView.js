@@ -23,7 +23,7 @@ const TripListView = ({trip, index, handleAccBodyClick}) => {
 
     let defaultItems = itemList.map(
         (item, index) => (
-            <TripAccordion title={item.description} content={item.startTime} type={item.type} handleAccBodyClick={handleAccBodyClick}
+            <TripAccordion key={item.description} title={item.description} content={item.startTime} type={item.type} handleAccBodyClick={handleAccBodyClick}
             highlightType={highlightType} handleItemsMod={handleItemsMod} index={index}/>
         )
     );
@@ -37,7 +37,7 @@ const TripListView = ({trip, index, handleAccBodyClick}) => {
         setItems(
             itemList.map(
                 (item, index) => (
-                    <TripAccordion title={item.description} content={item.startTime} type={item.type} handleAccBodyClick={handleAccBodyClick}
+                    <TripAccordion key={item.description} title={item.description} content={item.startTime} type={item.type} handleAccBodyClick={handleAccBodyClick}
                     highlightType={highlightType} handleItemsMod={handleItemsMod} index={index}/>
                 )
             )
