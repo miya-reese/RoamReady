@@ -18,6 +18,7 @@ function TripAccordion (props) {
                     <a href="https://www.expedia.com/" target="_blank" rel="noreferrer" style={{color:"blue"}}>
                         {props.content}
                     </a>{" "}
+                    <button style={{float: "right"}} onClick={() => {props.handleItemsMod(props.index)}}>delete</button>
                     <div style={{color: "blue", textDecorationLine: "underline"}} onClick={() => {
                         props.handleAccBodyClick(props.title)
                     }} onKeyDown={() => {
@@ -25,7 +26,6 @@ function TripAccordion (props) {
                     }}>
                         MapView
                     </div>
-                    <button onClick={() => {props.handleItemsMod(props.index)}}>delete</button>
                 </Accordion.Body>
             </Accordion.Item>
         </Accordion>
