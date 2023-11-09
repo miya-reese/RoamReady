@@ -5,18 +5,28 @@ import TripArray from "../TripArray.js";
 import PropTypes from "prop-types";
 
 const TripListView = ({trip, index, handleAccBodyClick}) => {
-    const [highlightType, setHighlightType] = useState(-1);
+    const [transportColor, setTransportColor] = useState("black");
+    const [accoColor, setAccoColor] = useState("black");
+    const [actColor, setActColor] = useState("black");
     function handleTransportClick() {
-        setHighlightType(0);
+        setTransportColor("green");
+        setAccoColor("black");
+        setActColor("black");
     }
     function handleAccoClick() {
-        setHighlightType(1);
+        setTransportColor("black");
+        setAccoColor("black");
+        setActColor("green");
     }
     function handleActClick() {
-        setHighlightType(2);
+        setTransportColor("black");
+        setAccoColor("green");
+        setActColor("black");
     }
     function handleNoneClick() {
-        setHighlightType(-1);
+        setTransportColor("black");
+        setAccoColor("black");
+        setActColor("black");
     }
 
     let itemList = trip.ItineraryObject.itineraryItemList;
@@ -24,7 +34,7 @@ const TripListView = ({trip, index, handleAccBodyClick}) => {
     let defaultItems = itemList.map(
         (item, index) => (
             <TripAccordion title={item.description} content={item.startTime} type={item.type} handleAccBodyClick={handleAccBodyClick}
-            highlightType={highlightType} handleItemsMod={handleItemsMod} index={index}/>
+            transportColor={transportColor} accoColor={accoColor} actColor={actColor} handleItemsMod={handleItemsMod} index={index}/>
         )
     );
 
@@ -38,21 +48,19 @@ const TripListView = ({trip, index, handleAccBodyClick}) => {
             itemList.map(
                 (item, index) => (
                     <TripAccordion title={item.description} content={item.startTime} type={item.type} handleAccBodyClick={handleAccBodyClick}
-                    highlightType={highlightType} handleItemsMod={handleItemsMod} index={index}/>
+                    transportColor={transportColor} accoColor={accoColor} actColor={actColor} handleItemsMod={handleItemsMod} index={index}/>
                 )
             )
         );
     }
 
     return(
-        <div>
-            <div>
-                <TripFilter handleTransportClick={handleTransportClick} handleAccoClick={handleAccoClick} 
-                handleActClick={handleActClick} handleNoneClick={handleNoneClick}/>
-            </div>
+        <>
+            <TripFilter handleTransportClick={handleTransportClick} handleAccoClick={handleAccoClick} 
+            handleActClick={handleActClick} handleNoneClick={handleNoneClick}/>
             <div>{items}</div>
-            <button>add</button>
-        </div>
+            <button className="single-trip-button" style={{float:'right'}}>Add</button>
+        </>
     )
 }
 

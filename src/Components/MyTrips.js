@@ -4,7 +4,7 @@ import Col from 'react-bootstrap/Col';
 import TripCard from './TripCard.js';
 import TripArray from '../TripArray.js';
 import PastTrips from '../PastTripArray.js';
-import './css/UI.css'
+import './css/UI.css';
 
 // the page
 function MyTripsPage() 
@@ -16,6 +16,7 @@ function MyTripsPage()
       </div>
     </Col>
   );
+
   let defaultUpcomingTrips = TripArray.map((trip, index) => 
     <Col key={trip.name}>
       <div>

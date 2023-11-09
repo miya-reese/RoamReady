@@ -2,7 +2,6 @@ import React from 'react'
 import './css/profile.css'
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import PropTypes from 'prop-types';
 import User from '../Classes/UserObject';
 
 const userTest = new User("Francisco", "Lachowski", "chico.lachowski", "milo123", "+1 888 123-4567", "chico_lachowski@gmail.com", "525 E 86th Street", "New York, NY 10651-78")
@@ -13,7 +12,7 @@ function ProfileCard(user) {
     <Row>
       <Col>
       <div className='prof-col1'>
-      <img src={userTest.profileImg} width={300} height={310} alt='Profile Image'/>
+      <img src={userTest.profileImg} width={300} height={310} alt="profImg"/>
       <div>
         <h1 className='prof-name'>{formatName(userTest.firstname, userTest.lastname)}</h1>
         <h2 className='prof-subtitle'>Account Information</h2>

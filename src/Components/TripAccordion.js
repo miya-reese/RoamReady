@@ -1,25 +1,28 @@
 import Accordion from "react-bootstrap/Accordion";
-import TripArray from "../TripArray.js";
 import PropTypes from "prop-types";
 
 function TripAccordion (props) {
-    let color = "black";
-    if(props.type === props.highlightType)
-        color = "green";
+    let color;
+    if(props.type === 0)
+        color = props.transportColor;
+    else if(props.type === 1)
+        color = props.accoColor;
+    else
+        color = props.actColor;
     return (
         <Accordion>
             <Accordion.Item eventKey="0" class="testTrip">
                 <Accordion.Header>
-                    <body style={{color: color}}>
+                    <body className="single-trip-text" style={{color: color}}>
                     {props.title}
                     </body>
                 </Accordion.Header>
                 <Accordion.Body>
-                    <a href="https://www.expedia.com/" target="_blank" rel="noreferrer" style={{color:"blue"}}>
+                    <a className="single-trip-time" href="https://www.expedia.com/" target="_blank" rel="noreferrer" style={{color:"blue"}}>
                         {props.content}
                     </a>{" "}
-                    <button style={{float: "right"}} onClick={() => {props.handleItemsMod(props.index)}}>delete</button>
-                    <div style={{color: "blue", textDecorationLine: "underline"}} onClick={() => {
+                    <button className="single-trip-button" style={{float: "right"}} onClick={() => {props.handleItemsMod(props.index)}}>Delete</button>
+                    <div className="single-trip-text" style={{color: "blue", textDecorationLine: "underline", position: "relative", left: "45%"}} onClick={() => {
                         props.handleAccBodyClick(props.title)
                     }} onKeyDown={() => {
                         props.handleAccBodyClick(props.title)
