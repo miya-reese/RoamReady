@@ -2,7 +2,6 @@ import React from 'react'
 import './css/profile.css'
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import PropTypes from 'prop-types';
 import User from '../Classes/UserObject';
 
 const userTest = new User("Francisco", "Lachowski", "chico.lachowski", "milo123", "+1 888 123-4567", "chico_lachowski@gmail.com", "525 E 86th Street", "New York, NY 10651-78")
