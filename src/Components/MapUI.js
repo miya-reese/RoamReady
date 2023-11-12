@@ -12,18 +12,16 @@ function MapUI({startLoc, endLoc, placeMode, place}) {
     "&mode=transit";
   }
   return (
-      <div className='container'>
-        <iframe
-          title="mapframe"
-          width="600"
-          height="400"
-          style={{border:0}}
-          loading="lazy"
-          allowfullscreen
-          referrerPolicy="no-referrer-when-downgrade"
-          src={url}>
-        </iframe>
-      </div>
+      <iframe
+        title="mapframe"
+        width="600"
+        height="400"
+        style={{border:0}}
+        loading="lazy"
+        allowfullscreen
+        referrerPolicy="no-referrer-when-downgrade"
+        src={url}>
+      </iframe>
   );
 }
 

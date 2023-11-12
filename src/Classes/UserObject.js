@@ -1,3 +1,4 @@
+
 export default class {
     constructor(firstname, lastname, password, phone, email) {
         this.firstname = firstname;

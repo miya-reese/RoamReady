@@ -12,7 +12,7 @@ function ProfileCard(user) {
     <Row>
       <Col>
       <div className='prof-col1'>
-      <img src={userTest.profileImg} width={300} height={310} alt='Profile Image'/>
+      <img src={userTest.profileImg} width={300} height={310} alt="profImg"/>
       <div>
         <h1 className='prof-name'>{formatName(userTest.firstname, userTest.lastname)}</h1>
         <h2 className='prof-subtitle'>Account Information</h2>
