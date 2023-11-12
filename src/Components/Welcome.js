@@ -9,9 +9,9 @@ function Welcome(props) {
     return (
         <div style={{height: '100vh', backgroundImage: `url(${backgroundImage})`, objectFit: 'fill'}}>
             <div className="welcome-page-message">Where to?</div>
-            <button className="create-button">
-            <NavLink to="/FormScreen" style={{textDecorationLine: 'none'}}>Create trip</NavLink>
-            </button>
+            {/* <button className="create-button"> */}
+            <NavLink to="/FormScreen" style={{textDecorationLine: 'none'}}><button className="create-button">Create trip</button></NavLink>
+            {/* </button> */}
         </div>
     );
 }

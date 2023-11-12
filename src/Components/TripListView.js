@@ -4,60 +4,41 @@ import TripAccordion from "./TripAccordion.js";
 import TripArray from "../TripArray.js";
 import PropTypes from "prop-types";
 
-const TripListView = ({trip, index, handleAccBodyClick}) => {
-    const [transportColor, setTransportColor] = useState("black");
-    const [accoColor, setAccoColor] = useState("black");
-    const [actColor, setActColor] = useState("black");
-    function handleTransportClick() {
-        setTransportColor("green");
-        setAccoColor("black");
-        setActColor("black");
-    }
-    function handleAccoClick() {
-        setTransportColor("black");
-        setAccoColor("black");
-        setActColor("green");
-    }
-    function handleActClick() {
-        setTransportColor("black");
-        setAccoColor("green");
-        setActColor("black");
-    }
-    function handleNoneClick() {
-        setTransportColor("black");
-        setAccoColor("black");
-        setActColor("black");
-    }
+const TripListView = ({trip, index, handleAccBodyClick}) => { 
 
-    let itemList = trip.ItineraryObject.itineraryItemList;
-
-    let defaultItems = itemList.map(
-        (item, index) => (
-            <TripAccordion title={item.description} content={item.startTime} type={item.type} handleAccBodyClick={handleAccBodyClick}
-            transportColor={transportColor} accoColor={accoColor} actColor={actColor} handleItemsMod={handleItemsMod} index={index}/>
-        )
-    );
-
-    const [items, setItems] = useState(defaultItems);
-
-    function handleItemsMod(idx){
-        TripArray[index].ItineraryObject.itineraryItemList.splice(idx, 1);
-        itemList = TripArray[index].ItineraryObject.itineraryItemList;
-
-        setItems(
+    function mapItems(itemList) {
+        return (
             itemList.map(
                 (item, index) => (
-                    <TripAccordion title={item.description} content={item.startTime} type={item.type} handleAccBodyClick={handleAccBodyClick}
-                    transportColor={transportColor} accoColor={accoColor} actColor={actColor} handleItemsMod={handleItemsMod} index={index}/>
+                    <TripAccordion title={item.description} content={item.startTime} type={item.type} handleAccBodyClick={handleAccBodyClick} handleItemsMod={handleItemsMod} index={index}/>
                 )
             )
         );
     }
 
+    let itemList = trip.ItineraryObject.itineraryItemList;
+    let defaultItems = mapItems(itemList);
+    const [items, setItems] = useState(defaultItems);
+
+    function handleItemsMod(idx){
+        TripArray[index].ItineraryObject.itineraryItemList.splice(idx, 1);
+        itemList = TripArray[index].ItineraryObject.itineraryItemList;
+        setItems(
+            mapItems(itemList)
+        );
+    }
+
+    function handleFilterClick(typeNum){
+        itemList = TripArray[index].ItineraryObject.itineraryItemList;
+        if(typeNum !== -1){
+            itemList = itemList.filter(item => item.type === typeNum);
+        }
+        setItems(mapItems(itemList));
+    }
+
     return(
         <>
-            <TripFilter handleTransportClick={handleTransportClick} handleAccoClick={handleAccoClick} 
-            handleActClick={handleActClick} handleNoneClick={handleNoneClick}/>
+            <TripFilter handleFilterClick={handleFilterClick}/>
             <div>{items}</div>
             <button className="single-trip-button" style={{float:'right'}}>Add</button>
         </>

@@ -2,18 +2,11 @@ import Accordion from "react-bootstrap/Accordion";
 import PropTypes from "prop-types";
 
 function TripAccordion (props) {
-    let color;
-    if(props.type === 0)
-        color = props.transportColor;
-    else if(props.type === 1)
-        color = props.accoColor;
-    else
-        color = props.actColor;
     return (
         <Accordion>
             <Accordion.Item eventKey="0" class="testTrip">
                 <Accordion.Header>
-                    <body className="single-trip-text" style={{color: color}}>
+                    <body className="single-trip-text" style={{color: "black"}}>
                     {props.title}
                     </body>
                 </Accordion.Header>
