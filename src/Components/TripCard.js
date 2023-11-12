@@ -20,7 +20,11 @@ import './css/UI.css';
   TripCard.propTypes = {
     name: PropTypes.string,
     date: PropTypes.string,
-    srcImg: PropTypes.string
+    srcImg: PropTypes.string,
+    trip: PropTypes.object,
+    index: PropTypes.number,
+    handleItemDelete: PropTypes.func,
+    handleTripsMod: PropTypes.func
   };
 
 

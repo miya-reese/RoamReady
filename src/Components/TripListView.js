@@ -46,8 +46,9 @@ const TripListView = ({trip, index, handleAccBodyClick}) => {
 }
 
 TripListView.propTypes = {
-    itemList: PropTypes.array,
     handleAccBodyClick: PropTypes.func,
+    trip: PropTypes.object,
+    index: PropTypes.number
 }
 
 export default TripListView;

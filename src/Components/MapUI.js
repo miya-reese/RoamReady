@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 function MapUI({startLoc, endLoc, placeMode, place}) {
-  const apiKey = "AIzaSyBe_yqP9GViK5G5veZ-Kr0mTLIl-dSmlQI";
+  const apiKey = process.env.REACT_APP_Google;
   let url;
   if(placeMode){
     url = "https://www.google.com/maps/embed/v1/place?key="+apiKey+"&q="+place;

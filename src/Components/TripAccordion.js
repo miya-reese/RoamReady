@@ -33,7 +33,9 @@ TripAccordion.propTypes = {
     content: PropTypes.string,
     type: PropTypes.number,
     highlightType: PropTypes.number,
-    handleAccBodyClick: PropTypes.func
+    handleAccBodyClick: PropTypes.func,
+    handleItemsMod: PropTypes.func,
+    index: PropTypes.number
 };
 
 export default TripAccordion;
