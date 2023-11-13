@@ -67,6 +67,23 @@
     border-radius: 0px 0px 10px 30px;
   }
 
+  .ABCard-div{
+    height: 85px;
+    width: 280px;
+    background-color: #12263a;
+  }
+
+  .ABcard-date {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: light;
+    font-size: 15px;
+    color: #ffffff;
+    text-align: left;
+    position: relative;
+    top: 15px;
+    left: 10px;
+  }
+
   .delete-button {
     font-family: 'Montserrat', sans-serif;
     font-weight: light;
