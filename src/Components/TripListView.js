@@ -3,8 +3,9 @@ import TripFilter from "./TripFilter.js";
 import TripAccordion from "./TripAccordion.js";
 import TripArray from "../TripArray.js";
 import PropTypes from "prop-types";
+import {Link} from 'react-router-dom';
 
-const TripListView = ({trip, index, handleAccBodyClick}) => { 
+const TripListView = ({trip, index, handleItemDelete, handleAccBodyClick}) => { 
 
     function mapItems(itemList) {
         return (
@@ -40,7 +41,9 @@ const TripListView = ({trip, index, handleAccBodyClick}) => {
         <>
             <TripFilter handleFilterClick={handleFilterClick}/>
             <div>{items}</div>
+            <Link to="AddItem" state={{index: index, handleItemDelete: handleItemDelete}}>
             <button className="single-trip-button" style={{float:'right'}}>Add</button>
+            </Link>
         </>
     )
 }
