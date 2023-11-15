@@ -8,7 +8,7 @@ import AboutCard from './AboutCard.js';
 import sorenIMG from './images/ABOUT_SOREN.jpeg';
 import drewIMG from './images/ABOUT_DREW.jpeg';
 import annaIMG from './images/ABOUT_ANNA.jpeg';
-import miyaIMG from './images/ABOUT_ANNA.jpeg';
+import miyaIMG from './images/ABOUT_MIYA.jpeg';
 
 let soren = new PersonObject(sorenIMG, "Soren Fliegel", "Third-year CS major from Chicago, Illinois");
 let drew = new PersonObject(drewIMG, "Drew Kim", "Third-year SE major from the Bay Area, CA");
