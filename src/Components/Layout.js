@@ -23,7 +23,7 @@ const Layout = () => {
         </Link>
         <ul className={`${styles.navMenu}`}>
           <li>
-            <NavLink to="/Card" style={getLinkStyle('/Card')}>
+            <NavLink to="/AboutUs" style={getLinkStyle('/AboutUs')}>
               About Us
             </NavLink>
           </li>
