@@ -10,7 +10,7 @@ const imageStyle = {
   function AboutCard(props) {
     return (
       <div style={{margin:5}}>
-        <img src={props.srcImg} style={imageStyle} alt={props.name}></img>
+        <img src={props.srcImg} style={imageStyle} alt={props.person.name+" img"}></img>
         <div className='ABCard-div'>
           <h1 className='card-title'>{props.person.name}</h1>
           <h2 className='ABcard-date'>{props.person.description}</h2>
@@ -25,6 +25,7 @@ const imageStyle = {
       srcImg: PropTypes.string.isRequired,
       description: PropTypes.string.isRequired,
     }).isRequired,
+    srcImg: PropTypes.string.isRequired,
   };
 
 export default AboutCard;
