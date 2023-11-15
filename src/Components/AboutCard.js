@@ -20,9 +20,11 @@ const imageStyle = {
   };
 
   AboutCard.propTypes = {
-    name: PropTypes.string.isRequired,
-    srcImg: PropTypes.string.isRequired,
-    description: PropTypes.string.isRequired
+    person: PropTypes.shape({
+      name: PropTypes.string.isRequired,
+      srcImg: PropTypes.string.isRequired,
+      description: PropTypes.string.isRequired,
+    }).isRequired,
   };
 
 export default AboutCard;
