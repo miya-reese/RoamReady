@@ -84,6 +84,10 @@
     left: 10px;
   }
 
+  .ABimage {
+    object-fit: 'cover';
+  }
+
   .delete-button {
     font-family: 'Montserrat', sans-serif;
     font-weight: light;
