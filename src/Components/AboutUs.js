@@ -1,7 +1,6 @@
 import React from 'react';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-//import './css/UI.css';
 import PersonObject from '../Classes/PersonObject';
 import AboutCard from './AboutCard.js';
 
@@ -45,35 +44,6 @@ function AboutUsPage() {
     </div>
   );
 }
-
-// the page
-// function AboutUsPage() 
-// { 
-//   teamMembers.map((person) =>
-//     <Col key={person.name}>
-//       <div>
-//         <AboutCard person={person} srcImg={person.srcImg}/>
-//       </div>
-//     </Col>
-//   );
-
-//   // display on page
-//   return (  
-//     <div>
-//       <Row>
-//         <h1 className="title"> Meet the Team </h1>
-//       </Row>
-//       <div className="row no-gutters">
-//         <Row>
-//           <h5 className="subtitle">Chillato Explorato - Students at Cal Poly, SLO</h5>
-//         </Row>
-//         <div className="d-flex justify-content-evenly">
-//           <Row>{teamMembers}</Row>
-//         </div>
-//       </div>
-//     </div>
-//   );
-// }
   
 export default AboutUsPage;
   

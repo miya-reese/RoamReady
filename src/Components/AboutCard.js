@@ -1,6 +1,5 @@
 import React from 'react'
 import PropTypes from 'prop-types';
-//import './css/UI.css';
 
 const imageStyle = {
   width: '280px',
@@ -21,9 +20,9 @@ const imageStyle = {
   };
 
   AboutCard.propTypes = {
-    name: PropTypes.string,
-    srcImg: PropTypes.string,
-    description: PropTypes.string
+    name: PropTypes.string.isRequired,
+    srcImg: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired
   };
 
 export default AboutCard;
