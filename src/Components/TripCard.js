@@ -11,7 +11,7 @@ import './css/UI.css';
           <h1 className='card-title'>{props.trip.name}</h1>
           <h2 className='card-date'>{props.date}</h2>
           <Link to="/MyTrips/SingleTrip" className='card-details' state={{trip: props.trip, index: props.index, handleItemDelete: props.handleItemDelete}}>View details</Link>
-          <button className="delete-button" style={{float: "right"}} onClick={() => {props.handleTripsMod(props.index)}}>Delete</button>
+          <button className="delete-button" style={{float: "right"}} onClick={() => {props.handleTripsMod(props.trips, props.index, props.type)}}>Delete</button>
         </div>
       </div>
     );
