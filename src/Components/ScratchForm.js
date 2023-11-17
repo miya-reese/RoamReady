@@ -5,6 +5,28 @@ import Form from 'react-bootstrap/Form';
 import Container from 'react-bootstrap/Container';
 import FormController from './FormController';
 import { Link } from 'react-router-dom';
+import firebaseConfig from './firebaseConfig';
+
+import { initializeApp } from "firebase/app";
+import { getFirestore, collection, addDoc } from 'firebase/firestore';
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
+
+const handleClick = async () => {
+  try {
+    // Add a test document to the 'itineraries' collection
+    const docRef = await addDoc(collection(db, 'itineraries'), {
+      title: 'Test Itinerary',
+      places: ['Place 1', 'Place 2', 'Place 3'],
+    });
+
+    console.log('Document written with ID: ', docRef.id);
+  } catch (e) {
+    console.error('Error adding document: ', e);
+  }
+};
 
 function ScratchForm() {
   const [formData, setFormData] = useState({
@@ -27,7 +49,6 @@ function ScratchForm() {
   };
 
   return (
-    // <Col xs={12} sm={6} className="p-3" style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0 }}>
     <Container fluid className="p-0" style={{fontFamily: 'Fira Sans', background: 'white', height:'100vh'}}>
       <Form style={{ height: '100%', overflowY: 'auto' }}>
         <br></br>
@@ -133,9 +154,9 @@ function ScratchForm() {
         <Link to="/MyTrips"><Button style={{background: '#a4e0e1'}} variant="primary" type="button" onClick={() => FormController(formData)}>Submit</Button></Link>
         <br></br>
         <br></br>
-      </Form>
+        <Button onClick={handleClick}>Test Button</Button>
+        </Form>
       </Container>
-    // </Col>
   );
 }
 

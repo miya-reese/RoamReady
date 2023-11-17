@@ -1,5 +1,5 @@
 
-export default class {
+export default class UserObject {
     constructor(firstname, lastname, password, phone, email) {
         this.firstname = firstname;
         this.lastname = lastname;
