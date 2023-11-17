@@ -17,7 +17,8 @@ export default function App() {
                     <Route index element={<Welcome />} />
                     <Route path="Welcome" element={<Welcome />} />
                     <Route path="ScratchForm" element={<ScratchForm />} />
-                    <Route path="Card" element={<Card />} />
+                    <Route path="Profile" element={<Card />} />
+                    <Route path="EditProfile" element={<EditProfile/>}/>
                     <Route path="MyTrips" element={<MyTrips />} />
                     <Route path="SingleTrip" element={<SingleTrip />} />
                     <Route path="*" element={<NoPage />} />

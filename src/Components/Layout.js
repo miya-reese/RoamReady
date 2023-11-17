@@ -23,7 +23,7 @@ const Layout = () => {
                     </li>
 
                     <li>
-                        <Link to="/Card">Profile</Link>
+                        <Link to="/Profile">Profile</Link>
                     </li>
                 </ul>
 
