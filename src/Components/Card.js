@@ -4,40 +4,19 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import User from '../Classes/UserObject';
 import {Link} from 'react-router-dom';
-import {useState} from "react";
 import PropTypes from 'prop-types';
 
-const userTest = new User("Francisco", "Lachowski", "chico.lachowski", "milo123", "+1 888 123-4567", "chico_lachowski@gmail.com", "525 E 86th Street", "New York, NY 10651-78")
+const userTest = new User("Francisco Lachowski", "chico.lachowski", "milo123", "+1 888 123-4567", "chico_lachowski@gmail.com", "525 E 86th Street", "New York, NY 10651-78")
 userTest.setProfileImg('https://www.numeromag.nl/wp-content/uploads/2023/08/Numero-Rio-de-janeiro-Brazil-7-960x1000.jpg')
 
 function ProfileCard(user) {
-
-  const [data, setData] = React.useState({
-    name: userTest.username,
-    password: "*************",
-    phone: userTest.phone,
-    email: userTest.email,
-    addrLine1: userTest.addrLine1,
-    addrLine2: userTest.addrLine2
-  });
-  
-  // handle on change according to input name and setState
-  const handleChange = (e) => {
-    setData({ ...data, [e.target.name]: e.target.value });
-  };
-  
-  const handleSubmit = (e) => {
-    e.preventDefault()
-    // take data to submit
-  };
-  
   return (
     <Row>
       <Col>
       <div className='prof-col1'>
       <img src={userTest.profileImg} width={300} height={310} alt="profImg"/>
       <div>
-        <h1 className='prof-name'>{formatName(userTest.firstname, userTest.lastname)}</h1>
+        <h1 className='prof-name'>{userTest.fullname}</h1>
         <h2 className='prof-subtitle'>Account Information</h2>
         <h2 className='prof-info'>{formatInfo("Username", userTest.username)}</h2>
         <h2 className='prof-info'>{formatInfo("Password", "*************")}</h2>
@@ -67,11 +46,6 @@ function ProfileCard(user) {
     </Row>
   );
 };
-
-// formatting functions
-function formatName(firstname, lastname) {
-  return firstname + ' ' + lastname;
-}
 
 function formatInfo(title, info) {
   return title + ":    " + info;
@@ -145,10 +119,10 @@ function EditProfile(user) {
     // take data to submit
   };
 
-  const [username, setUsername] = useState(userTest.username);
-  const[pass, setPass] = useState("*************");
-  const [showUsername, setShowUsername] = useState(false);
-  const [showPass, setShowPass] = useState(false);
+  const [username, setUsername] = React.useState(userTest.username);
+  const[pass, setPass] = React.useState("*************");
+  const [showUsername, setShowUsername] = React.useState(false);
+  const [showPass, setShowPass] = React.useState(false);
   
   return (
     <Row>
@@ -156,7 +130,7 @@ function EditProfile(user) {
       <div className='prof-col1'>
       <img src={userTest.profileImg} width={300} height={310} alt='Profile Image'/>
       <div>
-        <h1 className='prof-name'>{formatName(userTest.firstname, userTest.lastname)}</h1>
+        <h1 className='prof-name'>{userTest.fullname}</h1>
         <h2 className='prof-subtitle'>Account Information</h2>
         <div>
         <table>
