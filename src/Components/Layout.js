@@ -38,7 +38,7 @@ const Layout = () => {
             </NavLink>
           </li>
           <li>
-            <NavLink to="/Card" style={getLinkStyle('/Card')}>
+            <NavLink to="/Profile" style={getLinkStyle('/Card')}>
               Profile
             </NavLink>
           </li>
