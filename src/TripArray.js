@@ -35,7 +35,5 @@ florenceItinerary.itineraryItemList.push(florenceItem);
 let florenceTrip = new TripObject('Florence', florenceMap, florenceItinerary, "$$$", 8, 'https://media.timeout.com/images/105879414/750/422/image.jpg');
 TripArray.push(florenceTrip);
 /**********************************************************/
-// TripArray.pop();
-// TripArray.pop();
 
 export default TripArray;

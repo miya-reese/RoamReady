@@ -1,7 +1,5 @@
 
-export default class TripObject {
-    constructor(name, MapObject, ItineraryObject, budget, travelers, srcImg) 
-    {
+export default function TripObject(name, MapObject, ItineraryObject, budget, travelers, srcImg) {
         this.name = name;
         this.MapObject = MapObject;
         this.ItineraryObject = ItineraryObject;
@@ -15,5 +13,4 @@ export default class TripObject {
         {
             this.srcImg = srcImg;
         }
-    };
 }

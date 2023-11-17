@@ -1,40 +1,57 @@
 import {useState} from "react";
 import TripFilter from "./TripFilter.js";
 import TripAccordion from "./TripAccordion.js";
+import TripArray from "../TripArray.js";
 import PropTypes from "prop-types";
+import {Link} from 'react-router-dom';
 
-const TripListView = ({itemList, handleAccBodyClick}) => {
-    const [highlightType, setHighlightType] = useState(-1);
-    function handleTransportClick() {
-        setHighlightType(0);
+const TripListView = ({trip, index, handleItemDelete, handleAccBodyClick}) => { 
+
+    function mapItems(itemList) {
+        return (
+            itemList.map(
+                (item, index) => (
+                    <TripAccordion title={item.description} content={item.startTime} type={item.type} handleAccBodyClick={handleAccBodyClick} handleItemsMod={handleItemsMod} index={index}/>
+                )
+            )
+        );
     }
-    function handleAccoClick() {
-        setHighlightType(1);
+
+    let itemList = trip.ItineraryObject.itineraryItemList;
+    let defaultItems = mapItems(itemList);
+    const [items, setItems] = useState(defaultItems);
+
+    function handleItemsMod(idx){
+        TripArray[index].ItineraryObject.itineraryItemList.splice(idx, 1);
+        itemList = TripArray[index].ItineraryObject.itineraryItemList;
+        setItems(
+            mapItems(itemList)
+        );
     }
-    function handleActClick() {
-        setHighlightType(2);
-    }
-    function handleNoneClick() {
-        setHighlightType(-1);
+
+    function handleFilterClick(typeNum){
+        itemList = TripArray[index].ItineraryObject.itineraryItemList;
+        if(typeNum !== -1){
+            itemList = itemList.filter(item => item.type === typeNum);
+        }
+        setItems(mapItems(itemList));
     }
 
     return(
-        <div>
-            <div>
-                <TripFilter handleTransportClick={handleTransportClick} handleAccoClick={handleAccoClick} 
-                handleActClick={handleActClick} handleNoneClick={handleNoneClick}/>
-            </div>
-            {itemList.map((item) => (
-                <TripAccordion title={item.description} content={item.startTime} type={item.type} handleAccBodyClick={handleAccBodyClick}
-                highlightType={highlightType}/>
-            ))}
-        </div>
+        <>
+            <TripFilter handleFilterClick={handleFilterClick}/>
+            <div>{items}</div>
+            <Link to="AddItem" state={{index: index, handleItemDelete: handleItemDelete}}>
+            <button className="single-trip-button" style={{float:'right'}}>Add</button>
+            </Link>
+        </>
     )
 }
 
 TripListView.propTypes = {
-    itemList: PropTypes.array,
     handleAccBodyClick: PropTypes.func,
+    trip: PropTypes.object,
+    index: PropTypes.number
 }
 
 export default TripListView;

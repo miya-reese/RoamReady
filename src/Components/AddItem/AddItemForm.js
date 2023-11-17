@@ -3,18 +3,18 @@ import {React, useState} from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import Container from 'react-bootstrap/Container';
-import FormController from './FormController';
+import AddItemFormController from './AddItemFormController';
 import { Link } from 'react-router-dom';
+import TripArray from '../../TripArray'
 
-function ScratchForm() {
+function AddItemForm({index, handleItemDelete}) {
   const [formData, setFormData] = useState({
     tripName: '',
+    type: '',
     location1: '',
-    location2: '',
+    startTime: '',
     startDate: '',
-    endDate: '',
-    budget: '',
-    numTravelers: '',
+    endDate: ''
     // imgSrc: '',
   });
 
@@ -32,7 +32,7 @@ function ScratchForm() {
       <Form style={{ height: '100%', overflowY: 'auto' }}>
         <br></br>
         <Form.Group className="mb-3" controlId="formName">
-          <Form.Label style={{fontSize: '20px'}}>Trip Name</Form.Label>
+          <Form.Label style={{fontSize: '20px'}}>Item Name</Form.Label>
           <Form.Control
             type="text"
             name="tripName"
@@ -46,8 +46,26 @@ function ScratchForm() {
         <br></br>
         <br></br>
 
+        <Form.Group className="mb-3" controlId="formType">
+          <Form.Label style={{fontSize: '20px'}}>Item Type</Form.Label>
+          <Form.Select
+            name="type"
+            value={formData.type}
+            onChange={handleInputChange}
+            style={{fontFamily: 'Montserrat', color: '#737373'}}
+          >
+            <option>Please Select</option>
+            <option>Transportation</option>
+            <option>Accomodation</option>
+            <option>Activity</option>
+          </Form.Select>
+        </Form.Group>
+
+        <br></br>
+        <br></br>
+
         <Form.Group className="mb-3" controlId="formBasicLocation1">
-          <Form.Label style={{fontSize: '20px'}}>First Location</Form.Label>
+          <Form.Label style={{fontSize: '20px'}}>Location</Form.Label>
           <Form.Control
             type="text"
             name="location1"
@@ -58,20 +76,20 @@ function ScratchForm() {
           />
         </Form.Group>
 
-        <Form.Group className="mb-3" controlId="formBasicLocation2">
-          <Form.Label style={{fontSize: '20px'}}>Second Location</Form.Label>
+        <br></br>
+        <br></br>
+
+        <Form.Group className="mb-3" controlId="formStartTime">
+          <Form.Label style={{fontSize: '20px'}}>Start Time</Form.Label>
           <Form.Control
             type="text"
-            name="location2"
-            placeholder="Location"
-            value={formData.location2}
+            name="startTime"
+            placeholder="hh:mm"
+            value={formData.startTime}
             onChange={handleInputChange}
             style={{fontFamily: 'Montserrat', color: '#737373'}}
           />
         </Form.Group>
-
-        <br></br>
-        <br></br>
 
         <Form.Group className="mb-3" controlId="formDate">
           <Form.Label style={{fontSize: '20px'}}>Start Date</Form.Label>
@@ -100,37 +118,7 @@ function ScratchForm() {
         <br></br>
         <br></br>
 
-        <Form.Group className="mb-3" controlId="formBudget">
-          <Form.Label style={{fontSize: '20px'}}>Budget</Form.Label>
-          <Form.Select
-            name="budget"
-            value={formData.budget}
-            onChange={handleInputChange}
-            style={{fontFamily: 'Montserrat', color: '#737373'}}
-          >
-            <option>Please Select</option>
-            <option>$</option>
-            <option>$$</option>
-            <option>$$$</option>
-            <option>$$$$</option>
-          </Form.Select>
-        </Form.Group>
-
-        <br></br>
-
-        <Form.Group className="mb-3" controlId="formTravelers">
-          <Form.Label style={{fontSize: '20px'}}>Number of Travelers</Form.Label>
-          <Form.Control
-            type="number"
-            name="numTravelers"
-            placeholder="Enter Number"
-            style={{fontFamily: 'Montserrat', color: '#737373'}}
-            value={formData.numTravelers}
-            onChange={handleInputChange}
-          />
-        </Form.Group>
-
-        <Link to="/MyTrips"><Button style={{background: '#a4e0e1'}} variant="primary" type="button" onClick={() => FormController(formData)}>Submit</Button></Link>
+        <Link to="/MyTrips/SingleTrip" state={{trip: TripArray[index], index: index, handleItemDelete: handleItemDelete}}><Button style={{background: '#a4e0e1'}} variant="primary" type="button" onClick={() => AddItemFormController(formData, index)}>Submit</Button></Link>
         <br></br>
         <br></br>
       </Form>
@@ -139,4 +127,4 @@ function ScratchForm() {
   );
 }
 
-export default ScratchForm;
+export default AddItemForm;

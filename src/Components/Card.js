@@ -2,10 +2,10 @@ import React from 'react';
 import './css/profile.css';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import PropTypes from 'prop-types';
 import User from '../Classes/UserObject';
 import {Link} from 'react-router-dom';
 import {useState} from "react";
+import PropTypes from 'prop-types';
 
 const userTest = new User("Francisco", "Lachowski", "chico.lachowski", "milo123", "+1 888 123-4567", "chico_lachowski@gmail.com", "525 E 86th Street", "New York, NY 10651-78")
 userTest.setProfileImg('https://www.numeromag.nl/wp-content/uploads/2023/08/Numero-Rio-de-janeiro-Brazil-7-960x1000.jpg')
@@ -35,7 +35,7 @@ function ProfileCard(user) {
     <Row>
       <Col>
       <div className='prof-col1'>
-      <img src={userTest.profileImg} width={300} height={310} alt='Profile Image'/>
+      <img src={userTest.profileImg} width={300} height={310} alt="profImg"/>
       <div>
         <h1 className='prof-name'>{formatName(userTest.firstname, userTest.lastname)}</h1>
         <h2 className='prof-subtitle'>Account Information</h2>
@@ -44,7 +44,7 @@ function ProfileCard(user) {
       </div>
         <br></br>
         <br></br>
-        <Link to="*" state={{user: user}} className='edit-profile'>Edit</Link>
+        <Link to="/*" className='edit-profile' state={{user: user}} >Edit</Link>
       </div>
       </Col>
       <Col>

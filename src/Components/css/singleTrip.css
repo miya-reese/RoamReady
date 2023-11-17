@@ -18,11 +18,56 @@
         background-color: beige;
         display: flex;
         flex-direction: row;
+        height: 100vh;
     }
 
     .accFlexBox {
         flex-grow: 1;
-        background-color: cadetblue;
+        background-color: beige;
         display: flex;
         flex-direction: column;
+    }
+
+    .map-ui {
+        /* position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); */
+        margin: 50px;
+        background-color: beige;
+        flex-grow: 0;
+    }
+
+    .trip-list-view {
+        margin: 50px;
+        flex-grow: 1;
+    }
+
+    .single-trip-flex {
+        display: flex;
+        flex-direction: row;
+        background-color: beige;
+        height: 100vh;
+    }
+
+    .trip-filter {
+        position: absolute;
+        left: 50%;
+        transform: translate(50%, 0%);
+    }
+
+    .single-trip-text {
+        font-family: 'Fira Sans', sans-serif;
+    }
+
+    .single-trip-button {
+        font-family: 'Fira Sans', sans-serif;
+        background-color: #5f9ea0;
+        width: 60px;
+        border-radius: 50px;
+    }
+
+    .single-trip-time {
+        font-family: 'Fira Sans', sans-serif;
+        font-size: 20px;
     }

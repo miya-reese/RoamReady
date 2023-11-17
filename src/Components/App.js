@@ -9,6 +9,8 @@ import MyTrips from './MyTrips';
 import SingleTrip from './SingleTrip';
 import FormScreen from './FormScreen';
 import EditProfile from './EditProfile';
+import AboutUsPage from './AboutUs';
+import AddItemFormScreen from './AddItem/AddItemFormScreen';
 
 export default function App() {
     return (
@@ -23,6 +25,8 @@ export default function App() {
                     <Route path="*" element={<NoPage />}/>
                     <Route path="MyTrips" element={<MyTrips />}/>
                     <Route path="MyTrips/SingleTrip" element={<SingleTrip />}/>
+                    <Route path="AboutUs" element={<AboutUsPage />}/>
+                    <Route path="MyTrips/SingleTrip/AddItem" element={<AddItemFormScreen/>}/>
                 </Route>
             </Routes>
         </BrowserRouter>
