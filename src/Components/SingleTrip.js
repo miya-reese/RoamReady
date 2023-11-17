@@ -21,37 +21,6 @@ const SingleTrip = () => {
 
     return (
         <>
-            {/* <div className="box">
-                <div className="imgParent">
-                    <MapUI startLoc={trip.MapObject.origin} endLoc={trip.MapObject.destination} placeMode={placeMode} 
-                    place={place}/>
-                    <div style={{color: "blue", textDecorationLine: "underline", textAlign: "center"}} onClick={() => {
-                      setPlaceMode(false);
-                    }} onKeyDown={() => {
-                        setPlaceMode(false);
-                    }}>
-                      FullTripView
-                    </div>
-                </div>
-                <div className="accFlexBox">
-                    <TripListView trip={trip} index={index} handleItemDelete={handleItemDelete} handleAccBodyClick={handleAccBodyClick} />
-                </div>
-            </div> */}
-
-            {/* <div className="map-ui">
-                <MapUI startLoc={trip.MapObject.origin} endLoc={trip.MapObject.destination} placeMode={placeMode} place={place}/>
-                <div style={{color: "blue", textDecorationLine: "underline", textAlign: "center"}} onClick={() => {
-                        setPlaceMode(false);
-                        }} onKeyDown={() => {
-                            setPlaceMode(false);
-                        }}>
-                        FullTripView
-                </div>
-            </div>
-            <div className="trip-list-view">
-                <TripListView trip={trip} index={index} handleItemDelete={handleItemDelete} handleAccBodyClick={handleAccBodyClick} />
-            </div> */}
-
             <div className="single-trip-flex">
                 <div className="map-ui">
                     <h1 className="single-trip-text" style={{fontWeight: "bold"}}>Your trip to {trip.MapObject.destination}</h1>

@@ -9,13 +9,13 @@ import TripArray from '../../TripArray'
 
 function AddItemForm({index, handleItemDelete}) {
   const [formData, setFormData] = useState({
-    tripName: '',
+    title: '',
     type: '',
-    location1: '',
     startTime: '',
     startDate: '',
-    endDate: ''
-    // imgSrc: '',
+    endDate: '',
+    duration: '',
+    location: ''
   });
 
   const handleInputChange = (event) => {
@@ -26,18 +26,24 @@ function AddItemForm({index, handleItemDelete}) {
     });
   };
 
+  const durationOption1 = "< 1 hour";
+  const durationOption2 = "1-2 hours";
+  const durationOption3 = "2-4 hours";
+  const durationOption4 = "5-8 hours";
+  const durationOption5 = "All day";
+  const durationOption6 = "Multiple days";
+
   return (
-    // <Col xs={12} sm={6} className="p-3" style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0 }}>
     <Container fluid className="p-0" style={{fontFamily: 'Fira Sans', background: 'white', height:'100vh'}}>
       <Form style={{ height: '100%', overflowY: 'auto' }}>
         <br></br>
-        <Form.Group className="mb-3" controlId="formName">
+        <Form.Group className="mb-3" controlId="formTitle">
           <Form.Label style={{fontSize: '20px'}}>Item Name</Form.Label>
           <Form.Control
             type="text"
-            name="tripName"
+            name="title"
             placeholder="Name"
-            value={formData.tripName}
+            value={formData.title}
             onChange={handleInputChange}
             style={{fontFamily: 'Montserrat', color: '#737373'}}
           />
@@ -64,20 +70,6 @@ function AddItemForm({index, handleItemDelete}) {
         <br></br>
         <br></br>
 
-        <Form.Group className="mb-3" controlId="formBasicLocation1">
-          <Form.Label style={{fontSize: '20px'}}>Location</Form.Label>
-          <Form.Control
-            type="text"
-            name="location1"
-            placeholder="Location"
-            value={formData.location1}
-            onChange={handleInputChange}
-            style={{fontFamily: 'Montserrat', color: '#737373'}}
-          />
-        </Form.Group>
-
-        <br></br>
-        <br></br>
 
         <Form.Group className="mb-3" controlId="formStartTime">
           <Form.Label style={{fontSize: '20px'}}>Start Time</Form.Label>
@@ -90,6 +82,9 @@ function AddItemForm({index, handleItemDelete}) {
             style={{fontFamily: 'Montserrat', color: '#737373'}}
           />
         </Form.Group>
+
+        <br></br>
+        <br></br>
 
         <Form.Group className="mb-3" controlId="formDate">
           <Form.Label style={{fontSize: '20px'}}>Start Date</Form.Label>
@@ -110,6 +105,42 @@ function AddItemForm({index, handleItemDelete}) {
             name="endDate"
             placeholder="dd/mm/yyyy"
             value={formData.endDate}
+            onChange={handleInputChange}
+            style={{fontFamily: 'Montserrat', color: '#737373'}}
+          />
+        </Form.Group>
+
+        <br></br>
+        <br></br>
+
+        <Form.Group className="mb-3" controlId="formDuration">
+          <Form.Label style={{fontSize: '20px'}}>Duration</Form.Label>
+          <Form.Select
+            name="duration"
+            value={formData.duration}
+            onChange={handleInputChange}
+            style={{fontFamily: 'Montserrat', color: '#737373'}}
+          >
+            <option>Please Select</option>
+            <option>{durationOption1}</option>
+            <option>{durationOption2}</option>
+            <option>{durationOption3}</option>
+            <option>{durationOption4}</option>
+            <option>{durationOption5}</option>
+            <option>{durationOption6}</option>
+          </Form.Select>
+        </Form.Group>
+
+        <br></br>
+        <br></br>
+
+        <Form.Group className="mb-3" controlId="formLocation">
+          <Form.Label style={{fontSize: '20px'}}>Location</Form.Label>
+          <Form.Control
+            type="text"
+            name="location"
+            placeholder="Location"
+            value={formData.location}
             onChange={handleInputChange}
             style={{fontFamily: 'Montserrat', color: '#737373'}}
           />

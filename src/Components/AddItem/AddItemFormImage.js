@@ -9,7 +9,7 @@ export default function AddItemFormImage()
         height: '100vh' }}>
             <Image
                 src="https://bettyonthego.com/wp-content/uploads/2018/04/IMG_8878.jpg"
-                alt="Greece at night"
+                alt="Lago di Braies"
                 style={{
                 width: "100%",
                 height: "100vh",
