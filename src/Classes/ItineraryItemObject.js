@@ -1,8 +1,9 @@
-export default function ItineraryItem(type, startTime, endTime, date1, date2, description) {
+export default function ItineraryItem(title, type, startTime, startDate, endDate, duration, location) {
+    this.title = title;
     this.type = type;
     this.startTime = startTime;
-    this.endTime = endTime;
-    this.date1 = date1;
-    this.date2 = date2;
-    this.description = description;
+    this.startDate = startDate;
+    this.endDate = endDate;
+    this.duration = duration;
+    this.location = location;
 }

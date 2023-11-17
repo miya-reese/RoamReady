@@ -16,7 +16,8 @@ function AddItemFormController(formData, index)
         }
         return typeNum;
     }
-    let userItem = new ItineraryItem(getType(formData.type), formData.startTime, '', formData.startDate, formData.endDate, formData.location1);
+
+    let userItem = new ItineraryItem(formData.title, getType(formData.type), formData.startTime, formData.startDate, formData.endDate, formData.duration, formData.location);
     TripArray[index].ItineraryObject.itineraryItemList.push(userItem);
 }
 
