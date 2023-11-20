@@ -9,50 +9,49 @@ import './css/UI.css';
 // the page
 function MyTripsPage() 
 { 
-  let defaultPastTrips = PastTrips.map((trip, index) =>
-    <Col key={trip.name}>
-      <div>
-        <TripCard trip={trip} index={index} handleTripsMod={handlePastTripsMod} date={(trip.ItineraryObject.startDate.toDateString()).slice(4)+' - '+(trip.ItineraryObject.endDate.toDateString()).slice(4)} srcImg={trip.srcImg}/>
-      </div>
-    </Col>
-  );
 
-  let defaultUpcomingTrips = TripArray.map((trip, index) => 
-    <Col key={trip.name}>
-      <div>
-        <TripCard trip={trip} index={index} handleTripsMod={handleTripsMod} date={(trip.ItineraryObject.startDate.toDateString()).slice(4)+' - '+(trip.ItineraryObject.endDate.toDateString()).slice(4)} srcImg={trip.srcImg}/>
-      </div>
-    </Col>
-  );
-
-  const [pastTrips, setPastTrips] = useState(defaultPastTrips);
-  const [upcomingTrips, setUpcomingTrips] = useState(defaultUpcomingTrips);
-
-  function handlePastTripsMod(idx) {
-    PastTrips.splice(idx, 1);
-    setPastTrips(
-      PastTrips.map(
-        (trip, index) =>
-        <Col key={trip.name}>
-          <div>
-            <TripCard trip={trip} index={index} handleTripsMod={handlePastTripsMod} date={(trip.ItineraryObject.startDate.toDateString()).slice(4)+' - '+(trip.ItineraryObject.endDate.toDateString()).slice(4)} srcImg={trip.srcImg}/>
-          </div>
-        </Col>
-      )
-    );
+  function mapTrips(trips, type) {
+    if(trips.length > 0){
+      return (
+        trips.map((trip, index) => 
+          <Col key={trip.name}>
+            <div>
+              <TripCard trip={trip} index={index} trips={trips} type={type} handleTripsMod={handleTripsMod} date={(trip.ItineraryObject.startDate.toDateString()).slice(4)+' - '+(trip.ItineraryObject.endDate.toDateString()).slice(4)} srcImg={trip.srcImg}/>
+            </div>
+          </Col>
+        )
+      );
+    }
+    else{
+      if(type === 0){
+        return(
+          <h3 className="text-center">You haven't gone on any trips... yet :D </h3>
+        );
+      }
+      else{
+        return(
+          <h3 className="text-center">No trips planned, get on it!!! :P</h3>
+        );
+      }
+    }
   }
-  function handleTripsMod(idx) {
-    TripArray.splice(idx, 1);
-    setUpcomingTrips(
-      TripArray.map(
-        (trip, index) =>
-        <Col key={trip.name}>
-          <div>
-            <TripCard trip={trip} index={index} handleTripsMod={handleTripsMod} date={(trip.ItineraryObject.startDate.toDateString()).slice(4)+' - '+(trip.ItineraryObject.endDate.toDateString()).slice(4)} srcImg={trip.srcImg}/>
-          </div>
-        </Col>
+
+  const [pastTrips, setPastTrips] = useState(mapTrips(PastTrips, 0));
+  const [upcomingTrips, setUpcomingTrips] = useState(mapTrips(TripArray, 1));
+
+  function handleTripsMod(trips, idx, type) {
+    trips.splice(idx, 1);
+    console.log("deleting idx: "+idx+" from array "+type);
+    if(type === 0) {
+      setPastTrips(
+        mapTrips(trips, type)
       )
-    );
+    }
+    else {
+      setUpcomingTrips(
+        mapTrips(trips, type)
+      )
+    }
   }
   
   // display on page

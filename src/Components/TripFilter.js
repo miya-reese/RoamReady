@@ -4,15 +4,17 @@ import PropTypes from 'prop-types';
 const TripFilter = ({handleFilterClick}) => {
     return (
         <Dropdown>
-            <Dropdown.Toggle className="single-trip-text" variant="success" id="dropdown-basic">
-                Filter by:
-            </Dropdown.Toggle>
+            <div className="filter-text">
+                <Dropdown.Toggle variant="success" id="dropdown-basic">
+                    Filter By:
+                </Dropdown.Toggle>
+            </div>
 
             <Dropdown.Menu>
-                <Dropdown.Item onClick={() => {handleFilterClick(0)}}>Transportation</Dropdown.Item>
-                <Dropdown.Item onClick={() => {handleFilterClick(1)}}>Accommodations</Dropdown.Item>
-                <Dropdown.Item onClick={() => {handleFilterClick(2)}}>Activities</Dropdown.Item>
-                <Dropdown.Item onClick={() => {handleFilterClick(-1)}}>None</Dropdown.Item>
+                <Dropdown.Item className="filter-text" onClick={() => {handleFilterClick(0)}}>Transportation</Dropdown.Item>
+                <Dropdown.Item className="filter-text" onClick={() => {handleFilterClick(1)}}>Accommodations</Dropdown.Item>
+                <Dropdown.Item className="filter-text" onClick={() => {handleFilterClick(2)}}>Activities</Dropdown.Item>
+                <Dropdown.Item className="filter-text" onClick={() => {handleFilterClick(-1)}}>None</Dropdown.Item>
             </Dropdown.Menu>
         </Dropdown>
     )

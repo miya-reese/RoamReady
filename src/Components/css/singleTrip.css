@@ -29,10 +29,6 @@
     }
 
     .map-ui {
-        /* position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%); */
         margin: 50px;
         background-color: beige;
         flex-grow: 0;
@@ -58,6 +54,11 @@
 
     .single-trip-text {
         font-family: 'Fira Sans', sans-serif;
+    }
+
+    .filter-text {
+        font-family: 'Fira Sans', sans-serif;
+        font-size: 16px;
     }
 
     .single-trip-button {
