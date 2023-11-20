@@ -8,7 +8,7 @@ import Card from './Card';
 import MyTrips from './MyTrips';
 import SingleTrip from './SingleTrip';
 import FormScreen from './FormScreen';
-import EditProfile from './EditProfile';
+import ManageProfile from './ManageProfile';
 import AboutUsPage from './AboutUs';
 import AddItemFormScreen from './AddItem/AddItemFormScreen';
 
@@ -21,7 +21,7 @@ export default function App() {
                     <Route path="Welcome" element={<Welcome />} />
                     <Route path="FormScreen" element={<FormScreen />} />
                     <Route path="Profile" element={<Card />} />
-                    <Route path="Profile/EditProfile" element={<EditProfile/>}/>
+                    <Route path="Profile/ManageProfile" element={<ManageProfile/>}/>
                     <Route path="*" element={<NoPage />}/>
                     <Route path="MyTrips" element={<MyTrips />}/>
                     <Route path="MyTrips/SingleTrip" element={<SingleTrip />}/>
