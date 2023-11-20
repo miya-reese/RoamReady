@@ -3,6 +3,7 @@ import './css/profile.css';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import User from '../Classes/UserObject';
+import Button from 'react-bootstrap/Button';
 import {Link} from 'react-router-dom';
 import PropTypes from 'prop-types';
 
@@ -13,21 +14,27 @@ function ProfileCard(user) {
   return (
     <Row>
       <Col>
+      <div style={{ height: '1vh'}} ></div>
+        <h1 className="title"> Profile </h1>
+        <div style={{height: '1vh'}}></div>
       <div className='prof-col1'>
       <img src={userTest.profileImg} width={300} height={310} alt="profImg"/>
-      <div>
-        <h1 className='prof-name'>{userTest.fullname}</h1>
-        <h2 className='prof-subtitle'>Account Information</h2>
-        <h2 className='prof-info'>{formatInfo("Username", userTest.username)}</h2>
-        <h2 className='prof-info'>{formatInfo("Password", "*************")}</h2>
-      </div>
-        <br></br>
-        <br></br>
-        <Link to="/*" className='edit-profile' state={{user: user}} >Edit</Link>
+      <br></br>
+      <h1 className='prof-name'>{userTest.fullname}</h1>
+      <br></br>
+      <br></br>
+      <Link to="/Profile/ManageProfile"><Button style={{background: '#a4e0e1'}} variant="primary" type="button" state={{user: user}}>Edit</Button></Link>
       </div>
       </Col>
       <Col>
         <div className='prof-col2'>
+        <div>
+        <h2 className='prof-subtitle'>Account Information</h2>
+        <h2 className='prof-info'>{formatInfo("Username", userTest.username)}</h2>
+        <h2 className='prof-info'>{formatInfo("Password", "*************")}</h2>
+        </div>
+        <br></br>
+        <br></br>
         <div>
           <h2 className='prof-subtitle'>Contact Information</h2>
           <h2 className='prof-info'>{formatInfo("Phone", userTest.phone)}</h2>
@@ -35,12 +42,12 @@ function ProfileCard(user) {
           <h2 className='prof-info'>{formatInfo("Address", userTest.addrLine1)}</h2>
           <h2 className='prof-info'>{"                    " + userTest.addrLine2}</h2>
         </div>
-        </div>
+        </div>    
     </Col>
     <Col>
       <div>
         <img className='water-img' src='https://images.unsplash.com/photo-1555412654-72a95a495858?auto=format&fit=crop&q=80&w=1000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8fA%3D%3D' 
-        height={580} alt='Water'/>
+        height={625} alt='Water'/>
       </div>
     </Col>
     </Row>
