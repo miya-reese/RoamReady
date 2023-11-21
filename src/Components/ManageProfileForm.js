@@ -1,25 +1,21 @@
 import React from 'react';
 import './css/profile.css';
-import User from '../Classes/UserObject.js';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
-import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
+import mainUser from '../GlobalUser.js';
+import ManageProfileController from './ManageProfileController.js';
 
-const userTest = new User("Francisco Lachowski", "chico.lachowski", "milo123", "+1 888 123-4567", "chico_lachowski@gmail.com", "525 E 86th Street", "New York, NY 10651-78")
-userTest.setProfileImg('https://www.numeromag.nl/wp-content/uploads/2023/08/Numero-Rio-de-janeiro-Brazil-7-960x1000.jpg')
-
-// unfinished
 function ManageProfileForm(user) {
 
     const [userData, setUserData] = React.useState({
-      fullname: userTest.fullname,
-      username: userTest.username,
-      password: userTest.password,
-      phone: userTest.phone,
-      email: userTest.email,
-      addrLine1: userTest.addrLine1,
-      addrLine2: userTest.addrLine2
+      fullname: mainUser.fullname,
+      username: mainUser.username,
+      password: mainUser.password,
+      phone: mainUser.phone,
+      email: mainUser.email,
+      addrLine1: mainUser.addrLine1,
+      addrLine2: mainUser.addrLine2
     });
     
     // handle on change according to input name and setState
@@ -40,7 +36,7 @@ function ManageProfileForm(user) {
               type="text"
               name="fullname"
               placeholder="Fullname"
-              defaultValue={userTest.fullname}
+              defaultValue={mainUser.fullname}
               value={userData.fullname}
               onChange={handleInputChange}
               style={{fontFamily: 'Montserrat', color: '#737373'}}
@@ -52,7 +48,7 @@ function ManageProfileForm(user) {
               type="text"
               name="username"
               placeholder="Username"
-              defaultValue={userTest.username}
+              defaultValue={mainUser.username}
               value={userData.username}
               onChange={handleInputChange}
               style={{fontFamily: 'Montserrat', color: '#737373'}}
@@ -64,7 +60,7 @@ function ManageProfileForm(user) {
               type="password"
               name="password"
               placeholder="Password"
-              defaultValue={userTest.password}
+              defaultValue={mainUser.password}
               value={userData.password}
               onChange={handleInputChange}
               style={{fontFamily: 'Montserrat', color: '#737373'}}
@@ -76,7 +72,7 @@ function ManageProfileForm(user) {
               type="text"
               name="phone"
               placeholder="Phone number"
-              defaultValue={userTest.phone}
+              defaultValue={mainUser.phone}
               value={userData.phone}
               onChange={handleInputChange}
               style={{fontFamily: 'Montserrat', color: '#737373'}}
@@ -88,7 +84,7 @@ function ManageProfileForm(user) {
               type="text"
               name="email"
               placeholder="Email"
-              defaultValue={userTest.email}
+              defaultValue={mainUser.email}
               value={userData.email}
               onChange={handleInputChange}
               style={{fontFamily: 'Montserrat', color: '#737373'}}
@@ -100,7 +96,7 @@ function ManageProfileForm(user) {
               type="text"
               name="addrLine1"
               placeholder="Address Line 1"
-              defaultValue={userTest.addrLine1}
+              defaultValue={mainUser.addrLine1}
               value={userData.addrLine1}
               onChange={handleInputChange}
               style={{fontFamily: 'Montserrat', color: '#737373'}}
@@ -112,21 +108,16 @@ function ManageProfileForm(user) {
               type="text"
               name="addrLine2"
               placeholder="Address Line 2"
-              defaultValue={userTest.addrLine2}
+              defaultValue={mainUser.addrLine2}
               value={userData.addrLine2}
               onChange={handleInputChange}
               style={{fontFamily: 'Montserrat', color: '#737373'}}
               />
             </Form.Group>
-            <Link to="/Profile"><Button style={{background: '#a4e0e1'}} variant="primary" type="button">Submit</Button></Link>
+            <Link to="/Profile"><Button style={{background: '#a4e0e1'}} variant="primary" type="button" onClick={() => ManageProfileController(userData)}>Submit</Button></Link>
         </Form>
       </div>
     );
-  };
-
-  // type check props
-ManageProfileForm.propTypes = {
-    user: PropTypes.object
   };
 
   export default ManageProfileForm;

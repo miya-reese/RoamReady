@@ -16,7 +16,31 @@ export default class UserObject{
         this.profileImg = imgLink;
     }
 
-    fullname(){
-        return this.firstname + " " + this.lastname;
+    setFullname(fullname){
+        this.fullname = fullname;
+    }
+
+    setUsername(username){
+        this.username = username;
+    }
+
+    setPassword(pass){
+        this.password = pass;
+    }
+
+    setPhone(phone){
+        this.phone = phone;
+    }
+
+    setEmail(email){
+        this.email = email;
+    }
+
+    setAddrLine1(addrLine1){
+        this.addrLine1 = addrLine1;
+    }
+
+    setAddrLine2(addrLine2){
+        this.addrLine2 = addrLine2;
     }
 }
