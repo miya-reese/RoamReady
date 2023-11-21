@@ -1,10 +1,8 @@
 import TripArray from "../TripArray";
 import PastTripArray from "../PastTripArray";
-
 import ItineraryObject from "../Classes/ItineraryObject";
 import MapObject from "../Classes/MapObject";
 import TripObject from "../Classes/TripObject";
-
 import TimePush from "../Components/TimePush";
 
 let romeMap1 = new MapObject('Milan','Rome');
@@ -16,7 +14,6 @@ test('pushes romeTrip (future trip) to TripArray', () => {
     TimePush(romeTrip1);
     expect(TripArray.length).toBe(initialLength+1);
 });
-
 
 let romeMap2 = new MapObject('Milan','Rome');
 let romeItinerary2 = new ItineraryObject(new Date()+1, new Date()+2);
@@ -31,7 +28,6 @@ test('pushes romeTrip (future trip) to TripArray', () => {
 let amalfiMap = new MapObject('','');
 let amalfiItinerary = new ItineraryObject(new Date('October 7, 2023'), new Date('Octobere 8, 2023'));
 let amalfiTrip = new TripObject('Amalfi Coast', amalfiMap, amalfiItinerary, 0, 0, 'https://www.tourissimo.travel/hubfs/Blog_pictures/The%20Path%20of%20Gods/Path%20of%20the%20Gods%20Blog%20Banner.jpg');
-
 /* loop Testing 2 body execution*/
 test('pushes amalfiTrip (past trip) to PastTripArray', () => {
     const initialLength = PastTripArray.length;
