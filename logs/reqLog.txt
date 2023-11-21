@@ -20,3 +20,5 @@
 20231121	22:24:13	5a3965f4-12e0-4c7d-827d-62f09b67b391	POST	http://localhost:3000	/auth
 20231121	22:24:14	5603665f-af09-46ad-b6b9-d79bf571e623	POST	http://localhost:3000	/auth
 20231121	22:24:15	99e47870-fc3f-42bb-91f4-f7554ee8c243	POST	http://localhost:3000	/auth
+20231121	22:55:07	a139aeef-9129-4fa9-88d3-6f96d8a1bd8a	OPTIONS	http://localhost:3000	/auth
+20231121	22:55:07	c4eeb5f5-8a6f-4076-9120-15ad63b13ae3	POST	http://localhost:3000	/auth
