@@ -21,10 +21,7 @@ const TripFilter = ({handleFilterClick}) => {
 }
 
 TripFilter.propTypes = {
-    handleTransportClick: PropTypes.func,
-    handleAccoClick: PropTypes.func,
-    handleActClick: PropTypes.func,
-    handleNoneClick: PropTypes.func,
+    handleFilterClick: PropTypes.func,
 }
 
 export default TripFilter;
