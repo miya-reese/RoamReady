@@ -11,7 +11,7 @@ const TripListView = ({trip, index, handleItemDelete, handleAccBodyClick}) => {
         return (
             itemList.map(
                 (item, index) => (
-                    <TripAccordion title={item.title} type={item.type} startTime={item.startTime} startDate={item.startDate} endDate={item.endDate} duration={item.duration} location={item.location} handleAccBodyClick={handleAccBodyClick} handleItemsMod={handleItemsMod} index={index}/>
+                    <TripAccordion key={"item"} title={item.title} type={item.type} startTime={item.startTime} startDate={item.startDate} endDate={item.endDate} duration={item.duration} location={item.location} handleAccBodyClick={handleAccBodyClick} handleItemsMod={handleItemsMod} index={index}/>
                 )
             )
         );
@@ -49,6 +49,7 @@ const TripListView = ({trip, index, handleItemDelete, handleAccBodyClick}) => {
 }
 
 TripListView.propTypes = {
+    handleItemDelete: PropTypes.func,
     handleAccBodyClick: PropTypes.func,
     trip: PropTypes.object,
     index: PropTypes.number

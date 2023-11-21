@@ -18,6 +18,8 @@ import './css/UI.css';
   };
 
   TripCard.propTypes = {
+    trips: PropTypes.array,
+    type: PropTypes.number,
     name: PropTypes.string,
     date: PropTypes.string,
     srcImg: PropTypes.string,
