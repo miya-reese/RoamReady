@@ -23,7 +23,7 @@ const Layout = () => {
         </Link>
         <ul className={`${styles.navMenu}`}>
           <li>
-            <NavLink to="/Card" style={getLinkStyle('/Card')}>
+            <NavLink to="/AboutUs" style={getLinkStyle('/AboutUs')}>
               About Us
             </NavLink>
           </li>
@@ -38,7 +38,11 @@ const Layout = () => {
             </NavLink>
           </li>
           <li>
+<<<<<<< HEAD:react/src/Components/Layout.js
             <NavLink to="/Login" style={getLinkStyle('/Login')}>
+=======
+            <NavLink to="/Profile" style={getLinkStyle('/Card')}>
+>>>>>>> 3dcbcfe2026a2cc426d09906a303cbdaf749a6ef:src/Components/Layout.js
               Profile
             </NavLink>
           </li>

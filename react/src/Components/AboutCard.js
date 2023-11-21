@@ -1,31 +1,31 @@
-import React from 'react';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
-import User from '../Classes/UserObject';
+import React from 'react'
+import PropTypes from 'prop-types';
 
-export default function AboutCard() {
+const imageStyle = {
+  width: '280px',
+  height: '280px',
+  objectFit: 'cover', // Prevents the image from stretching
+};
+
+  function AboutCard(props) {
     return (
-        <Row>
-            <Col>
-                <div className="Anna">
-                    <h1>Anna Makarewicz</h1>
-                </div>
-            </Col>
-            <Col>
-                <div className="Drew">
-                    <h1>Drew Kim</h1>
-                </div>
-            </Col>
-            <Col>
-                <div className="Miya">
-                    <h1>Miya Reese</h1>
-                </div>
-            </Col>
-            <Col>
-                <div className="Soren">
-                    <h1>Soren Fliegel</h1>
-                </div>
-            </Col>
-        </Row>
-    )
-}
+      <div style={{margin:5}}>
+        <img src={props.srcImg} style={imageStyle} alt={props.person.name+" img"}></img>
+        <div className='ABCard-div'>
+          <h1 className='card-title'>{props.person.name}</h1>
+          <h2 className='ABcard-date'>{props.person.description}</h2>
+        </div>
+      </div>
+    );
+  };
+
+  AboutCard.propTypes = {
+    person: PropTypes.shape({
+      name: PropTypes.string.isRequired,
+      srcImg: PropTypes.string.isRequired,
+      description: PropTypes.string.isRequired,
+    }).isRequired,
+    srcImg: PropTypes.string.isRequired,
+  };
+
+export default AboutCard;

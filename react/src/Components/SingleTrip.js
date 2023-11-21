@@ -20,27 +20,22 @@ const SingleTrip = () => {
     }
 
     return (
-        <>
-            <h1>
-                {trip.name}
-            </h1>
-            <div className="box">
-                <div className="imgParent">
-                    <MapUI startLoc={trip.MapObject.origin} endLoc={trip.MapObject.destination} placeMode={placeMode} 
-                    place={place}/>
-                    <div style={{color: "blue", textDecorationLine: "underline", textAlign: "center"}} onClick={() => {
-                      setPlaceMode(false);
-                    }} onKeyDown={() => {
+        <div className="single-trip-flex">
+            <div className="map-ui">
+                <h1 className="single-trip-text" style={{fontWeight: "bold"}}>Your trip to {trip.MapObject.destination}</h1>
+                <MapUI startLoc={trip.MapObject.origin} endLoc={trip.MapObject.destination} placeMode={placeMode} place={place}/>  
+                <div className="single-trip-text" style={{color: "blue", textDecorationLine: "underline", textAlign: "center"}} onClick={() => {
                         setPlaceMode(false);
-                    }}>
-                      FullTripView
-                    </div>
-                </div>
-                <div className="accFlexBox">
-                    <TripListView trip={trip} index={index} handleItemDelete={handleItemDelete} handleAccBodyClick={handleAccBodyClick} />
+                        }} onKeyDown={() => {
+                            setPlaceMode(false);
+                        }}>
+                        FullTripView
                 </div>
             </div>
-        </>
+            <div className="trip-list-view">
+                <TripListView trip={trip} index={index} handleItemDelete={handleItemDelete} handleAccBodyClick={handleAccBodyClick} />
+            </div>
+        </div>
 );
 }
 
