@@ -22,19 +22,18 @@ function MyTripsPage()
         )
       );
     }
-    else{
-      if(type === 0){
-        return(
-          <h3 className="text-center">You haven't gone on any trips... yet :D </h3>
-        );
-      }
-      else{
-        return(
-          <h3 className="text-center">No trips planned, get on it!!! :P</h3>
-        );
-      }
+    else if (type === 0){
+      return(
+        <h3 className="text-center">You haven't gone on any trips... yet :D </h3>
+      );
     }
-  }
+    else{
+      return(
+        <h3 className="text-center">No trips planned, get on it!!! :P</h3>
+      );
+    }
+    }
+  
 
   const [pastTrips, setPastTrips] = useState(mapTrips(PastTrips, 0));
   const [upcomingTrips, setUpcomingTrips] = useState(mapTrips(TripArray, 1));
