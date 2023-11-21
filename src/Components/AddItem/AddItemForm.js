@@ -5,7 +5,8 @@ import Form from 'react-bootstrap/Form';
 import Container from 'react-bootstrap/Container';
 import AddItemFormController from './AddItemFormController';
 import { Link } from 'react-router-dom';
-import TripArray from '../../TripArray'
+import TripArray from '../../TripArray';
+import PropTypes from 'prop-types';
 
 function AddItemForm({index, handleItemDelete}) {
   const [formData, setFormData] = useState({
@@ -159,3 +160,8 @@ function AddItemForm({index, handleItemDelete}) {
 }
 
 export default AddItemForm;
+
+AddItemForm.propTypes = {
+  index: PropTypes.number,
+  handleItemDelete: PropTypes.func
+}
