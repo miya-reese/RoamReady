@@ -2,7 +2,6 @@ import React from 'react';
 import './css/profile.css';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
-import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import mainUser from '../GlobalUser.js';
 import ManageProfileController from './ManageProfileController.js';
@@ -119,11 +118,6 @@ function ManageProfileForm(user) {
         </Form>
       </div>
     );
-  };
-
-  // type check props
-ManageProfileForm.propTypes = {
-    user: PropTypes.object
   };
 
   export default ManageProfileForm;
