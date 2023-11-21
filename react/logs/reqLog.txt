@@ -1,0 +1,8 @@
+20231121	01:25:02	1b6035d6-e240-4f76-8aee-4ac3ef6f6375	GET	undefined	/Register
+20231121	01:25:02	0d1d5320-14cd-4d29-8c34-39b702778bbe	GET	undefined	/favicon.ico
+20231121	01:25:08	15b0a552-ccec-4ff3-abff-d4c8a3509947	GET	undefined	/
+20231121	01:25:08	855f7e6a-6fd5-41ae-aa04-1e991fdb147d	GET	undefined	/%PUBLIC_URL%/favicon.ico
+20231121	01:25:08	fd905511-b0cf-4770-84d4-7c63d001c8ee	GET	undefined	/%PUBLIC_URL%/manifest.json
+20231121	01:25:11	281f1c5f-3a74-41b7-846b-006aed9dec39	GET	undefined	/
+20231121	01:25:11	ac31986b-71e6-4325-8a16-3c9ffeb578ce	GET	undefined	/%PUBLIC_URL%/favicon.ico
+20231121	01:25:11	f4233eb4-7e65-4ea7-9674-f59c994f08d3	GET	undefined	/%PUBLIC_URL%/manifest.json
