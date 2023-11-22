@@ -28,7 +28,6 @@ section {
 form {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     flex-grow: 1;
     padding-bottom: 1rem;
 }
@@ -43,7 +42,6 @@ button,
 textarea {
   font-family: 'Nunito', sans-serif;
   font-size: 24px;
-  padding: 0.05rem;
   border-radius: 0.25rem;
 }
 
