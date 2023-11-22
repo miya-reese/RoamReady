@@ -27,6 +27,8 @@ export default function App() {
                     <Route path="MyTrips/SingleTrip" element={<SingleTrip />}/>
                     <Route path="AboutUs" element={<AboutUsPage />}/>
                     <Route path="MyTrips/SingleTrip/AddItem" element={<AddItemFormScreen/>}/>
+                    <Route path="Register" element={<Register />} />
+                    <Route path="Login" element={<Login />} />
                 </Route>
             </Routes>
         </BrowserRouter>
