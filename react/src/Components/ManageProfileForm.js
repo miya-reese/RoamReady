@@ -6,16 +6,16 @@ import { Link } from 'react-router-dom';
 import mainUser from '../GlobalUser.js';
 import ManageProfileController from './ManageProfileController.js';
 
-function ManageProfileForm(user) {
+function ManageProfileForm() {
 
     const [userData, setUserData] = React.useState({
-      fullname: mainUser.fullname,
+      firstname: mainUser.firstname,
+      lastname: mainUser.lastname,
       username: mainUser.username,
       password: mainUser.password,
       phone: mainUser.phone,
       email: mainUser.email,
-      addrLine1: mainUser.addrLine1,
-      addrLine2: mainUser.addrLine2
+      address: mainUser.address
     });
     
     // handle on change according to input name and setState
@@ -30,14 +30,26 @@ function ManageProfileForm(user) {
     return (
       <div>
         <Form>
-          <Form.Group className="mb-3" controlId="formFullname">
-            <Form.Label style={{fontSize: '20px'}}>Fullname</Form.Label>
+          <Form.Group className="mb-3" controlId="formFirstname">
+            <Form.Label style={{fontSize: '20px'}}>Firstname</Form.Label>
             <Form.Control
               type="text"
-              name="fullname"
-              placeholder="Fullname"
-              defaultValue={mainUser.fullname}
-              value={userData.fullname}
+              name="firstname"
+              placeholder="Firstname"
+              defaultValue={mainUser.firstname}
+              value={userData.firstname}
+              onChange={handleInputChange}
+              style={{fontFamily: 'Montserrat', color: '#737373'}}
+            />
+            </Form.Group>
+            <Form.Group className="mb-3" controlId="formLastname">
+            <Form.Label style={{fontSize: '20px'}}>Lastname</Form.Label>
+            <Form.Control
+              type="text"
+              name="lastname"
+              placeholder="Lastname"
+              defaultValue={mainUser.lastname}
+              value={userData.lastname}
               onChange={handleInputChange}
               style={{fontFamily: 'Montserrat', color: '#737373'}}
             />
@@ -90,26 +102,14 @@ function ManageProfileForm(user) {
               style={{fontFamily: 'Montserrat', color: '#737373'}}
               />
             </Form.Group>
-            <Form.Group className='mb-3' controlId='formAddrLine1'>
-              <Form.Label style={{fontSize: '20px'}}>Address Line 1</Form.Label>
+            <Form.Group className='mb-3' controlId='formAddress'>
+              <Form.Label style={{fontSize: '20px'}}>Address</Form.Label>
               <Form.Control
               type="text"
-              name="addrLine1"
-              placeholder="Address Line 1"
-              defaultValue={mainUser.addrLine1}
-              value={userData.addrLine1}
-              onChange={handleInputChange}
-              style={{fontFamily: 'Montserrat', color: '#737373'}}
-              />
-            </Form.Group>
-            <Form.Group className='mb-3' controlId='formAddrLine2'>
-              <Form.Label style={{fontSize: '20px'}}>Address Line 2</Form.Label>
-              <Form.Control
-              type="text"
-              name="addrLine2"
-              placeholder="Address Line 2"
-              defaultValue={mainUser.addrLine2}
-              value={userData.addrLine2}
+              name="address"
+              placeholder="Address"
+              defaultValue={mainUser.address}
+              value={userData.address}
               onChange={handleInputChange}
               style={{fontFamily: 'Montserrat', color: '#737373'}}
               />
