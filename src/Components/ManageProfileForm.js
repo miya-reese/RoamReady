@@ -31,11 +31,11 @@ function ManageProfileForm() {
       <div>
         <Form>
           <Form.Group className="mb-3" controlId="formFirstname">
-            <Form.Label style={{fontSize: '20px'}}>Firstname</Form.Label>
+            <Form.Label style={{fontSize: '20px'}}>First Name</Form.Label>
             <Form.Control
               type="text"
               name="firstname"
-              placeholder="Firstname"
+              placeholder="First name"
               defaultValue={mainUser.firstname}
               value={userData.firstname}
               onChange={handleInputChange}
@@ -43,11 +43,11 @@ function ManageProfileForm() {
             />
             </Form.Group>
             <Form.Group className="mb-3" controlId="formLastname">
-            <Form.Label style={{fontSize: '20px'}}>Lastname</Form.Label>
+            <Form.Label style={{fontSize: '20px'}}>Last Name</Form.Label>
             <Form.Control
               type="text"
               name="lastname"
-              placeholder="Lastname"
+              placeholder="Last name"
               defaultValue={mainUser.lastname}
               value={userData.lastname}
               onChange={handleInputChange}
