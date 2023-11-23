@@ -17,21 +17,21 @@ test('renders ManageProfileForm with input fields and submit button', () => {
   const editButton = screen.getByRole('button', { name: /Edit/i });
   fireEvent.click(editButton);
   // Check if input fields are rendered
-  const fullnameInput = screen.getByPlaceholderText(/Fullname/i);
+  const firstnameInput = screen.getByPlaceholderText(/First Name/i);
+  const lastnameInput = screen.getByPlaceholderText(/Last Name/i);
   const usernameInput = screen.getByPlaceholderText(/Username/i);
   const passwordInput = screen.getByPlaceholderText(/Password/i);
   const phoneInput = screen.getByPlaceholderText(/Phone number/i);
   const emailInput = screen.getByPlaceholderText(/Email/i);
-  const addrLine1Input = screen.getByPlaceholderText(/Address Line 1/i);
-  const addrLine2Input = screen.getByPlaceholderText(/Address Line 2/i);
+  const addressInput = screen.getByPlaceholderText(/Address/i);
 
-  expect(fullnameInput).toBeInTheDocument();
+  expect(firstnameInput).toBeInTheDocument();
+  expect(lastnameInput).toBeInTheDocument();
   expect(usernameInput).toBeInTheDocument();
   expect(passwordInput).toBeInTheDocument();
   expect(phoneInput).toBeInTheDocument();
   expect(emailInput).toBeInTheDocument();
-  expect(addrLine1Input).toBeInTheDocument();
-  expect(addrLine2Input).toBeInTheDocument();
+  expect(addressInput).toBeInTheDocument();
 
   // Check if the submit button is rendered
   const submitButton = screen.getByRole('button', { name: /Submit/i });
@@ -47,13 +47,13 @@ test('calls ManageProfileController function when submit button is clicked', () 
 
   // Mock user input
     const userInput = {
-      fullname: 'John Doe',
+      firstname: 'John',
+      lastname: 'Doe',
       username: 'john_doe',
       password: 'password123',
       phone: '123-456-7890',
       email: 'john.doe@example.com',
-      addrLine1: '123 Main St',
-      addrLine2: 'Apt 4B',
+      address: '123 Main St'
     };
 
     // Populate form fields using input names
