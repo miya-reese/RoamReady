@@ -91,7 +91,7 @@ function ManageProfileForm(user) {
               />
             </Form.Group>
             <Form.Group className='mb-3' controlId='formAddrLine1'>
-              <Form.Label style={{fontSize: '20px'}}>Address Line 1</Form.Label>
+              <Form.Label style={{fontSize: '20px'}}>addrLine1</Form.Label>
               <Form.Control
               type="text"
               name="addrLine1"
@@ -103,7 +103,7 @@ function ManageProfileForm(user) {
               />
             </Form.Group>
             <Form.Group className='mb-3' controlId='formAddrLine2'>
-              <Form.Label style={{fontSize: '20px'}}>Address Line 2</Form.Label>
+              <Form.Label style={{fontSize: '20px'}}>addrLine2</Form.Label>
               <Form.Control
               type="text"
               name="addrLine2"
