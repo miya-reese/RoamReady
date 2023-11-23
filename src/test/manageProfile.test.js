@@ -1,11 +1,8 @@
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
-import ManageProfileForm from '../Components/ManageProfileForm.js';
 import ManageProfileController from '../Components/ManageProfileController.js';
 import App from '../Components/App.js';
-import Card from '../Components/Card.js'
 import '@testing-library/jest-dom';
-import '@testing-library/react';
 
 // Mocking the ManageProfileController function
 jest.mock('../Components/ManageProfileController.js', () => jest.fn());
