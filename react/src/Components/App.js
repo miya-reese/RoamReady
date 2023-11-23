@@ -13,24 +13,30 @@ import AboutUsPage from './AboutUs';
 import AddItemFormScreen from './AddItem/AddItemFormScreen';
 import Login from './Login.js';
 import Register from './Register.js';
+import RequireAuth from './RequireAuth.js';
 
 export default function App() {
     return (
         <BrowserRouter>
             <Routes>
                 <Route path="/" element={<Layout />}>
-                    <Route index element={<Welcome />} />
+                    // public
                     <Route path="Welcome" element={<Welcome />} />
-                    <Route path="FormScreen" element={<FormScreen />} />
-                    <Route path="Profile" element={<Card />} />
-                    <Route path="Profile/ManageProfile" element={<ManageProfile/>}/>
-                    <Route path="*" element={<NoPage />}/>
-                    <Route path="MyTrips" element={<MyTrips />}/>
-                    <Route path="MyTrips/SingleTrip" element={<SingleTrip />}/>
-                    <Route path="AboutUs" element={<AboutUsPage />}/>
-                    <Route path="MyTrips/SingleTrip/AddItem" element={<AddItemFormScreen/>}/>
                     <Route path="Register" element={<Register />} />
                     <Route path="Login" element={<Login />} />
+                    <Route path="AboutUs" element={<AboutUsPage />}/>
+
+                    // protected
+                    <Route element={<RequireAuth />}>
+                        <Route path="FormScreen" element={<FormScreen />} />
+                        <Route path="Profile" element={<Card />} />
+                        <Route path="Profile/ManageProfile" element={<ManageProfile/>}/>
+                        <Route path="MyTrips" element={<MyTrips />}/>
+                        <Route path="MyTrips/SingleTrip" element={<SingleTrip />}/>
+                        <Route path="MyTrips/SingleTrip/AddItem" element={<AddItemFormScreen/>}/>
+                    </Route>
+                    // catch all
+                    <Route path="*" element={<NoPage />}/>
                 </Route>
             </Routes>
         </BrowserRouter>
