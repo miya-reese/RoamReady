@@ -39,6 +39,7 @@ const Login = () => {
 			setUser('');
 			setPwd('');
 			setSuccess(true);
+			console.log("Success state:", success);
 		} catch (err) {
 			if(!err?.response) {
 				setErrMsg('No Server Response');
@@ -60,7 +61,7 @@ const Login = () => {
 					<h1>You are logged in!</h1>
 					<br />
 					<p>
-						<a style="color: black" href="welcome">Go to Home</a>
+						<a href="welcome">Go to Home</a>
 					</p>
 				</section>
 			) : (
@@ -68,7 +69,7 @@ const Login = () => {
 					<p ref={errRef} className={errMsg ? "errmsg" : "offscreen"} aria-live="assertLive">{errMsg}</p>
 					<h1>Sign In</h1>
 					<form onSubmit={handleSubmit}>
-						<label hrmlFor="username">Username:</label>
+						<label hrmlfor="username">Username:</label>
 						<input 
 							type="text" 
 							id="username"
@@ -79,7 +80,7 @@ const Login = () => {
 			 				required
 						/>
 
-						<label hrmlFor="password">Password:</label>
+						<label htmlFor="password">Password:</label>
 						<input 
 							type="password" 
 							id="password"
