@@ -60,7 +60,7 @@ const Login = () => {
 					<h1>You are logged in!</h1>
 					<br />
 					<p>
-						<a href="welcome">Go to Home</a>
+						<a style="color: black" href="welcome">Go to Home</a>
 					</p>
 				</section>
 			) : (

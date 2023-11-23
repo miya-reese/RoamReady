@@ -32,10 +32,6 @@ form {
     padding-bottom: 1rem;
 }
 
-a, a:visited {
-    color: black;
-}
-
 input[type="text"],
 input[type="password"],
 button,
@@ -98,8 +94,4 @@ button {
 
 .line:hover {
     color: blue;
-}
-
-a {
-    color: black;
 }
