@@ -50,7 +50,7 @@ test('calls ManageProfileController function when submit button is clicked', () 
       firstname: 'John',
       lastname: 'Doe',
       username: 'john_doe',
-      password: 'password123',
+      password: process.env.TEST_PASS,
       phone: '123-456-7890',
       email: 'john.doe@example.com',
       address: '123 Main St'
