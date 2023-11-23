@@ -31,7 +31,7 @@ function ManageProfileForm() {
       <div>
         <Form>
           <Form.Group className="mb-3" controlId="formFirstname">
-            <Form.Label style={{fontSize: '20px'}}>First Name</Form.Label>
+            <Form.Label style={{fontSize: '20px'}}>firstname</Form.Label>
             <Form.Control
               type="text"
               name="firstname"
@@ -43,7 +43,7 @@ function ManageProfileForm() {
             />
             </Form.Group>
             <Form.Group className="mb-3" controlId="formLastname">
-            <Form.Label style={{fontSize: '20px'}}>Last Name</Form.Label>
+            <Form.Label style={{fontSize: '20px'}}>lastname</Form.Label>
             <Form.Control
               type="text"
               name="lastname"
