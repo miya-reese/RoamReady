@@ -19,18 +19,21 @@ export default function App() {
         <BrowserRouter>
             <Routes>
                 <Route path="/" element={<Layout />}>
-                    <Route index element={<Welcome />} />
+                    // public
                     <Route path="Welcome" element={<Welcome />} />
+                    <Route path="Register" element={<Register />} />
+                    <Route path="Login" element={<Login />} />
+                    <Route path="*" element={<NoPage />}/>
+                    <Route path="AboutUs" element={<AboutUsPage />}/>
+
+                    // protected
                     <Route path="FormScreen" element={<FormScreen />} />
                     <Route path="Profile" element={<Card />} />
                     <Route path="Profile/ManageProfile" element={<ManageProfile/>}/>
-                    <Route path="*" element={<NoPage />}/>
                     <Route path="MyTrips" element={<MyTrips />}/>
                     <Route path="MyTrips/SingleTrip" element={<SingleTrip />}/>
-                    <Route path="AboutUs" element={<AboutUsPage />}/>
                     <Route path="MyTrips/SingleTrip/AddItem" element={<AddItemFormScreen/>}/>
-                    <Route path="Register" element={<Register />} />
-                    <Route path="Login" element={<Login />} />
+
                 </Route>
             </Routes>
         </BrowserRouter>
