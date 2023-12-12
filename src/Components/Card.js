@@ -41,9 +41,9 @@ function ProfileCard() {
         </div>    
     </Col>
     <Col>
-      <div>
-        <img className='water-img' src='https://images.unsplash.com/photo-1555412654-72a95a495858?auto=format&fit=crop&q=80&w=1000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8fA%3D%3D' 
-        height={625} alt='Water'/>
+      <div style={{height: '100vh'}}>
+        <img className='water-img' src='https://media.cntraveler.com/photos/5b33f55ed83c9262a52f005a/16:9/w_2560,c_limit/Cliffs-of-Moher_GettyImages-719869761.jpg' 
+        style={{height: '100vh', objectFit: 'cover'}} alt='Water'/>
       </div>
     </Col>
     </Row>

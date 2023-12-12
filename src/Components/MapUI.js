@@ -9,7 +9,7 @@ function MapUI({startLoc, endLoc, placeMode, place}) {
   }
   else{
     url = "https://www.google.com/maps/embed/v1/directions?key="+apiKey+"&origin="+startLoc+"&destination="+endLoc+
-    "&mode=transit";
+    "&mode=driving";
   }
   return (
       <iframe
