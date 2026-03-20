@@ -1,5 +1,6 @@
 import React from "react";
 import { Image } from "react-bootstrap";
+import lago from '../images/welcome1.jpg'
 
 export default function AddItemFormImage()
 {
@@ -8,7 +9,7 @@ export default function AddItemFormImage()
         width: '100%',
         height: '100vh' }}>
             <Image
-                src="https://bettyonthego.com/wp-content/uploads/2018/04/IMG_8878.jpg"
+                src={lago}
                 alt="Lago di Braies"
                 style={{
                 width: "100%",
@@ -24,7 +25,7 @@ export default function AddItemFormImage()
                 top: '7%',
                 left: '65%',
                 zIndex: 1,
-                color: 'white',
+                color: 'black',
                 }}
             >
                 <b>Add Item</b>
@@ -37,7 +38,7 @@ export default function AddItemFormImage()
                 top: '15%', // Adjust the top position as needed
                 left: '65%',
                 zIndex: 1,
-                color: 'white',
+                color: 'black',
                 }}
             >
             What will you discover?
