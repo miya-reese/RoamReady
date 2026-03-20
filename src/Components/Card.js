@@ -5,6 +5,8 @@ import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
 import {Link} from 'react-router-dom';
 import mainUser from '../GlobalUser';
+import cliffs from './images/cliffs.jpg';
+import profImg from './images/userprofile.jpeg';
 
 function ProfileCard() {
   return (
@@ -14,7 +16,7 @@ function ProfileCard() {
         <h1 className="title"> Profile </h1>
         <div style={{height: '1vh'}}></div>
       <div className='prof-col1'>
-      <img src={mainUser.profileImg} width={300} height={310} alt="profImg"/>
+      <img src={profImg} width={300} height={310} alt="profImg"/>
       <br></br>
       <h1 className='prof-name'>{mainUser.getFullname()}</h1>
       <br></br>
@@ -42,8 +44,8 @@ function ProfileCard() {
     </Col>
     <Col>
       <div>
-        <img className='water-img' src='https://images.unsplash.com/photo-1555412654-72a95a495858?auto=format&fit=crop&q=80&w=1000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8fA%3D%3D' 
-        height={625} alt='Water'/>
+        <img className='water-img' src={cliffs} width={600}
+        height={800} alt='Water'/>
       </div>
     </Col>
     </Row>
